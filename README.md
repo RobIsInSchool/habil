@@ -1,8 +1,8 @@
-#Habil
+# Habil
 
 Individual project for Robert Adams.
 
-###Problem Statment
+### Problem Statment
 
 People are broke, and college is expensive. What if you want to learn
 some basic auto maintenance, but you can't afford the classes offered
@@ -16,12 +16,12 @@ excellent painter, or you play a mean guitar. Is it outlandish to think
 that there's someone out there who could teach you what they know about 
 auto maintenance, but would accept guitar lessons in exchange?
 
-###Habil finds the connection!
+### Habil finds the connection!
 
 * YOU build a list of all the Skills you have to offer and provide exhibitions
 on your profile.
   
-* YOU make you Skills Wish-List
+* YOU make your Skills Wish-List.
 
 * HABIL compares your Skills and Skills Wish-List against those of other users. 
 If a user has a Skill that's on your Skills Wish-List - or vice-versa! - Habil
