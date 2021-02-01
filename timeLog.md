@@ -7,4 +7,4 @@
 | 1/29/21 | Work on week 2 exercise | 1 | slow day |
 | 1/30/21 | Powered through and finished week 2 exercise | 4 | productive day |
 | 1/31/21 | worked through some of the week 3 demos and activities and did the readings | 2 | |
-| 2/1/21 | Watched some of the week 3 videos, completed the activities, and started on the exercise | 1.5 ||
+| 2/1/21 | Watched some of the week 3 videos, completed the activities, and started on the exercise | 2 ||
