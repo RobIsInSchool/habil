@@ -9,3 +9,4 @@
 | 1/31/21 | worked through some of the week 3 demos and activities and did the readings | 2 | |
 | 2/1/21 | Watched some of the week 3 videos, completed the activities, and started on the exercise | 3 ||
 | 2/5/21 | Finishing up the latter portion of the week 3 exercise | 2 ||
+| 2/6/21 | Received feedback on week 3 and reviewed solution | .5 ||
