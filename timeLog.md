@@ -11,3 +11,4 @@
 | 2/5/21 | Finishing up the latter portion of the week 3 exercise | 2 ||
 | 2/6/21 | Received feedback on week 3 and reviewed solution | .5 ||
 | 2/8/21 | Created user stories and project plan for indie project, determined proDev activity | 2 ||
+| 2/9/21 | Created screen designs for indie app | 3 ||
