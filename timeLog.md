@@ -12,3 +12,4 @@
 | 2/6/21 | Received feedback on week 3 and reviewed solution | .5 ||
 | 2/8/21 | Created user stories and project plan for indie project, determined proDev activity | 2 ||
 | 2/9/21 | Created screen designs for indie app | 3 ||
+| 2/11/21 | Created habil database, wk4 readings, logging and testing to habil | 3 ||
