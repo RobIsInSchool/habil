@@ -13,8 +13,4 @@ public class UserTest {
         user = new User();
     }
 
-    @Test
-    public void testTests() {
-        assertEquals(1, user.testTesting());
-    }
 }
