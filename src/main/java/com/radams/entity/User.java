@@ -2,16 +2,16 @@ package com.radams.entity;
 
 import org.hibernate.annotations.GenericGenerator;
 
+import javax.ejb.Local;
 import javax.persistence.*;
 import java.sql.Date;
-
 
 @Entity(name="User")
 @Table(name="users")
 public class User {
 
     @Id
-    @GeneratedValue(Strategy = GenerationType.AUTO, generator = "native")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
     @Column(name = "user_id")
     private int userId;
@@ -154,7 +154,6 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "logger=" + logger +
                 ", userId=" + userId +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
