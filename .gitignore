@@ -16,6 +16,7 @@
 .idea/dynamic.xml
 .idea/uiDesigner.xml
 /sql/
+/src/main/resources/hibernate.cfg.xml
 
 # Gradle:
 .idea/gradle.xml
