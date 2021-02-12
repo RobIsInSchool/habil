@@ -9,6 +9,10 @@ public class User {
         logger.info("Logging works again?");
     }
 
+    public int testTesting() {
+        return 1;
+    }
+
     public static void main(String[] args) {
         User user = new User();
         user.testLogging();
