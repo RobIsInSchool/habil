@@ -13,3 +13,4 @@
 | 2/8/21 | Created user stories and project plan for indie project, determined proDev activity | 2 ||
 | 2/9/21 | Created screen designs for indie app | 3 ||
 | 2/11/21 | Created habil database, wk4 readings, logging and testing to habil | 3 ||
+| 2/12/21 | adding hibernate to indie project | 3 | slowly but surely... |
