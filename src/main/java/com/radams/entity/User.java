@@ -11,6 +11,8 @@ import java.sql.Date;
 @Entity(name="User")
 @Table(name="users")
 public class User {
+
+    @Transient
     private final Logger logger = LogManager.getLogger(this.getClass());
 
     @Id
@@ -51,6 +53,8 @@ public class User {
 
     @Column(name = "date_deleted")
     private Date dateDeleted;
+
+
 
     public User() {
 
