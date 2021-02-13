@@ -41,6 +41,14 @@ public class UserDao {
         return users;
     }
 
+    public User getUserById(int id) {
+        Session session = sessionFactory.openSession();
+        User user = session.get(User.class, id);
+        session.close();
+        return user;
+    }
+
+
     public static void main(String[] args) {
         UserDao dao = new UserDao();
         dao.getUsersByLastName("Person");

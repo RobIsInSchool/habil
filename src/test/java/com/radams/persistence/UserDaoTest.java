@@ -24,6 +24,15 @@ class UserDaoTest {
     }
 
     @Test
-    void getUsersByLastName() {
+    void getUsersByLastNameSuccess() {
+        List<User> users = dao.getUsersByLastName("P");
+        assertEquals(1, users.size());
+    }
+
+    @Test
+    void getByIdSuccess() {
+        User retrievedUser = dao.getUserById(2);
+        assertNotNull(retrievedUser);
+        assertEquals("Second", retrievedUser.getFirstName());
     }
 }
