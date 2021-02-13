@@ -1,18 +1,26 @@
 package com.radams.persistence;
 
+import com.radams.entity.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class UserDaoTest {
 
+    UserDao dao;
+
     @BeforeEach
     void setUp() {
+        dao = new UserDao();
     }
 
     @Test
-    void getAllUsers() {
+    void getAllUsersSuccess() {
+        List<User> users = dao.getAllUsers();
+        assertEquals(2, users.size());
     }
 
     @Test
