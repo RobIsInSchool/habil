@@ -1,6 +1,7 @@
 package com.radams.persistence;
 
 import com.radams.entity.User;
+import com.radams.test.util.Database;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -15,12 +16,14 @@ class UserDaoTest {
     @BeforeEach
     void setUp() {
         dao = new UserDao();
+        Database db = Database.getInstance();
+        db.runSQL("cleandb.sql");
     }
 
     @Test
     void getAllUsersSuccess() {
         List<User> users = dao.getAllUsers();
-        assertEquals(2, users.size());
+        assertEquals(6, users.size());
     }
 
     @Test
