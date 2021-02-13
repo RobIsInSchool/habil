@@ -23,7 +23,7 @@ public class UserDao {
         Root<User> root = query.from(User.class);
         List<User> users = session.createQuery(query).getResultList();
         session.close();
-        logger.info(users);
+        logger.info("Users: " + users);
         return users;
     }
 

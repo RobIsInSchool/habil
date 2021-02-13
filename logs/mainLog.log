@@ -1,1 +1,3 @@
 [INFO ] 2021-02-12 09:51:18.457 [main] User - Logging works again?
+[INFO ] 2021-02-13 09:19:51.731 [main] UserDao - Users: [User{, userId=1, firstName='First', lastName='User', username='firstUser', email='firstUser@gmail.com', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, roleId=1, dateCreated=2021-02-12, dateDeleted=null}]
+[INFO ] 2021-02-13 09:22:08.391 [main] UserDao - Users: [User{, userId=1, firstName='First', lastName='User', username='firstUser', email='firstUser@gmail.com', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, roleId=1, dateCreated=2021-02-12, dateDeleted=null}]
