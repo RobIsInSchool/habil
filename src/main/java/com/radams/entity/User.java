@@ -55,6 +55,27 @@ public class User {
 
     }
 
+    /**
+     * Constructor for User class
+     * @param firstName user first name
+     * @param lastName user last name
+     * @param username user's username
+     * @param email user email
+     * @param password user password
+     * @param isActive indicates if user is still active
+     * @param roleId user role id - 1 for user, 2 for admin
+     */
+    public User(String firstName, String lastName, String username, String email, String password, boolean isActive, int roleId) {
+        this();
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.isActive = isActive;
+        this.roleId = roleId;
+    }
+
     public int getUserId() {
         return userId;
     }
