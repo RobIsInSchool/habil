@@ -35,4 +35,16 @@ class UserDaoTest {
         assertNotNull(retrievedUser);
         assertEquals("Second", retrievedUser.getFirstName());
     }
+
+    @Test
+    void saveOrUpdateSuccess() {
+    }
+
+    @Test
+    void insertSuccess() {
+    }
+
+    @Test
+    void deleteSuccess() {
+    }
 }
