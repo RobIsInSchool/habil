@@ -8,6 +8,7 @@ import org.hibernate.SessionFactory;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Expression;
 import javax.persistence.criteria.Root;
 import java.util.List;
 
@@ -27,8 +28,21 @@ public class UserDao {
         return users;
     }
 
+    public List<User> getUsersByLastName(String lastName) {
+        Session session = sessionFactory.openSession();
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<User> query = builder.createQuery(User.class);
+        Root<User> root = query.from(User.class);
+        Expression<String> propertyPath = root.get("lastName");
+        query.where(builder.like(propertyPath, "%" + lastName + "%"));
+        List<User> users = session.createQuery(query).getResultList();
+        session.close();
+        logger.info("Users by last name: " + users);
+        return users;
+    }
+
     public static void main(String[] args) {
         UserDao dao = new UserDao();
-        dao.getAllUsers();
+        dao.getUsersByLastName("Person");
     }
 }
