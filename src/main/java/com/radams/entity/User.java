@@ -32,10 +32,10 @@ public class User {
     private String password;
 
     @Column(name = "lessons_taken")
-    private int lessonsTaken;
+    private Integer lessonsTaken;
 
     @Column(name = "lessons_taught")
-    private int lessonsTaught;
+    private Integer lessonsTaught;
 
     @Column(name = "is_active")
     private boolean isActive;
@@ -103,19 +103,19 @@ public class User {
         this.password = password;
     }
 
-    public int getLessonsTaken() {
+    public Integer getLessonsTaken() {
         return lessonsTaken;
     }
 
-    public void setLessonsTaken(int lessonsTaken) {
+    public void setLessonsTaken(Integer lessonsTaken) {
         this.lessonsTaken = lessonsTaken;
     }
 
-    public int getLessonsTaught() {
+    public Integer getLessonsTaught() {
         return lessonsTaught;
     }
 
-    public void setLessonsTaught(int lessonsTaught) {
+    public void setLessonsTaught(Integer lessonsTaught) {
         this.lessonsTaught = lessonsTaught;
     }
 
