@@ -17,6 +17,7 @@
 .idea/uiDesigner.xml
 /sql/
 /src/main/resources/hibernate.cfg.xml
+/logs/
 
 # Gradle:
 .idea/gradle.xml
