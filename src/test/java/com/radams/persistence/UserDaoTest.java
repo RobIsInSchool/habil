@@ -1,10 +1,21 @@
 package com.radams.persistence;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-public class UserDaoTest {
-    public void testGetAllUsers() {
+import static org.junit.jupiter.api.Assertions.*;
 
+class UserDaoTest {
+
+    @BeforeEach
+    void setUp() {
+    }
+
+    @Test
+    void getAllUsers() {
+    }
+
+    @Test
+    void getUsersByLastName() {
     }
 }
