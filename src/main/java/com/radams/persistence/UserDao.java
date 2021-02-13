@@ -48,9 +48,4 @@ public class UserDao {
         return user;
     }
 
-
-    public static void main(String[] args) {
-        UserDao dao = new UserDao();
-        dao.getUsersByLastName("Person");
-    }
 }
