@@ -2,3 +2,30 @@
 [INFO ] 2021-02-13 10:05:09.279 [main] UserDao - Users: [User{, userId=1, firstName='First', lastName='User', username='firstUser', email='firstUser@gmail.com', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, roleId=1, dateCreated=2021-02-12, dateDeleted=null}, User{, userId=2, firstName='Second', lastName='Person', username='secondPerson', email='secondPerson@gmail.com', password='12345', lessonsTaken=5, lessonsTaught=4, isActive=true, roleId=1, dateCreated=2021-02-13, dateDeleted=null}]
 [INFO ] 2021-02-13 10:07:18.101 [main] UserDao - Users: [User{, userId=1, firstName='First', lastName='User', username='firstUser', email='firstUser@gmail.com', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, roleId=1, dateCreated=2021-02-12, dateDeleted=null}, User{, userId=2, firstName='Second', lastName='Person', username='secondPerson', email='secondPerson@gmail.com', password='12345', lessonsTaken=5, lessonsTaught=4, isActive=true, roleId=1, dateCreated=2021-02-13, dateDeleted=null}]
 [INFO ] 2021-02-13 10:10:00.348 [main] UserDao - Users by last name: [User{, userId=2, firstName='Second', lastName='Person', username='secondPerson', email='secondPerson@gmail.com', password='12345', lessonsTaken=5, lessonsTaught=4, isActive=true, roleId=1, dateCreated=2021-02-13, dateDeleted=null}]
+[ERROR] 2021-02-13 16:19:33.319 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_habil.user' doesn't exist
+[INFO ] 2021-02-13 16:19:33.816 [main] UserDao - Users: [User{, userId=1, firstName='First', lastName='User', username='firstUser', email='firstUser@gmail.com', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, roleId=1, dateCreated=2021-02-12, dateDeleted=null}, User{, userId=2, firstName='Second', lastName='Person', username='secondPerson', email='secondPerson@gmail.com', password='12345', lessonsTaken=5, lessonsTaught=4, isActive=true, roleId=1, dateCreated=2021-02-13, dateDeleted=null}]
+[ERROR] 2021-02-13 16:20:50.588 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[INFO ] 2021-02-13 16:20:51.028 [main] UserDao - Users: [User{, userId=1, firstName='First', lastName='User', username='firstUser', email='firstUser@gmail.com', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, roleId=1, dateCreated=2021-02-12, dateDeleted=null}, User{, userId=2, firstName='Second', lastName='Person', username='secondPerson', email='secondPerson@gmail.com', password='12345', lessonsTaken=5, lessonsTaught=4, isActive=true, roleId=1, dateCreated=2021-02-13, dateDeleted=null}]
+[ERROR] 2021-02-13 16:21:29.488 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2021-02-13 16:23:07.784 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_habil.test_users' doesn't exist
+[INFO ] 2021-02-13 16:23:08.135 [main] UserDao - Users: []
+[ERROR] 2021-02-13 16:23:40.024 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_habil.test_users' doesn't exist
+[INFO ] 2021-02-13 16:23:40.376 [main] UserDao - Users: []
+[ERROR] 2021-02-13 16:24:43.994 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_habil.test_users' doesn't exist
+[INFO ] 2021-02-13 16:24:47.251 [main] UserDao - Users: []
+[ERROR] 2021-02-13 16:25:21.625 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_habil.test_users' doesn't exist
+[INFO ] 2021-02-13 16:26:12.340 [main] UserDao - Users: []
+[ERROR] 2021-02-13 16:39:38.161 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_habil.test_users' doesn't exist
+[INFO ] 2021-02-13 16:39:38.875 [main] UserDao - Users: []
+[ERROR] 2021-02-13 16:40:57.915 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[INFO ] 2021-02-13 16:40:58.282 [main] UserDao - Users: []
+[ERROR] 2021-02-13 16:41:35.496 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[INFO ] 2021-02-13 16:41:35.879 [main] UserDao - Users: []
+[ERROR] 2021-02-13 16:42:34.052 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[INFO ] 2021-02-13 16:42:34.335 [main] UserDao - Users: []
+[ERROR] 2021-02-13 16:47:00.489 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[INFO ] 2021-02-13 16:47:00.857 [main] UserDao - Users: []
+[ERROR] 2021-02-13 16:48:46.519 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[INFO ] 2021-02-13 16:48:46.888 [main] UserDao - Users: []
+[ERROR] 2021-02-13 16:51:23.853 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[INFO ] 2021-02-13 16:51:24.212 [main] UserDao - Users: []
