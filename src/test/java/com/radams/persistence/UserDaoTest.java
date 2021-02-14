@@ -5,6 +5,8 @@ import com.radams.test.util.Database;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -12,12 +14,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserDaoTest {
 
     UserDao dao;
+    User testUser;
 
     @BeforeEach
     void setUp() {
         dao = new UserDao();
         Database db = Database.getInstance();
         db.runSQL("cleandb.sql");
+        testUser = new User("test", "user", "testuser", "email", "password", true, Date.valueOf(LocalDate.now()), 1);
     }
 
     @Test
@@ -28,15 +32,15 @@ class UserDaoTest {
 
     @Test
     void getUsersByLastNameSuccess() {
-        List<User> users = dao.getUsersByLastName("P");
+        List<User> users = dao.getUsersByLastName("Coyne");
         assertEquals(1, users.size());
     }
 
     @Test
     void getByIdSuccess() {
-        User retrievedUser = dao.getUserById(2);
+        User retrievedUser = dao.getUserById(3);
         assertNotNull(retrievedUser);
-        assertEquals("Second", retrievedUser.getFirstName());
+        assertEquals("Barney", retrievedUser.getFirstName());
     }
 
     @Test
@@ -44,15 +48,25 @@ class UserDaoTest {
         String newLastName = "changed";
         User userToUpdate = dao.getUserById(1);
         userToUpdate.setLastName(newLastName);
+        dao.saveOrUpdate(userToUpdate);
         User retrievedUser = dao.getUserById(1);
         assertEquals(retrievedUser.getLastName(), newLastName);
     }
 
     @Test
     void insertSuccess() {
+        int newId = dao.insert(testUser);
+        User retrievedUser = dao.getUserById(newId);
+        assertEquals(newId, retrievedUser.getUserId());
     }
 
     @Test
     void deleteSuccess() {
+        insertSuccess();
+        List<User> users = dao.getAllUsers();
+        assertEquals(7, users.size());
+        dao.delete(testUser);
+        users = dao.getAllUsers();
+        assertEquals(6, users.size());
     }
 }
