@@ -14,4 +14,4 @@
 | 2/9/21 | Created screen designs for indie app | 3 ||
 | 2/11/21 | Created habil database, wk4 readings, logging and testing to habil | 3 ||
 | 2/12/21 | adding hibernate to indie project | 3 | slowly but surely... |
-| 2/13/21 | implemented most CRUD functions to indie project | 4 ||
+| 2/13/21 | implemented most CRUD functions to indie project | 5 ||
