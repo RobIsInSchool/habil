@@ -65,7 +65,7 @@ public class User {
      * @param isActive indicates if user is still active
      * @param roleId user role id - 1 for user, 2 for admin
      */
-    public User(String firstName, String lastName, String username, String email, String password, boolean isActive, int roleId) {
+    public User(String firstName, String lastName, String username, String email, String password, boolean isActive, Date dateCreated, int roleId) {
         this();
         this.firstName = firstName;
         this.lastName = lastName;
@@ -73,6 +73,7 @@ public class User {
         this.email = email;
         this.password = password;
         this.isActive = isActive;
+        this.dateCreated = dateCreated;
         this.roleId = roleId;
     }
 
