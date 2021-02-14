@@ -33,7 +33,6 @@ public class UserDao {
         Root<User> root = query.from(User.class);
         List<User> users = session.createQuery(query).getResultList();
         session.close();
-        logger.info("Users: " + users);
         return users;
     }
 
@@ -51,7 +50,6 @@ public class UserDao {
         query.where(builder.like(propertyPath, "%" + lastName + "%"));
         List<User> users = session.createQuery(query).getResultList();
         session.close();
-        logger.info("Users by last name: " + users);
         return users;
     }
 
@@ -73,7 +71,9 @@ public class UserDao {
      */
     public void saveOrUpdate(User user) {
         Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
         session.saveOrUpdate(user);
+        transaction.commit();
         session.close();
     }
 
