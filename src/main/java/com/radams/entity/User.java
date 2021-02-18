@@ -6,6 +6,12 @@ import javax.ejb.Local;
 import javax.persistence.*;
 import java.sql.Date;
 
+
+/**
+ * This class represents a Habil user
+ * @author Robert Adams
+ *
+ */
 @Entity(name="User")
 @Table(name="users")
 public class User {
