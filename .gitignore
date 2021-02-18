@@ -18,6 +18,7 @@
 /sql/
 /src/main/resources/hibernate.cfg.xml
 /logs/
+/designDocs/ERD.png
 
 # Gradle:
 .idea/gradle.xml
