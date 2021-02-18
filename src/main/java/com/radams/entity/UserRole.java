@@ -20,14 +20,15 @@ public class UserRole {
 
     @Column(name="role_name")
     private String roleName;
+    private User user;
 
     public UserRole() {
 
     }
 
-    public UserRole(int roleId, String roleName) {
-        this.roleId = roleId;
+    public UserRole(String roleName, User user) {
         this.roleName = roleName;
+        this.user = user;
     }
 
     public int getRoleId() {
@@ -46,11 +47,20 @@ public class UserRole {
         this.roleName = roleName;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     @Override
     public String toString() {
         return "UserRole{" +
                 "roleId=" + roleId +
                 ", roleName='" + roleName + '\'' +
+                ", user=" + user +
                 '}';
     }
 }
