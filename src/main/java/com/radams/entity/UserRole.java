@@ -20,6 +20,8 @@ public class UserRole {
 
     @Column(name="role_name")
     private String roleName;
+
+    @ManyToOne
     private User user;
 
     public UserRole() {
