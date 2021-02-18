@@ -5,6 +5,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.ejb.Local;
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.HashSet;
 
 
 /**
@@ -55,6 +56,7 @@ public class User {
     @Column(name = "date_deleted")
     private Date dateDeleted;
 
+    private HashSet<UserRole> userRoles = new HashSet<>();
 
 
     public User() {
@@ -177,6 +179,14 @@ public class User {
 
     public void setDateDeleted(Date dateDeleted) {
         this.dateDeleted = dateDeleted;
+    }
+
+    public HashSet<UserRole> getUserRoles() {
+        return userRoles;
+    }
+
+    public void setUserRoles(HashSet<UserRole> userRoles) {
+        this.userRoles = userRoles;
     }
 
     @Override
