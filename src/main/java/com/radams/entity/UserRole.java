@@ -4,6 +4,10 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
+/**
+ * This class represents a role that a Habil user will have
+ * @author Robert Adams
+ */
 @Entity(name="UserRole")
 @Table(name="user_roles")
 public class UserRole {
