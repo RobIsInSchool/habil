@@ -56,6 +56,7 @@ public class User {
     @Column(name = "date_deleted")
     private Date dateDeleted;
 
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private HashSet<UserRole> userRoles = new HashSet<>();
 
 
