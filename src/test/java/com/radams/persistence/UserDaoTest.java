@@ -1,6 +1,7 @@
 package com.radams.persistence;
 
 import com.radams.entity.User;
+import com.radams.entity.UserRole;
 import com.radams.test.util.Database;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -55,6 +56,15 @@ class UserDaoTest {
 
     @Test
     void insertSuccess() {
+        int newId = dao.insert(testUser);
+        User retrievedUser = dao.getUserById(newId);
+        assertEquals(newId, retrievedUser.getUserId());
+    }
+
+    @Test
+    void insertWithRoleSuccess() {
+        String roleDescription = "user";
+        UserRole role = new UserRole(roleDescription, testUser);
         int newId = dao.insert(testUser);
         User retrievedUser = dao.getUserById(newId);
         assertEquals(newId, retrievedUser.getUserId());
