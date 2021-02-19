@@ -16,3 +16,4 @@
 | 2/12/21 | adding hibernate to indie project | 3 | slowly but surely... |
 | 2/13/21 | implemented most CRUD functions to indie project | 5 ||
 | 2/15/21 | worked on database schema | 1.25 ||
+| 2/19/21 | added all tables, added useRole dao | 1.25 ||
