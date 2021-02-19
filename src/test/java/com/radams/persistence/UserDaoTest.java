@@ -65,9 +65,11 @@ class UserDaoTest {
     void insertWithRoleSuccess() {
         String roleDescription = "user";
         UserRole role = new UserRole(roleDescription, testUser);
+        testUser.addRole(role);
         int newId = dao.insert(testUser);
         User retrievedUser = dao.getUserById(newId);
         assertEquals(newId, retrievedUser.getUserId());
+        assertEquals(1, testUser.getUserRoles().size());
     }
 
     @Test
