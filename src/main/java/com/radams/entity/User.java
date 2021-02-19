@@ -6,6 +6,7 @@ import javax.ejb.Local;
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.HashSet;
+import java.util.Set;
 
 
 /**
@@ -57,7 +58,7 @@ public class User {
     private Date dateDeleted;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private HashSet<UserRole> userRoles = new HashSet<>();
+    private Set<UserRole> userRoles = new HashSet<>();
 
 
     public User() {
@@ -182,12 +183,22 @@ public class User {
         this.dateDeleted = dateDeleted;
     }
 
-    public HashSet<UserRole> getUserRoles() {
+    public Set<UserRole> getUserRoles() {
         return userRoles;
     }
 
     public void setUserRoles(HashSet<UserRole> userRoles) {
         this.userRoles = userRoles;
+    }
+
+    public void addRole(UserRole role) {
+        userRoles.add(role);
+        role.setUser(this);
+    }
+
+    public void removeRole(UserRole role) {
+        userRoles.remove(role);
+        role.setUser(null);
     }
 
     @Override
@@ -207,4 +218,6 @@ public class User {
                 ", dateDeleted=" + dateDeleted +
                 '}';
     }
+
+
 }
