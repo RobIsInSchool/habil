@@ -1,5 +1,6 @@
 package com.radams.persistence;
 
+import com.radams.entity.User;
 import com.radams.entity.UserRole;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -98,5 +99,13 @@ public class UserRoleDao {
         session.delete(userRole);
         transaction.commit();
         session.close();
+    }
+
+    public static void main(String[] args) {
+        UserRoleDao userRoleDao = new UserRoleDao();
+        User user = new User();
+        UserRole userRole = new UserRole("testRole", user);
+        System.out.println(userRoleDao.insert(userRole));
+
     }
 }
