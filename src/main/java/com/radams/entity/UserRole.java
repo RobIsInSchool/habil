@@ -22,6 +22,7 @@ public class UserRole {
     private String roleName;
 
     @ManyToOne
+    @JoinColumn(name="role_id", foreignKey = @ForeignKey(name="users_user_roles"), insertable=false, updatable = false)
     private User user;
 
     public UserRole() {
