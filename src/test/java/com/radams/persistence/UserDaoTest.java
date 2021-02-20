@@ -15,11 +15,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserDaoTest {
 
     UserDao dao;
+    UserRoleDao roleDao;
     User testUser;
+    UserRole userRole;
 
     @BeforeEach
     void setUp() {
         dao = new UserDao();
+        roleDao = new UserRoleDao();
         Database db = Database.getInstance();
         db.runSQL("cleandb.sql");
         testUser = new User("test", "user", "testuser", "email", "password", true, Date.valueOf(LocalDate.now()), 1);
@@ -29,6 +32,12 @@ class UserDaoTest {
     void getAllUsersSuccess() {
         List<User> users = dao.getAllUsers();
         assertEquals(6, users.size());
+    }
+
+    @Test
+    void getAllUserRolesSuccess() {
+        List<UserRole> userRoles = roleDao.getAllUserRoles();
+        assertEquals(2, userRoles.size());
     }
 
     @Test
