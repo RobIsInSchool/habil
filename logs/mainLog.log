@@ -8,3 +8,5 @@
 [ERROR] 2021-02-19 10:23:12.459 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
 [ERROR] 2021-02-19 10:24:03.580 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
 [ERROR] 2021-02-19 18:35:35.102 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`test_habil`.`users`, CONSTRAINT `users_user_roles` FOREIGN KEY (`role_id`) REFERENCES `user_roles` (`role_id`))
+[INFO ] 2021-02-20 09:56:03.939 [main] UserDao - []
+[ERROR] 2021-02-20 10:17:38.089 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_habil.user_roles' doesn't exist

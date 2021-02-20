@@ -9,20 +9,20 @@ import javax.persistence.*;
  * @author Robert Adams
  */
 @Entity(name="UserRole")
-@Table(name="user_roles")
+@Table(name="roles")
 public class UserRole {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
-    @Column(name="role_id")
+    @Column(name="id")
     private int roleId;
 
     @Column(name="role_name")
     private String roleName;
 
     @ManyToOne
-    @JoinColumn(name="role_id", foreignKey = @ForeignKey(name="users_user_roles"), insertable=false, updatable = false)
+    @JoinColumn(name="id", foreignKey = @ForeignKey(name="users_user_roles"), insertable=false, updatable = false)
     private User user;
 
     public UserRole() {
