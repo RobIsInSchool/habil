@@ -104,7 +104,7 @@ public class UserRoleDao {
     public static void main(String[] args) {
         UserRoleDao userRoleDao = new UserRoleDao();
         User user = new User();
-        UserRole userRole = new UserRole("testRole", user);
+        UserRole userRole = new UserRole("user", user);
         System.out.println(userRoleDao.insert(userRole));
 
     }
