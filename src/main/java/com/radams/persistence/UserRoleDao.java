@@ -105,7 +105,6 @@ public class UserRoleDao {
         UserRoleDao userRoleDao = new UserRoleDao();
         User user = new User();
         UserRole userRole = new UserRole("user", user);
-        System.out.println(userRoleDao.insert(userRole));
-
+        userRoleDao.logger.info(userRoleDao.insert(userRole));
     }
 }

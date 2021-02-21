@@ -22,7 +22,7 @@ public class UserRole {
     private String roleName;
 
     @ManyToOne
-    @JoinColumn(name="id", foreignKey = @ForeignKey(name="users_user_roles"), insertable=false, updatable = false)
+//    @JoinColumn(name="role_id", referencedColumnName = "role_id", nullable=false)
     private User user;
 
     public UserRole() {
