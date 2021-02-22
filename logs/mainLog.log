@@ -11,3 +11,4 @@
 [INFO ] 2021-02-20 09:56:03.939 [main] UserDao - []
 [ERROR] 2021-02-20 10:17:38.089 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_habil.user_roles' doesn't exist
 [ERROR] 2021-02-21 10:24:41.762 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`test_habil`.`users`, CONSTRAINT `users_user_roles` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`))
+[ERROR] 2021-02-21 13:11:25.508 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`test_habil`.`users`, CONSTRAINT `users_user_roles` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`))

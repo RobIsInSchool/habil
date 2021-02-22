@@ -49,6 +49,7 @@ public class User {
     private boolean isActive;
 
     @Column(name = "role_id")
+    @JoinColumn(name="id", referencedColumnName = "id", insertable = false, updatable = false)
     private int roleId;
 
     @Column(name = "date_created")
