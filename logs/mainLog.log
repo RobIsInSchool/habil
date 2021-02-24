@@ -12,3 +12,18 @@
 [ERROR] 2021-02-20 10:17:38.089 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_habil.user_roles' doesn't exist
 [ERROR] 2021-02-21 10:24:41.762 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`test_habil`.`users`, CONSTRAINT `users_user_roles` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`))
 [ERROR] 2021-02-21 13:11:25.508 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`test_habil`.`users`, CONSTRAINT `users_user_roles` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`))
+[ERROR] 2021-02-24 09:11:51.059 [main] Database - java.sql.SQLException: Field 'user_name' doesn't have a default value
+[ERROR] 2021-02-24 09:11:51.592 [main] Database - java.sql.SQLException: Field 'user_name' doesn't have a default value
+[ERROR] 2021-02-24 09:11:51.747 [main] Database - java.sql.SQLException: Field 'user_name' doesn't have a default value
+[ERROR] 2021-02-24 09:11:51.871 [main] Database - java.sql.SQLException: Field 'user_name' doesn't have a default value
+[ERROR] 2021-02-24 09:11:52.260 [main] Database - java.sql.SQLException: Field 'user_name' doesn't have a default value
+[ERROR] 2021-02-24 09:11:52.380 [main] Database - java.sql.SQLException: Field 'user_name' doesn't have a default value
+[ERROR] 2021-02-24 09:13:21.516 [main] Database - java.sql.SQLException: Field 'user_name' doesn't have a default value
+[ERROR] 2021-02-24 09:13:21.909 [main] Database - java.sql.SQLException: Field 'user_name' doesn't have a default value
+[ERROR] 2021-02-24 09:13:22.052 [main] Database - java.sql.SQLException: Field 'user_name' doesn't have a default value
+[ERROR] 2021-02-24 09:13:22.173 [main] Database - java.sql.SQLException: Field 'user_name' doesn't have a default value
+[ERROR] 2021-02-24 09:13:22.525 [main] Database - java.sql.SQLException: Field 'user_name' doesn't have a default value
+[ERROR] 2021-02-24 09:13:22.588 [main] Database - java.sql.SQLException: Field 'user_name' doesn't have a default value
+[ERROR] 2021-02-24 09:13:48.104 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`test_habil`.`users`, CONSTRAINT `users_user_roles` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`))
+[ERROR] 2021-02-24 09:14:39.457 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2021-02-24 09:15:30.577 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction

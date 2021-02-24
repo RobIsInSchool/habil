@@ -18,52 +18,9 @@ public class UserRole {
     @Column(name="id")
     private int roleId;
 
-    @Column(name="role_name")
+    @Column(name = "user_name")
+    private String userName;
+
+    @Column(name = "role_name")
     private String roleName;
-
-    @ManyToOne
-    @JoinColumn(name="role_id", referencedColumnName = "role_id", insertable=false, updatable=false)
-    private User user;
-
-    public UserRole() {
-
-    }
-
-    public UserRole(String roleName, User user) {
-        this.roleName = roleName;
-        this.user = user;
-    }
-
-    public int getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(int roleId) {
-        this.roleId = roleId;
-    }
-
-    public String getRoleName() {
-        return roleName;
-    }
-
-    public void setRoleName(String roleName) {
-        this.roleName = roleName;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    @Override
-    public String toString() {
-        return "UserRole{" +
-                "roleId=" + roleId +
-                ", roleName='" + roleName + '\'' +
-                ", user=" + user +
-                '}';
-    }
 }

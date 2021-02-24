@@ -30,7 +30,7 @@ public class User {
     @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "username")
+    @Column(name = "user_name")
     private String username;
 
     @Column(name = "email")
@@ -48,18 +48,14 @@ public class User {
     @Column(name = "is_active")
     private boolean isActive;
 
-    @Column(name = "role_id")
-    @JoinColumn(name="id", referencedColumnName = "id", insertable = false, updatable = false)
-    private int roleId;
-
     @Column(name = "date_created")
     private Date dateCreated;
 
     @Column(name = "date_deleted")
     private Date dateDeleted;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private Set<UserRole> userRoles = new HashSet<>();
+//    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+//    private Set<UserRole> userRoles = new HashSet<>();
 
 
     public User() {
@@ -74,9 +70,8 @@ public class User {
      * @param email user email
      * @param password user password
      * @param isActive indicates if user is still active
-     * @param roleId user role id - 1 for user, 2 for admin
      */
-    public User(String firstName, String lastName, String username, String email, String password, boolean isActive, Date dateCreated, int roleId) {
+    public User(String firstName, String lastName, String username, String email, String password, boolean isActive, Date dateCreated) {
         this();
         this.firstName = firstName;
         this.lastName = lastName;
@@ -85,7 +80,6 @@ public class User {
         this.password = password;
         this.isActive = isActive;
         this.dateCreated = dateCreated;
-        this.roleId = roleId;
     }
 
     public int getUserId() {
@@ -160,14 +154,6 @@ public class User {
         isActive = active;
     }
 
-    public int getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(int roleId) {
-        this.roleId = roleId;
-    }
-
     public Date getDateCreated() {
         return dateCreated;
     }
@@ -184,23 +170,6 @@ public class User {
         this.dateDeleted = dateDeleted;
     }
 
-    public Set<UserRole> getUserRoles() {
-        return userRoles;
-    }
-
-    public void setUserRoles(HashSet<UserRole> userRoles) {
-        this.userRoles = userRoles;
-    }
-
-    public void addRole(UserRole role) {
-        userRoles.add(role);
-        role.setUser(this);
-    }
-
-    public void removeRole(UserRole role) {
-        userRoles.remove(role);
-        role.setUser(null);
-    }
 
     @Override
     public String toString() {
@@ -214,7 +183,6 @@ public class User {
                 ", lessonsTaken=" + lessonsTaken +
                 ", lessonsTaught=" + lessonsTaught +
                 ", isActive=" + isActive +
-                ", roleId=" + roleId +
                 ", dateCreated=" + dateCreated +
                 ", dateDeleted=" + dateDeleted +
                 '}';

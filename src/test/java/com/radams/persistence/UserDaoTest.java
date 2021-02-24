@@ -25,7 +25,7 @@ class UserDaoTest {
         roleDao = new UserRoleDao();
         Database db = Database.getInstance();
         db.runSQL("cleandb.sql");
-        testUser = new User("test", "user", "testuser", "email", "password", true, Date.valueOf(LocalDate.now()), 1);
+        testUser = new User("test", "user", "testuser", "email", "password", true, Date.valueOf(LocalDate.now()));
     }
 
     @Test
@@ -34,11 +34,6 @@ class UserDaoTest {
         assertEquals(6, users.size());
     }
 
-    @Test
-    void getAllUserRolesSuccess() {
-        List<UserRole> userRoles = roleDao.getAllUserRoles();
-        assertEquals(2, userRoles.size());
-    }
 
     @Test
     void getUsersByLastNameSuccess() {
@@ -68,17 +63,6 @@ class UserDaoTest {
         int newId = dao.insert(testUser);
         User retrievedUser = dao.getUserById(newId);
         assertEquals(newId, retrievedUser.getUserId());
-    }
-
-    @Test
-    void insertWithRoleSuccess() {
-        String roleName = "user";
-        UserRole role = new UserRole(roleName, testUser);
-        testUser.addRole(role);
-        int newId = dao.insert(testUser);
-        User retrievedUser = dao.getUserById(newId);
-        assertEquals(newId, retrievedUser.getUserId());
-        assertEquals(1, testUser.getUserRoles().size());
     }
 
     @Test

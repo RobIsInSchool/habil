@@ -101,10 +101,4 @@ public class UserRoleDao {
         session.close();
     }
 
-    public static void main(String[] args) {
-        UserRoleDao userRoleDao = new UserRoleDao();
-        User user = new User();
-        UserRole userRole = new UserRole("user", user);
-        userRoleDao.logger.info(userRoleDao.insert(userRole));
-    }
 }
