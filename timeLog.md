@@ -20,4 +20,4 @@
 | 2/20/21 | trying to add one-to-many relationship, lots of troubleshooting | 1.5 ||
 | 2/21/21 | troubleshooting some more | .5 ||
 | 2/22/21 | Again with the troubleshooting | .5 ||
-|||||
+| 2/24/21 | Tore everything down, built it back up, it all works now| 4 ||
