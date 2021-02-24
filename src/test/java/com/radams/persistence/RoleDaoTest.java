@@ -35,7 +35,7 @@ class RoleDaoTest {
     void getByIdSuccess() {
         UserRole retrievedUserRole = dao.getUserRoleById(3);
         assertNotNull(retrievedUserRole);
-        assertEquals("Barney", retrievedUserRole.getRoleName());
+        assertEquals("admin", retrievedUserRole.getRoleName());
     }
 
     @Test
@@ -49,15 +49,15 @@ class RoleDaoTest {
         UserRole userRoleToUpdate = dao.getUserRoleById(newId);
         userRoleToUpdate.setRoleName(newRoleName);
         dao.saveOrUpdate(userRoleToUpdate);
-        UserRole retrievedUserRole = dao.getUserRoleById(1);
-        assertEquals(retrievedUserRole.getRoleName(), newRoleName);
+        UserRole retrievedUserRole = dao.getUserRoleById(newId);
+        assertEquals(newRoleName, retrievedUserRole.getRoleName());
     }
 
     @Test
     void insertSuccess() {
         UserDao userDao = new UserDao();
         User testUser = userDao.getUserById(1);
-        UserRole testUserRole = new UserRole("unitTestser", testUser);
+        UserRole testUserRole = new UserRole("unitTester", testUser);
         testUser.addRole(testUserRole);
         int newId = dao.insert(testUserRole);
         UserRole retrievedUserRole = dao.getUserRoleById(newId);
@@ -68,7 +68,10 @@ class RoleDaoTest {
 
     @Test
     void deleteSuccess() {
-        UserRole testUserRole = new UserRole();
+        UserDao userDao = new UserDao();
+        User testUser = userDao.getUserById(1);
+        UserRole testUserRole = new UserRole("unitTester", testUser);
+        testUser.addRole(testUserRole);
         dao.insert(testUserRole);
         List<UserRole> userRoles = dao.getAllUserRoles();
         assertEquals(7, userRoles.size());

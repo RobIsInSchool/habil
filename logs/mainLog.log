@@ -32,3 +32,13 @@
 [INFO ] 2021-02-24 13:41:35.705 [main] UserDao - User{, userId=0, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-02-24, dateDeleted=null}
 [INFO ] 2021-02-24 13:44:19.080 [main] UserDao - User{userId=27, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-02-24, dateDeleted=null}
 [INFO ] 2021-02-24 13:44:35.491 [main] UserDao - User{userId=28, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-02-24, dateDeleted=null}
+[ERROR] 2021-02-24 16:50:48.957 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_habil`.`roles`, CONSTRAINT `roles_users` FOREIGN KEY (`user_name`) REFERENCES `users` (`user_name`))
+[ERROR] 2021-02-24 16:50:49.176 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_habil`.`roles`, CONSTRAINT `roles_users` FOREIGN KEY (`user_name`) REFERENCES `users` (`user_name`))
+[ERROR] 2021-02-24 16:50:49.561 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_habil`.`roles`, CONSTRAINT `roles_users` FOREIGN KEY (`user_name`) REFERENCES `users` (`user_name`))
+[ERROR] 2021-02-24 16:50:49.986 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_habil`.`roles`, CONSTRAINT `roles_users` FOREIGN KEY (`user_name`) REFERENCES `users` (`user_name`))
+[ERROR] 2021-02-24 16:50:50.089 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_habil`.`roles`, CONSTRAINT `roles_users` FOREIGN KEY (`user_name`) REFERENCES `users` (`user_name`))
+[ERROR] 2021-02-24 16:51:16.637 [main] Database - java.sql.SQLException: Can not issue empty query.
+[ERROR] 2021-02-24 16:51:16.948 [main] Database - java.sql.SQLException: Can not issue empty query.
+[ERROR] 2021-02-24 16:51:17.132 [main] Database - java.sql.SQLException: Can not issue empty query.
+[ERROR] 2021-02-24 16:51:17.488 [main] Database - java.sql.SQLException: Can not issue empty query.
+[ERROR] 2021-02-24 16:51:17.627 [main] Database - java.sql.SQLException: Can not issue empty query.
