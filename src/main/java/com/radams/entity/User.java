@@ -303,6 +303,26 @@ public class User {
         this.userRoles = userRoles;
     }
 
+    /**
+     * Add role.
+     *
+     * @param role the role
+     */
+    public void addRole(UserRole role) {
+        userRoles.add(role);
+        role.setUser(this);
+    }
+
+    /**
+     * Remove role.
+     *
+     * @param role the role
+     */
+    public void removeRole(UserRole role) {
+        userRoles.remove(role);
+        role.setUser(null);
+    }
+
     @Override
     public String toString() {
         return "User{" +
