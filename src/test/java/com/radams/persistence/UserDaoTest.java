@@ -25,7 +25,6 @@ class UserDaoTest {
         roleDao = new UserRoleDao();
         Database db = Database.getInstance();
         db.runSQL("cleandb.sql");
-        testUser = new User("test", "user", "testuser", "email", "password", true, Date.valueOf(LocalDate.now()));
     }
 
     @Test
@@ -60,9 +59,16 @@ class UserDaoTest {
 
     @Test
     void insertSuccess() {
+        User testUser = new User("test", "user", "testuser", "email", "password", true, Date.valueOf(LocalDate.now()));
         int newId = dao.insert(testUser);
         User retrievedUser = dao.getUserById(newId);
         assertEquals(newId, retrievedUser.getUserId());
+    }
+
+    void insertWithRoleSuccess() {
+        User testUser = new User("test", "user", "testuser", "email", "password", true, Date.valueOf(LocalDate.now()));
+        UserRole role = new UserRole("testRole", testUser);
+        testUser.addRole(role);
     }
 
     @Test
