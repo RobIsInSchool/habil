@@ -96,6 +96,7 @@ public class UserDao {
      * @param user User to be deleted
      */
     public void delete(User user) {
+        logger.info(user);
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         session.delete(user);

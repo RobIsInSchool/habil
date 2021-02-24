@@ -35,6 +35,7 @@ public class Database {
 
     }
 
+    //TODO: put into interface
     private void loadProperties() {
         properties = new Properties();
         try {

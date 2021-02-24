@@ -16,8 +16,6 @@ class UserDaoTest {
 
     UserDao dao;
     UserRoleDao roleDao;
-    User testUser;
-    UserRole userRole;
 
     @BeforeEach
     void setUp() {
@@ -65,15 +63,21 @@ class UserDaoTest {
         assertEquals(newId, retrievedUser.getUserId());
     }
 
+    @Test
     void insertWithRoleSuccess() {
         User testUser = new User("test", "user", "testuser", "email", "password", true, Date.valueOf(LocalDate.now()));
         UserRole role = new UserRole("testRole", testUser);
         testUser.addRole(role);
+        int id = dao.insert(testUser);
+        User retrievedUser = dao.getUserById(id);
+        assertEquals(id, retrievedUser.getUserId());
+        assertEquals(1, retrievedUser.getUserRoles().size());
     }
 
     @Test
     void deleteSuccess() {
-        insertSuccess();
+        User testUser = new User("test", "user", "testuser", "email", "password", true, Date.valueOf(LocalDate.now()));
+        dao.insert(testUser);
         List<User> users = dao.getAllUsers();
         assertEquals(7, users.size());
         dao.delete(testUser);

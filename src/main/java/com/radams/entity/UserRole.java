@@ -23,7 +23,7 @@ public class UserRole {
     private String roleName;
 
     @ManyToOne
-    @JoinColumn(name = "username", referencedColumnName = "user_name", nullable = false)
+    @JoinColumn(name = "user_name", referencedColumnName = "user_name", nullable = false)
     private User user;
 
     /**
