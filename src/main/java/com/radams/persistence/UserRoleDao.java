@@ -34,22 +34,6 @@ public class UserRoleDao {
         return userRoles;
     }
 
-    /**
-     * gets a userRoles by a specified last name and puts them into a list
-     * @param lastName last name to search
-     * @return list of results
-     */
-    public List<UserRole> getUserRolesByLastName(String lastName) {
-        Session session = sessionFactory.openSession();
-        CriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<UserRole> query = builder.createQuery(UserRole.class);
-        Root<UserRole> root = query.from(UserRole.class);
-        Expression<String> propertyPath = root.get("lastName");
-        query.where(builder.like(propertyPath, "%" + lastName + "%"));
-        List<UserRole> userRoles = session.createQuery(query).getResultList();
-        session.close();
-        return userRoles;
-    }
 
     /**
      * gets specific userRole by id

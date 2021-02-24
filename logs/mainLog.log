@@ -42,3 +42,6 @@
 [ERROR] 2021-02-24 16:51:17.132 [main] Database - java.sql.SQLException: Can not issue empty query.
 [ERROR] 2021-02-24 16:51:17.488 [main] Database - java.sql.SQLException: Can not issue empty query.
 [ERROR] 2021-02-24 16:51:17.627 [main] Database - java.sql.SQLException: Can not issue empty query.
+[INFO ] 2021-02-24 17:03:26.643 [main] UserDao - User{userId=31, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-02-24, dateDeleted=null}
+[INFO ] 2021-02-24 17:04:11.620 [main] UserDao - User{userId=34, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-02-24, dateDeleted=null}
+[INFO ] 2021-02-24 17:06:13.813 [main] UserDao - User{userId=37, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-02-24, dateDeleted=null}
