@@ -16,11 +16,13 @@ class UserDaoTest {
 
     UserDao dao;
     UserRoleDao roleDao;
+    GenericDao genericDao;
 
     @BeforeEach
     void setUp() {
         dao = new UserDao();
         roleDao = new UserRoleDao();
+        genericDao = new GenericDao(User.class);
         Database db = Database.getInstance();
         db.runSQL("cleandb.sql");
     }
@@ -28,6 +30,12 @@ class UserDaoTest {
     @Test
     void getAllUsersSuccess() {
         List<User> users = dao.getAllUsers();
+        assertEquals(6, users.size());
+    }
+
+    @Test
+    void getAllUsersGenericDaoSuccess() {
+        List<User> users = genericDao.getAll();
         assertEquals(6, users.size());
     }
 
@@ -43,6 +51,13 @@ class UserDaoTest {
         User retrievedUser = dao.getUserById(3);
         assertNotNull(retrievedUser);
         assertEquals("Barney", retrievedUser.getFirstName());
+    }
+
+    @Test
+    void getByIdGenericDaoSuccess() {
+        User retrievedUser = (User)genericDao.getById(2);
+        assertNotNull(retrievedUser);
+        assertEquals("Hensen", retrievedUser.getLastName());
     }
 
     @Test
@@ -84,4 +99,16 @@ class UserDaoTest {
         users = dao.getAllUsers();
         assertEquals(6, users.size());
     }
+
+    void deleteGenericDaoSuccess() {
+        User testUser = new User("test", "user", "testuser", "email", "password", true, Date.valueOf(LocalDate.now()));
+        dao.insert(testUser);
+        List<User> users = dao.getAllUsers();
+        assertEquals(7, users.size());
+        dao.delete(testUser);
+        users = dao.getAllUsers();
+        assertEquals(6, users.size());
+    }
+
+
 }
