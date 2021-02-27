@@ -46,4 +46,14 @@ public class LessonDaoTest {
 
         assertNotNull(lessonDao.getById(newLessonId));
     }
+
+    @Test
+    void getAllLessonsSuccess() {
+        List<Lesson> retrievedLessons = lessonDao.getAll();
+        assertEquals(4, retrievedLessons.size());
+    }
+
+    void updateLessonSuccess() {
+
+    }
 }
