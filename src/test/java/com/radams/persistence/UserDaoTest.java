@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -138,6 +139,16 @@ class UserDaoTest {
         genericDao.delete(testUser);
         users = genericDao.getAll();
         assertEquals(6, users.size());
+    }
+
+    @Test
+    void findByLastNamePropertySuccess() throws Exception {
+         String searchTerm = "Coyne";
+         String searchProperty = "lastName";
+         List results = genericDao.findByPropertyEqual(searchProperty, searchTerm);
+         assertTrue(results.size() > 0);
+         User result = (User)results.get(0);
+         assertEquals(result.getLastName(), searchTerm);
     }
 
 
