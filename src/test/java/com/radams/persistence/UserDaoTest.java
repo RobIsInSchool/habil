@@ -23,6 +23,11 @@ class UserDaoTest {
         db.runSQL("cleandb.sql");
     }
 
+    private User getTestUser() {
+        User testUser = new User("test", "user", "testuser", "email", "password", true, Date.valueOf(LocalDate.now()));
+        return testUser;
+    }
+
     @Test
     void getAllUsersSuccess() {
         List<User> users = userDao.getAll();
@@ -50,7 +55,7 @@ class UserDaoTest {
 
     @Test
     void insertSuccess() {
-        User testUser = new User("test", "user", "testuser", "email", "password", true, Date.valueOf(LocalDate.now()));
+        User testUser = getTestUser();
         int newId = userDao.insert(testUser);
         User retrievedUser = (User) userDao.getById(newId);
         assertEquals(newId, retrievedUser.getUserId());
@@ -58,7 +63,7 @@ class UserDaoTest {
 
     @Test
     void insertWithRoleSuccess() {
-        User testUser = new User("test", "user", "testuser", "email", "password", true, Date.valueOf(LocalDate.now()));
+        User testUser = getTestUser();
         UserRole role = new UserRole("testRole", testUser);
         testUser.addRole(role);
         int id = userDao.insert(testUser);
@@ -69,7 +74,7 @@ class UserDaoTest {
 
     @Test
     void deleteSuccess() {
-        User testUser = new User("test", "user", "testuser", "email", "password", true, Date.valueOf(LocalDate.now()));
+        User testUser = getTestUser();
         userDao.insert(testUser);
         List<User> users = userDao.getAll();
         assertEquals(7, users.size());
