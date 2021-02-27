@@ -71,10 +71,28 @@ class UserDaoTest {
     }
 
     @Test
+    void saveOrUpdateGenericDaoSuccess() {
+        String newLastName = "changed";
+        User userToUpdate = (User)genericDao.getById(1);
+        userToUpdate.setLastName(newLastName);
+        genericDao.saveOrUpdate(userToUpdate);
+        User retrievedUser = (User)genericDao.getById(1);
+        assertEquals(retrievedUser.getLastName(), newLastName);
+    }
+
+    @Test
     void insertSuccess() {
         User testUser = new User("test", "user", "testuser", "email", "password", true, Date.valueOf(LocalDate.now()));
         int newId = dao.insert(testUser);
         User retrievedUser = dao.getUserById(newId);
+        assertEquals(newId, retrievedUser.getUserId());
+    }
+
+    @Test
+    void insertGenericDaoSuccess() {
+        User testUser = new User("test", "user", "testuser", "email", "password", true, Date.valueOf(LocalDate.now()));
+        int newId = genericDao.insert(testUser);
+        User retrievedUser = (User)genericDao.getById(newId);
         assertEquals(newId, retrievedUser.getUserId());
     }
 
@@ -90,6 +108,17 @@ class UserDaoTest {
     }
 
     @Test
+    void insertWithRoleGenericDaoSuccess() {
+        User testUser = new User("test", "user", "testuser", "email", "password", true, Date.valueOf(LocalDate.now()));
+        UserRole role = new UserRole("testRole", testUser);
+        testUser.addRole(role);
+        int id = genericDao.insert(testUser);
+        User retrievedUser = (User)genericDao.getById(id);
+        assertEquals(id, retrievedUser.getUserId());
+        assertEquals(1, retrievedUser.getUserRoles().size());
+    }
+
+    @Test
     void deleteSuccess() {
         User testUser = new User("test", "user", "testuser", "email", "password", true, Date.valueOf(LocalDate.now()));
         dao.insert(testUser);
@@ -100,13 +129,14 @@ class UserDaoTest {
         assertEquals(6, users.size());
     }
 
+    @Test
     void deleteGenericDaoSuccess() {
         User testUser = new User("test", "user", "testuser", "email", "password", true, Date.valueOf(LocalDate.now()));
-        dao.insert(testUser);
-        List<User> users = dao.getAllUsers();
+        genericDao.insert(testUser);
+        List<User> users = genericDao.getAll();
         assertEquals(7, users.size());
-        dao.delete(testUser);
-        users = dao.getAllUsers();
+        genericDao.delete(testUser);
+        users = genericDao.getAll();
         assertEquals(6, users.size());
     }
 

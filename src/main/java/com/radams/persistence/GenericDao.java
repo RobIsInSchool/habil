@@ -49,6 +49,10 @@ public class GenericDao<T> {
         return entity;
     }
 
+    /**
+     * deletes the entity
+     * @param entity the entity you want to delete
+     */
     public void delete(T entity) {
         logger.info(entity);
         Session session = getSession();
@@ -58,6 +62,10 @@ public class GenericDao<T> {
         session.close();
     }
 
+    /**
+     * Gets all records of an entity
+     * @return a list of records of the entity
+     */
     public List<T> getAll() {
         Session session = getSession();
 
@@ -68,6 +76,34 @@ public class GenericDao<T> {
         List<T> list = session.createQuery(query).getResultList();
         session.close();
         return list;
+    }
+
+    /**
+     * Inserts the entity.
+     *
+     * @param entity entity to be inserted
+     */
+    public int insert(T entity) {
+        int id = 0;
+        Session session = getSession();
+        Transaction transaction = session.beginTransaction();
+        id = (int)session.save(entity);
+        transaction.commit();
+        session.close();
+        return id;
+    }
+
+    /**
+     * Inserts or updates the entity.
+     *
+     * @param entity entity to be inserted/saved
+     */
+    public void saveOrUpdate(T entity) {
+        Session session = getSession();
+        Transaction transaction = session.beginTransaction();
+        session.saveOrUpdate(entity);
+        transaction.commit();
+        session.close();
     }
 
 }
