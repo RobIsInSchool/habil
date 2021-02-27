@@ -57,10 +57,10 @@ public class User implements Serializable {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<UserRole> userRoles = new HashSet<>();
 
-    @OneToMany(mappedBy = "studentId", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<Lesson> lessonsTaken = new HashSet<>();
 
-    @OneToMany(mappedBy = "teacherId", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<Lesson> lessonsTaught = new HashSet<>();
 
 
@@ -331,6 +331,10 @@ public class User implements Serializable {
 
     public void addLessonTaken(Lesson lesson) {
         lessonsTaken.add(lesson);
+    }
+
+    public void addLessonTaught(Lesson lesson) {
+        lessonsTaught.add(lesson);
     }
 
     @Override

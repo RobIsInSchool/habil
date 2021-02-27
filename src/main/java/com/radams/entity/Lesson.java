@@ -7,6 +7,8 @@ import javax.persistence.*;
 /**
  * The type Lesson.
  */
+@Entity(name = "Lesson")
+@Table(name = "lessons")
 public class Lesson {
 
     @Id
@@ -16,9 +18,11 @@ public class Lesson {
     private int lessonId;
 
     @ManyToOne
+    @JoinColumn(name = "student_user_id", referencedColumnName = "id", nullable = false)
     private User student;
 
     @ManyToOne
+    @JoinColumn(name = "teacher_user_id", referencedColumnName = "id", nullable = false)
     private User teacher;
 
     /**
