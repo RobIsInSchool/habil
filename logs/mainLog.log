@@ -61,3 +61,4 @@
 [INFO ] 2021-02-27 14:08:43.426 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
 [INFO ] 2021-02-27 14:39:26.219 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
 [INFO ] 2021-02-27 14:39:43.996 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-02-27 14:50:16.105 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
