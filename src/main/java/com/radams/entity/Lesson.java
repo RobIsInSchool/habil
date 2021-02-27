@@ -1,13 +1,25 @@
 package com.radams.entity;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+
 /**
  * The type Lesson.
  */
 public class Lesson {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native", strategy = "native")
+    @Column(name = "id")
     private int lessonId;
-    private int studentId;
-    private int teacherId;
+
+    @ManyToOne
+    private User student;
+
+    @ManyToOne
+    private User teacher;
 
     /**
      * Instantiates a new Lesson.
@@ -19,74 +31,74 @@ public class Lesson {
     /**
      * Instantiates a new Lesson.
      *
-     * @param studentId the student id
-     * @param teacherId the teacher id
+     * @param student the student id
+     * @param teacher the teacher id
      */
-    public Lesson(int studentId, int teacherId) {
-        this.studentId = studentId;
-        this.teacherId = teacherId;
+    public Lesson(User student, User teacher) {
+        this.student = student;
+        this.teacher = teacher;
     }
 
     /**
      * Gets lesson id.
      *
-     * @return the lesson id
+     * @return the lesson
      */
     public int getLessonId() {
         return lessonId;
     }
 
     /**
-     * Sets lesson id.
+     * Sets lesson
      *
-     * @param lessonId the lesson id
+     * @param lessonId the lesson
      */
     public void setLessonId(int lessonId) {
         this.lessonId = lessonId;
     }
 
     /**
-     * Gets student id.
+     * Gets student.
      *
-     * @return the student id
+     * @return the student
      */
-    public int getStudentId() {
-        return studentId;
+    public User getStudent() {
+        return student;
     }
 
     /**
-     * Sets student id.
+     * Sets student
      *
-     * @param studentId the student id
+     * @param student the student
      */
-    public void setStudentId(int studentId) {
-        this.studentId = studentId;
+    public void setStudent(User student) {
+        this.student = student;
     }
 
     /**
-     * Gets teacher id.
+     * Gets teacher
      *
-     * @return the teacher id
+     * @return the teacher
      */
-    public int getTeacherId() {
-        return teacherId;
+    public User getTeacher() {
+        return teacher;
     }
 
     /**
      * Sets teacher id.
      *
-     * @param teacherId the teacher id
+     * @param teacher the teacher
      */
-    public void setTeacherId(int teacherId) {
-        this.teacherId = teacherId;
+    public void setTeacher(User teacher) {
+        this.teacher = teacher;
     }
 
     @Override
     public String toString() {
         return "Lesson{" +
                 "lessonId=" + lessonId +
-                ", studentId=" + studentId +
-                ", teacherId=" + teacherId +
+                ", student=" + student.getUserId() +
+                ", teacher=" + teacher.getUserId() +
                 '}';
     }
 }

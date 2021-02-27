@@ -2,7 +2,6 @@ package com.radams.entity;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.ejb.Local;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Date;
@@ -41,10 +40,10 @@ public class User implements Serializable {
     private String password;
 
     @Column(name = "lessons_taken")
-    private Integer lessonsTaken;
+    private Integer numLessonsTaken;
 
     @Column(name = "lessons_taught")
-    private Integer lessonsTaught;
+    private Integer numLessonsTaught;
 
     @Column(name = "is_active")
     private boolean isActive;
@@ -57,6 +56,12 @@ public class User implements Serializable {
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<UserRole> userRoles = new HashSet<>();
+
+    @OneToMany(mappedBy = "studentId", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Lesson> lessonsTaken = new HashSet<>();
+
+    @OneToMany(mappedBy = "teacherId", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Lesson> lessonsTaught = new HashSet<>();
 
 
     /**
@@ -201,17 +206,17 @@ public class User implements Serializable {
      *
      * @return the lessons taken
      */
-    public Integer getLessonsTaken() {
-        return lessonsTaken;
+    public Integer getNumLessonsTaken() {
+        return numLessonsTaken;
     }
 
     /**
      * Sets lessons taken.
      *
-     * @param lessonsTaken the lessons taken
+     * @param numLessonsTaken the lessons taken
      */
-    public void setLessonsTaken(Integer lessonsTaken) {
-        this.lessonsTaken = lessonsTaken;
+    public void setNumLessonsTaken(Integer numLessonsTaken) {
+        this.numLessonsTaken = numLessonsTaken;
     }
 
     /**
@@ -219,17 +224,17 @@ public class User implements Serializable {
      *
      * @return the lessons taught
      */
-    public Integer getLessonsTaught() {
-        return lessonsTaught;
+    public Integer getNumLessonsTaught() {
+        return numLessonsTaught;
     }
 
     /**
      * Sets lessons taught.
      *
-     * @param lessonsTaught the lessons taught
+     * @param numLessonsTaught the lessons taught
      */
-    public void setLessonsTaught(Integer lessonsTaught) {
-        this.lessonsTaught = lessonsTaught;
+    public void setNumLessonsTaught(Integer numLessonsTaught) {
+        this.numLessonsTaught = numLessonsTaught;
     }
 
     /**
@@ -324,6 +329,10 @@ public class User implements Serializable {
         role.setUser(null);
     }
 
+    public void addLessonTaken(Lesson lesson) {
+        lessonsTaken.add(lesson);
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -333,8 +342,8 @@ public class User implements Serializable {
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", lessonsTaken=" + lessonsTaken +
-                ", lessonsTaught=" + lessonsTaught +
+                ", lessonsTaken=" + numLessonsTaken +
+                ", lessonsTaught=" + numLessonsTaught +
                 ", isActive=" + isActive +
                 ", dateCreated=" + dateCreated +
                 ", dateDeleted=" + dateDeleted +
