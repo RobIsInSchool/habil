@@ -1,22 +1,28 @@
 # Project Plan
 
 ### Week 4
-- [ ] Complete Checkpoint 1
-- [ ] Create database and tables
-- [ ] Create jsp templates
+- [x] Complete Checkpoint 1
+- [x] Create database and tables
+
 
 ### Week 5
 - [ ] Create entities
-- [ ] Implement log4j
+- [x] Implement log4j
 - [ ] Write unit tests
 
 ### Week 6
-- [ ] Create DAO(s) with Hibernate
+- [x] Create DAO(s) with Hibernate
 
 ### Week 7
+- [ ] Deploy to AWS
 - [ ] User authentication
 - [ ] Admin authentication
 
+
 ### Week 8
-- [ ] Deploy to AWS
+- [ ] Create jsp templates
 - [ ] Display db data to jsp
+
+### Week 9
+
+- [ ] Set up controller(s)
