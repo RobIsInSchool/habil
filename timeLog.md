@@ -22,3 +22,5 @@
 | 2/22/21 | Again with the troubleshooting | .5 ||
 | 2/24/21 | Tore everything down, built it back up, it all works now| 4 ||
 | 2/27/21 | Created Lesson entity with one-to-many on Users with fully-tested CRUD | 5 | Super productive day! |
+| 2/28/21 | Worked on Professional Development Presentation | 1 ||
+| 3/2/21 | Finished Professional Development Presentation | 2 ||
