@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "UserDisplayServlet", value = "/UserDisplay")
+@WebServlet(name = "UserDisplayServlet", value = "/displayUsers")
 public class UserDisplayServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
