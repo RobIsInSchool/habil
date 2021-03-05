@@ -9,6 +9,10 @@
         </header>
         <p>The application is still in development, but you can click <a href="displayUsers">here</a> to display all users</p>
         <p>You can access the login page <a href="login.jsp">here.</a></p>
+
+        <aside>
+            <p>Psst! Hey! Are you an admin? <a href="admin.jsp">Go here</a> </p>
+        </aside>
     </div>
     </body>
 </html>
