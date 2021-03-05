@@ -110,3 +110,6 @@
 [INFO ] 2021-03-04 15:11:13.534 [main] GenericDao - UserRole{roleId=126, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null}}
 [INFO ] 2021-03-04 15:11:14.757 [main] GenericDao - User{userId=104, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-04, dateDeleted=null}
 [INFO ] 2021-03-04 15:11:15.944 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-05 09:51:51.956 [main] GenericDao - UserRole{roleId=130, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null}}
+[INFO ] 2021-03-05 09:51:53.372 [main] GenericDao - User{userId=107, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-05, dateDeleted=null}
+[INFO ] 2021-03-05 09:51:54.867 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
