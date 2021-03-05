@@ -19,34 +19,7 @@
         <c:out value="${nav}" escapeXml="false"/>
     </header>
     <main>
-        <table>
-            <thead>
-            <tr>
-                <th>User ID</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>Roles</th>
-            </tr>
-            </thead>
-            <tbody>
-            <c:forEach var="result" items="${users}">
-                <tr>
-                    <td>${result.userId}</td>
-                    <td>${result.firstName}</td>
-                    <td>${result.lastName}</td>
-                    <td>${result.email}</td>
-                    <td>
-                        <ul>
-                        <c:forEach var="role" items="${result.userRoles}">
-                            <li>${role.roleName}</li>
-                        </c:forEach>
-                        </ul>
-                    </td>
-                </tr>
-            </c:forEach>
-            </tbody>
-        </table>
+        <h2>Welcome, administrator</h2>
     </main>
 </div>
 </body>
