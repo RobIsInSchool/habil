@@ -11,6 +11,19 @@
 <c:import var="head" url="components/head.jsp" />
 <c:out value="${head}" escapeXml="false"/>
 <body>
-    <p>Login form here</p>
+<form action="j_security_check" method="post">
+    <table>
+        <tr>
+            <td>User Name: <input type="text" name="j_username"></td>
+        </tr>
+        <tr>
+            <td>Password: <input type="text" name="j_password"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Log In"> </td>
+        </tr>
+    </table>
+</form>
+
 </body>
 </html>
