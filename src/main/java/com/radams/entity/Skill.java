@@ -3,6 +3,8 @@ package com.radams.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * The type Skill.
@@ -19,6 +21,14 @@ public class Skill {
 
     @Column(name = "skill_name")
     private String skillName;
+
+    @ManyToMany
+    @JoinTable(
+            name = "user_skills_has",
+            joinColumns = { @JoinColumn(name = "id") },
+            inverseJoinColumns = { @JoinColumn(name = "id") }
+    )
+    private Set<User> users = new HashSet<>();
 
     /**
      * Instantiates a new Skill.
