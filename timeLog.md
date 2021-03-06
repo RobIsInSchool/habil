@@ -26,3 +26,4 @@
 | 3/2/21 | Finished Professional Development Presentation | 2 ||
 | 3/4/21 | Set up AWS EC2, deployed Habil WAR to instance, created servlet + display for Habil users, general troubleshooting | 5 | Catching back up! |
 | 3/5/21 | Laid the groundwork for user authentication in personal project | 3.25 | All caught up! |
+| 3/6/21 | Added many-to-many relationships to indie project with partial testing and successful display | 5 | Big milestone! |
