@@ -61,10 +61,35 @@ public class UserSkillsTest {
         Skill fishingSkill = (Skill)skillDao.getById(1);
         joeCoyne.addSkillHas(fishingSkill);
         userDao.saveOrUpdate(joeCoyne);
+        User updatedJoeCoyneWith = (User)userDao.getById(1);
+        updatedJoeCoyneWith.removeSkillHas(fishingSkill);
+        userDao.saveOrUpdate(updatedJoeCoyneWith);
+        User updatedJoeCoyneWithout = (User)userDao.getById(1);
+        assertEquals(0, updatedJoeCoyneWithout.getSkillsHas().size());
+
+    }
+
+    @Test
+    void updateUserJoeCoyneWithNewSkillWants() {
+        User joeCoyne = (User)userDao.getById(1);
+        Skill autoMaintenance = (Skill)skillDao.getById(2);
+        joeCoyne.addSkillsWants(autoMaintenance);
+        userDao.saveOrUpdate(joeCoyne);
         User updatedJoeCoyne = (User)userDao.getById(1);
-        updatedJoeCoyne.removeSkillHas(fishingSkill);
-        userDao.saveOrUpdate(updatedJoeCoyne);
-        User updatedJoeCoyneRemoved = (User)userDao.getById(1);
-        assertEquals(0, updatedJoeCoyneRemoved.getSkillsHas().size());
+        assertEquals(1, updatedJoeCoyne.getSkillsWants().size());
+    }
+
+    @Test
+    void updateUserJoeCoyneWithRemovedSkillWants() {
+        User joeCoyne = (User)userDao.getById(1);
+        Skill autoMaintenance = (Skill)skillDao.getById(1);
+        joeCoyne.addSkillsWants(autoMaintenance);
+        userDao.saveOrUpdate(joeCoyne);
+        User updatedJoeCoyneWith = (User)userDao.getById(1);
+        updatedJoeCoyneWith.removeSkillWants(autoMaintenance);
+        userDao.saveOrUpdate(updatedJoeCoyneWith);
+        User updatedJoeCoyneWithout = (User)userDao.getById(1);
+        assertEquals(0, updatedJoeCoyneWithout.getSkillsWants().size());
+
     }
 }
