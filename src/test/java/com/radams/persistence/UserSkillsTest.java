@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -34,8 +35,36 @@ public class UserSkillsTest {
         assertEquals("fishing", fishing.getSkillName());
     }
 
+    @Test
+    void insertSkillSuccess() {
+        String skillName = "Auto Maintenance";
+        Skill autoMaintenance = new Skill(skillName);
+        int newSkillId = skillDao.insert(autoMaintenance);
+        assertNotNull(newSkillId);
+        Skill retrievedSkill = (Skill)skillDao.getById(newSkillId);
+        assertEquals(skillName, retrievedSkill.getSkillName());
+    }
+
+    @Test
     void updateUserJoeCoyneWithNewSkillHas() {
         User joeCoyne = (User)userDao.getById(1);
-        Skill someSkill = (Skill)skillDao.getById(1);
+        Skill fishingSkill = (Skill)skillDao.getById(1);
+        joeCoyne.addSkillHas(fishingSkill);
+        userDao.saveOrUpdate(joeCoyne);
+        User updatedJoeCoyne = (User)userDao.getById(1);
+        assertEquals(1, updatedJoeCoyne.getSkillsHas().size());
+    }
+
+    @Test
+    void updateUserJoeCoyneWithRemovedSkillHas() {
+        User joeCoyne = (User)userDao.getById(1);
+        Skill fishingSkill = (Skill)skillDao.getById(1);
+        joeCoyne.addSkillHas(fishingSkill);
+        userDao.saveOrUpdate(joeCoyne);
+        User updatedJoeCoyne = (User)userDao.getById(1);
+        updatedJoeCoyne.removeSkillHas(fishingSkill);
+        userDao.saveOrUpdate(updatedJoeCoyne);
+        User updatedJoeCoyneRemoved = (User)userDao.getById(1);
+        assertEquals(0, updatedJoeCoyneRemoved.getSkillsHas().size());
     }
 }

@@ -1,3 +1,5 @@
+delete from user_skills_has;
+delete from user_skills_wants;
 delete from roles;
 delete from lessons;
 delete from users;

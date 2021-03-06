@@ -63,11 +63,11 @@ public class User implements Serializable {
     @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<Lesson> lessonsTaught = new HashSet<>();
 
-    @ManyToMany
+    @ManyToMany(fetch=FetchType.EAGER)
     @JoinTable(
             name = "user_skills_has",
-            joinColumns = { @JoinColumn(name = "users.id") },
-            inverseJoinColumns = { @JoinColumn(name = "skills.id") }
+            joinColumns = { @JoinColumn(name = "user_id") },
+            inverseJoinColumns = { @JoinColumn(name = "skill_id") }
     )
     private Set<Skill> skillsHas = new HashSet<>();
 
@@ -326,6 +326,42 @@ public class User implements Serializable {
     }
 
     /**
+     * Gets skills has.
+     *
+     * @return the skills has
+     */
+    public Set<Skill> getSkillsHas() {
+        return skillsHas;
+    }
+
+    /**
+     * Sets skills has.
+     *
+     * @param skillsHas the skills has
+     */
+    public void setSkillsHas(Set<Skill> skillsHas) {
+        this.skillsHas = skillsHas;
+    }
+
+    /**
+     * Gets skills wants.
+     *
+     * @return the skills wants
+     */
+    public Set<Skill> getSkillsWants() {
+        return skillsWants;
+    }
+
+    /**
+     * Sets skills wants.
+     *
+     * @param skillsWants the skills wants
+     */
+    public void setSkillsWants(Set<Skill> skillsWants) {
+        this.skillsWants = skillsWants;
+    }
+
+    /**
      * Add role.
      *
      * @param role the role
@@ -345,13 +381,34 @@ public class User implements Serializable {
         role.setUser(null);
     }
 
+    /**
+     * Add lesson taken.
+     *
+     * @param lesson the lesson
+     */
     public void addLessonTaken(Lesson lesson) {
         lessonsTaken.add(lesson);
     }
 
+    /**
+     * Add lesson taught.
+     *
+     * @param lesson the lesson
+     */
     public void addLessonTaught(Lesson lesson) {
         lessonsTaught.add(lesson);
     }
+
+    public void addSkillHas(Skill skill) {
+        skillsHas.add(skill);
+        skill.addUsersHas(this);
+    }
+
+    public void removeSkillHas(Skill skill) {
+        skillsHas.remove(skill);
+        skill.removeUsersHas(this);
+    }
+
 
     @Override
     public String toString() {

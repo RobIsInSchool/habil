@@ -22,7 +22,7 @@ public class Skill {
     @Column(name = "skill_name")
     private String skillName;
 
-    @ManyToMany(mappedBy = "skillsHas")
+    @ManyToMany(mappedBy = "skillsHas", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<User> usersHave = new HashSet<>();
 
     @ManyToMany(mappedBy = "skillsWants")
@@ -37,10 +37,9 @@ public class Skill {
     /**
      * Instantiates a new Skill.
      *
-     * @param skillId   the skill id
      * @param skillName the skill name
      */
-    public Skill(int skillId, String skillName) {
+    public Skill(String skillName) {
         this();
         this.skillName = skillName;
     }
@@ -79,6 +78,14 @@ public class Skill {
      */
     public void setSkillName(String skillName) {
         this.skillName = skillName;
+    }
+
+    public void addUsersHas(User user) {
+        usersHave.add(user);
+    }
+
+    public void removeUsersHas(User user) {
+        usersHave.remove(user);
     }
 
     @Override
