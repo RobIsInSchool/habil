@@ -63,8 +63,21 @@ public class User implements Serializable {
     @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<Lesson> lessonsTaught = new HashSet<>();
 
-    @ManyToMany(mappedBy = "skills")
+    @ManyToMany(mappedBy = "users")
+    @JoinTable(
+            name = "user_skills_has",
+            joinColumns = { @JoinColumn(name = "id") },
+            inverseJoinColumns = { @JoinColumn(name = "id") }
+    )
     private Set<Skill> skillsHas = new HashSet<>();
+
+    @ManyToMany
+    @JoinTable(
+            name = "user_skills_wants",
+            joinColumns = { @JoinColumn(name = "id") },
+            inverseJoinColumns = { @JoinColumn(name = "id") }
+    )
+    private Set<Skill> skillsWants = new HashSet<>();
 
 
     /**

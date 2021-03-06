@@ -22,20 +22,10 @@ public class Skill {
     @Column(name = "skill_name")
     private String skillName;
 
-    @ManyToMany
-    @JoinTable(
-            name = "user_skills_has",
-            joinColumns = { @JoinColumn(name = "id") },
-            inverseJoinColumns = { @JoinColumn(name = "id") }
-    )
+    @ManyToMany(mappedBy = "user_skills_has")
     private Set<User> usersHave = new HashSet<>();
 
-    @ManyToMany
-    @JoinTable(
-            name = "user_skills_wants",
-            joinColumns = { @JoinColumn(name = "id") },
-            inverseJoinColumns = { @JoinColumn(name = "id") }
-    )
+    @ManyToMany(mappedBy = "user_skills_wants")
     private Set<User> usersWant = new HashSet<>();
 
     /**
