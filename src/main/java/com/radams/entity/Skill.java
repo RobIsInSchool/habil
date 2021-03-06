@@ -25,7 +25,7 @@ public class Skill {
     @ManyToMany(mappedBy = "skillsHas", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<User> usersHave = new HashSet<>();
 
-    @ManyToMany(mappedBy = "skillsWants")
+    @ManyToMany(mappedBy = "skillsWants", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<User> usersWant = new HashSet<>();
 
     /**
@@ -86,6 +86,10 @@ public class Skill {
 
     public void removeUsersHas(User user) {
         usersHave.remove(user);
+    }
+
+    public void addUsersWants(User user) {
+        usersWant.add(user);
     }
 
     @Override
