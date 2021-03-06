@@ -28,7 +28,15 @@ public class Skill {
             joinColumns = { @JoinColumn(name = "id") },
             inverseJoinColumns = { @JoinColumn(name = "id") }
     )
-    private Set<User> users = new HashSet<>();
+    private Set<User> usersHave = new HashSet<>();
+
+    @ManyToMany
+    @JoinTable(
+            name = "user_skills_wants",
+            joinColumns = { @JoinColumn(name = "id") },
+            inverseJoinColumns = { @JoinColumn(name = "id") }
+    )
+    private Set<User> usersWant = new HashSet<>();
 
     /**
      * Instantiates a new Skill.

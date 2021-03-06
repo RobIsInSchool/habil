@@ -63,6 +63,9 @@ public class User implements Serializable {
     @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<Lesson> lessonsTaught = new HashSet<>();
 
+    @ManyToMany(mappedBy = "skills")
+    private Set<Skill> skillsHas = new HashSet<>();
+
 
     /**
      * Instantiates a new User.
