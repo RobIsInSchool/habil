@@ -66,16 +66,16 @@ public class User implements Serializable {
     @ManyToMany
     @JoinTable(
             name = "user_skills_has",
-            joinColumns = { @JoinColumn(name = "id") },
-            inverseJoinColumns = { @JoinColumn(name = "id") }
+            joinColumns = { @JoinColumn(name = "users.id") },
+            inverseJoinColumns = { @JoinColumn(name = "skills.id") }
     )
     private Set<Skill> skillsHas = new HashSet<>();
 
     @ManyToMany
     @JoinTable(
             name = "user_skills_wants",
-            joinColumns = { @JoinColumn(name = "id") },
-            inverseJoinColumns = { @JoinColumn(name = "id") }
+            joinColumns = { @JoinColumn(name = "users.id") },
+            inverseJoinColumns = { @JoinColumn(name = "skills.id") }
     )
     private Set<Skill> skillsWants = new HashSet<>();
 

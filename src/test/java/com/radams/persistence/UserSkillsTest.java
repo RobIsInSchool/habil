@@ -31,6 +31,7 @@ public class UserSkillsTest {
     void getSkillById() {
         Skill fishing = (Skill)skillDao.getById(1);
         assertNotNull(fishing);
+        assertEquals("fishing", fishing.getSkillName());
     }
 
     void updateUserJoeCoyneWithNewSkillHas() {
