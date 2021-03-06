@@ -27,6 +27,8 @@
                 <th>Last Name</th>
                 <th>Email</th>
                 <th>Roles</th>
+                <th>Skills Has</th>
+                <th>Skills Wish-List</th>
             </tr>
             </thead>
             <tbody>
@@ -41,6 +43,20 @@
                         <c:forEach var="role" items="${result.userRoles}">
                             <li>${role.roleName}</li>
                         </c:forEach>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <c:forEach var="skillHas" items="${result.skillsHas}">
+                                <li>${skillHas.skillName}</li>
+                            </c:forEach>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <c:forEach var="skillWants" items="${result.skillsWants}">
+                                <li>${skillWants.skillName}</li>
+                            </c:forEach>
                         </ul>
                     </td>
                 </tr>
