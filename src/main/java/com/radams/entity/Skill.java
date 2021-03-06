@@ -22,10 +22,10 @@ public class Skill {
     @Column(name = "skill_name")
     private String skillName;
 
-    @ManyToMany(mappedBy = "user_skills_has")
+    @ManyToMany(mappedBy = "skillsHas")
     private Set<User> usersHave = new HashSet<>();
 
-    @ManyToMany(mappedBy = "user_skills_wants")
+    @ManyToMany(mappedBy = "skillsWants")
     private Set<User> usersWant = new HashSet<>();
 
     /**

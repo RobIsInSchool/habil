@@ -12,6 +12,7 @@
         <mapping class="com.radams.entity.User"/>
         <mapping class="com.radams.entity.UserRole"/>
         <mapping class="com.radams.entity.Lesson"/>
+        <mapping class="com.radams.entity.Skill"/>
 
     </session-factory>
 </hibernate-configuration>
