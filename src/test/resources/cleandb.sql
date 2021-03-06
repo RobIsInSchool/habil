@@ -8,3 +8,4 @@ INSERT INTO users (id, first_name, last_name, user_name, email, password, is_act
 INSERT INTO `roles` VALUES (1,'regUser','jcoyne'),(2,'regUser','fhensen'),(3,'admin','bcurry'),(4,'regUser','bcurry'),(5,'regUser','kmack'),(6,'admin','dklein');
 INSERT INTO `lessons` VALUES (1, 1, 2), (2, 2, 1), (3, 4, 6), (4, 6, 5), (5, 2, 1);
 INSERT INTO `skills` VALUES (1, 'fishing');
+INSERT INTO `skills` VALUES (2, 'Auto Maintenance');
