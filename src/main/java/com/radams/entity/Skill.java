@@ -1,11 +1,23 @@
 package com.radams.entity;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+
 /**
  * The type Skill.
  */
+@Entity(name = "Skill")
+@Table(name = "skills")
 public class Skill {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native", strategy = "native")
+    @Column(name = "id")
     private int skillId;
+
+    @Column(name = "skill_name")
     private String skillName;
 
     /**
