@@ -6,6 +6,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Date;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 
@@ -71,11 +72,11 @@ public class User implements Serializable {
     )
     private Set<Skill> skillsHas = new HashSet<>();
 
-    @ManyToMany
+    @ManyToMany(fetch=FetchType.EAGER)
     @JoinTable(
             name = "user_skills_wants",
-            joinColumns = { @JoinColumn(name = "users.id") },
-            inverseJoinColumns = { @JoinColumn(name = "skills.id") }
+            joinColumns = { @JoinColumn(name = "user_id") },
+            inverseJoinColumns = { @JoinColumn(name = "skill_id") }
     )
     private Set<Skill> skillsWants = new HashSet<>();
 
@@ -405,8 +406,38 @@ public class User implements Serializable {
     }
 
     public void removeSkillHas(Skill skill) {
-        skillsHas.remove(skill);
-        skill.removeUsersHas(this);
+        Iterator<Skill> iterator = skillsHas.iterator();
+        while(iterator.hasNext()) {
+            String skillName = iterator.next().getSkillName();
+            if(skillName.equals(skill.getSkillName())) {
+                iterator.remove();
+            }
+        }
+    }
+
+    public void addSkillsWants(Skill skill) {
+        skillsWants.add(skill);
+        skill.addUsersWants(this);
+    }
+
+    public void removeSkillWants(Skill skill) {
+        Iterator<Skill> iterator = skillsWants.iterator();
+        while(iterator.hasNext()) {
+            String skillName = iterator.next().getSkillName();
+            if(skillName.equals(skill.getSkillName())) {
+                iterator.remove();
+            }
+        }
+    }
+
+    public void removeSkillsWants(Skill skill) {
+        Iterator<Skill> iterator = skillsWants.iterator();
+        while(iterator.hasNext()) {
+            String skillName = iterator.next().getSkillName();
+            if(skillName.equals(skill.getSkillName())) {
+                iterator.remove();
+            }
+        }
     }
 
 
