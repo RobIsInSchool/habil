@@ -19,6 +19,7 @@
 /src/main/resources/hibernate.cfg.xml
 /logs/
 /designDocs/ERD.png
+/src/main/webapp/WEB-INF/web.xml
 
 # Gradle:
 .idea/gradle.xml
