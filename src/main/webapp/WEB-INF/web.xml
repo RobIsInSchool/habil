@@ -38,8 +38,22 @@
     </auth-constraint>
   </security-constraint>
 
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>displayServ</web-resource-name>
+      <url-pattern>/displayUsers</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+      <role-name>regUser</role-name>
+    </auth-constraint>
+  </security-constraint>
+
   <security-role>
     <role-name>admin</role-name>
+  </security-role>
+  <security-role>
+    <role-name>regUser</role-name>
   </security-role>
 
 </web-app>
