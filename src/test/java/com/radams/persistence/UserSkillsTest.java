@@ -91,7 +91,7 @@ public class UserSkillsTest {
     }
 
     @Test
-    void matchUsersBasedOnSkillsSuccess() {
+    void matchUsersBasedOnHasSkillsSuccess() {
         User joeCoyne = (User)userDao.getById(1);
         User karenMack = (User)userDao.getById(4);
         User barneyCurry = (User)userDao.getById(3);
@@ -111,37 +111,52 @@ public class UserSkillsTest {
         userDao.saveOrUpdate(barneyCurry);
 
         List<User> otherUsers = userDao.getAll();
-//        otherUsers.remove(joeCoyne);
-        Set<User> matchedUsers = new HashSet<>();
+        Set<User> matches = new HashSet<>();
 
-        Set<Skill> joeSkillsWants = joeCoyne.getSkillsWants();
-        Set<Skill> joeSkillsHas = joeCoyne.getSkillsHas();
+        getWantsFromHas(joeCoyne, otherUsers);
+        Set<User> hasMatches = getWantsFromHas(joeCoyne, otherUsers);
+        Set<User> wantsMatches = getHasFromWants(joeCoyne, otherUsers);
 
-        for (User user : otherUsers) {
-            Set<Skill> userWants = user.getSkillsWants();
-            Set<Skill> userHas = user.getSkillsHas();
-
-            Set<Skill> allSkills = new HashSet<>();
-            allSkills.addAll(userWants);
-            allSkills.addAll(userHas);
-
-            for (Skill skill : allSkills) {
-                int skillId = skill.getSkillId();
-                for (Skill wantSkill : joeSkillsWants) {
-                    int wantSkillId = wantSkill.getSkillId();
-                    if(wantSkillId == skillId) {
-                        System.out.println("joe wants auto");
-                        for (Skill joeSkillHas : joeSkillsHas) {
-                            int hasSkillId = joeSkillHas.getSkillId();
-                            System.out.println("Joe has: " + joeSkillHas);
-
-                            if (userHas.contains(skill) && userWants.contains(joeSkillHas)) {
-                                matchedUsers.add(user);
-                            }
-                        }
+        for (Skill skillHas : joeCoyne.getSkillsHas()) {
+            for (User otherUser : otherUsers) {
+                for (Skill skillWants : otherUser.getSkillsWants()){
+                    if (skillHas.getSkillName().equals(skillWants.getSkillName())) {
+                        matches.add(otherUser);
                     }
                 }
             }
         }
+        System.out.println(matches);
     }
+
+    private Set<User> getWantsFromHas(User user, List<User> otherUsers) {
+        Set<User> wantsMatches = new HashSet<>();
+        for (Skill skillHas : user.getSkillsHas()) {
+            for (User otherUser : otherUsers) {
+                for (Skill skillWants : otherUser.getSkillsWants()){
+                    if (skillHas.getSkillName().equals(skillWants.getSkillName())) {
+                        wantsMatches.add(otherUser);
+                    }
+                }
+            }
+        }
+        return wantsMatches;
+    }
+
+    private Set<User> getHasFromWants(User user, List<User> otherUsers) {
+        Set<User> hasMatches = new HashSet<>();
+        for (Skill skillWants : user.getSkillsWants()) {
+            for (User otherUser : otherUsers) {
+                for (Skill skillHas : otherUser.getSkillsHas()){
+                    if (skillHas.getSkillName().equals(skillWants.getSkillName())) {
+                        hasMatches.add(otherUser);
+                    }
+                }
+            }
+        }
+        return hasMatches;
+    }
+
 }
+
+
