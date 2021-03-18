@@ -55,6 +55,9 @@ public class User implements Serializable {
     @Column(name = "date_deleted")
     private Date dateDeleted;
 
+    @Column(name = "zip")
+    private String zip;
+
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<UserRole> userRoles = new HashSet<>();
 
@@ -308,6 +311,14 @@ public class User implements Serializable {
         this.dateDeleted = dateDeleted;
     }
 
+    public String getZip() {
+        return zip;
+    }
+
+    public void setZip(String zip) {
+        this.zip = zip;
+    }
+
     /**
      * Gets user roles.
      *
@@ -455,6 +466,7 @@ public class User implements Serializable {
                 ", isActive=" + isActive +
                 ", dateCreated=" + dateCreated +
                 ", dateDeleted=" + dateDeleted +
+                ", zip=" + zip +
                 '}';
     }
 
