@@ -1,5 +1,8 @@
 package com.radams.entity;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.radams.geoNames.PostalCodesItem;
+import com.radams.geoNames.Response;
 import com.radams.persistence.GenericDao;
 import com.radams.test.util.Database;
 import net.bytebuddy.description.type.TypeList;
@@ -26,13 +29,16 @@ public class TestServiceClient {
         User testUser = (User) userDao.getById(1);
         String zip = testUser.getZip();
         String targetString = "http://api.geonames.org/findNearbyPostalCodesJSON"
-                + "?maxRows=30&country=US"
+                + "?maxRows=1&country=US"
                 + "&postalcode=" + zip
                 + "&radius=30&username=mirado1155";
         Client client = ClientBuilder.newClient();
         WebTarget target =
                 client.target(targetString);
         String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
-        assertEquals("???", response);
+        ObjectMapper mapper = new ObjectMapper();
+        PostalCodesItem item = mapper.readValue(response, PostalCodesItem.class);
+        String postCode = item.getPostalCode();
+        assertEquals("53705", postCode);
     }
 }
