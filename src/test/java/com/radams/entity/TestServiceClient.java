@@ -1,17 +1,37 @@
 package com.radams.entity;
 
-import org.junit.Test;
+import com.radams.persistence.GenericDao;
+import com.radams.test.util.Database;
+import net.bytebuddy.description.type.TypeList;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+import com.radams.entity.User;
 import javax.ws.rs.client.*;
 import javax.ws.rs.core.MediaType;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestServiceClient {
 
+    GenericDao userDao;
+
+    @BeforeEach
+    void setUp() {
+        userDao = new GenericDao(User.class);
+        Database db = Database.getInstance();
+        db.runSQL("cleandb.sql");
+    }
+
     @Test
-    public void testswapiJSON() throws Exception {
+    public void testNearbyPostCodesJSON() throws Exception {
+        User testUser = (User) userDao.getById(1);
+        String zip = testUser.getZip();
+        String targetString = "http://api.geonames.org/findNearbyPostalCodesJSON"
+                + "?maxRows=30&country=US"
+                + "&postalcode=" + zip
+                + "&radius=30&username=mirado1155";
         Client client = ClientBuilder.newClient();
         WebTarget target =
-                client.target("http://api.geonames.org/findNearbyPostalCodesJSON?maxRows=30&country=US&postalcode=53705&radius=30&username=mirado1155");
+                client.target(targetString);
         String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
         assertEquals("???", response);
     }
