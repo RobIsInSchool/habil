@@ -27,3 +27,7 @@
 | 3/4/21 | Set up AWS EC2, deployed Habil WAR to instance, created servlet + display for Habil users, general troubleshooting | 5 | Catching back up! |
 | 3/5/21 | Laid the groundwork for user authentication in personal project | 3.25 | All caught up! |
 | 3/6/21 | Added many-to-many relationships to indie project with partial testing and successful display | 5 | Big milestone! |
+| 3/9/21 | Added security to deployed AWS app | 1.5 ||
+| 3/11/21 | Worked on adding main comparison algorithm | 1.5 ||
+| 3/16/21 | Met with team to discuss project | 1 ||
+| 3/18/21 | troubleshoot timezone error, working on mapping json results to class | 2.2 ||
