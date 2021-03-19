@@ -3,7 +3,7 @@ package com.radams.geoNames;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Response{
+public class LocationJSONResponse {
 
 	@JsonProperty("postalCodes")
 	private List<PostalCodesItem> postalCodes;
