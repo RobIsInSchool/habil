@@ -92,11 +92,11 @@ public class UserSkillsTest {
 
     @Test
     void matchUsersBasedOnHasSkillsSuccess() {
-        User joeCoyne = (User)userDao.getById(1);
-        User karenMack = (User)userDao.getById(4);
-        User barneyCurry = (User)userDao.getById(3);
-        Skill autoMaintenance = (Skill)skillDao.getById(2);
-        Skill fishing = (Skill)skillDao.getById(1);
+        User joeCoyne = (User) userDao.getById(1);
+        User karenMack = (User) userDao.getById(4);
+        User barneyCurry = (User) userDao.getById(3);
+        Skill autoMaintenance = (Skill) skillDao.getById(2);
+        Skill fishing = (Skill) skillDao.getById(1);
 
         //Joe Coyne wants to learn auto maintenance - Karen Mack and Barney Curry know auto maintenance
         //Joe Coyne knows how to fish, but only Karen Mack wants to learn how to fish
@@ -110,51 +110,47 @@ public class UserSkillsTest {
         userDao.saveOrUpdate(karenMack);
         userDao.saveOrUpdate(barneyCurry);
 
+        assertEquals(joeCoyne.getSkillsWants(), barneyCurry.getSkillsHas());
+        assertEquals(joeCoyne.getSkillsHas(), karenMack.getSkillsWants());
+
+        Set<Skill> userSkillsHas = joeCoyne.getSkillsHas();
+        Set<Skill> userSkillsWants = joeCoyne.getSkillsWants();
+
         List<User> otherUsers = userDao.getAll();
-        Set<User> matches = new HashSet<>();
+        otherUsers.remove(joeCoyne);
 
-        getWantsFromHas(joeCoyne, otherUsers);
-        Set<User> hasMatches = getWantsFromHas(joeCoyne, otherUsers);
-        Set<User> wantsMatches = getHasFromWants(joeCoyne, otherUsers);
+        Set<User> matchedUsers = new HashSet<>();
 
-        for (Skill skillHas : joeCoyne.getSkillsHas()) {
-            for (User otherUser : otherUsers) {
-                for (Skill skillWants : otherUser.getSkillsWants()){
-                    if (skillHas.getSkillName().equals(skillWants.getSkillName())) {
-                        matches.add(otherUser);
+        //Loop through all users. If their wants/has are complementary, add them to the matched users list
+
+
+        for (User otherUser : otherUsers) {
+            Boolean hasMatch = false; //if the main user has a skill another user wants
+            Boolean wantsMatch = false; //if the main user wants a skill another user has
+            Set<Skill> otherUserSkillsHas = otherUser.getSkillsHas();
+            Set<Skill> otherUserSkillsWants = otherUser.getSkillsWants();
+
+            for (Skill mainUserSkillHas : userSkillsHas) {
+                for (Skill otherWant : otherUserSkillsWants) {
+                    if(otherWant.equals(mainUserSkillHas)) {
+                        hasMatch = true;
                     }
                 }
             }
-        }
-        System.out.println(matches);
-    }
-
-    private Set<User> getWantsFromHas(User user, List<User> otherUsers) {
-        Set<User> wantsMatches = new HashSet<>();
-        for (Skill skillHas : user.getSkillsHas()) {
-            for (User otherUser : otherUsers) {
-                for (Skill skillWants : otherUser.getSkillsWants()){
-                    if (skillHas.getSkillName().equals(skillWants.getSkillName())) {
-                        wantsMatches.add(otherUser);
+            for (Skill mainUserSkillWants : userSkillsWants) {
+                for (Skill otherHas : otherUserSkillsHas) {
+                    if (otherHas.equals(mainUserSkillWants)) {
+                        wantsMatch = true;
                     }
                 }
             }
-        }
-        return wantsMatches;
-    }
 
-    private Set<User> getHasFromWants(User user, List<User> otherUsers) {
-        Set<User> hasMatches = new HashSet<>();
-        for (Skill skillWants : user.getSkillsWants()) {
-            for (User otherUser : otherUsers) {
-                for (Skill skillHas : otherUser.getSkillsHas()){
-                    if (skillHas.getSkillName().equals(skillWants.getSkillName())) {
-                        hasMatches.add(otherUser);
-                    }
-                }
+            if (wantsMatch && hasMatch) {
+                matchedUsers.add(otherUser);
             }
+
         }
-        return hasMatches;
+        assertEquals(1, matchedUsers.size());
     }
 
 }
