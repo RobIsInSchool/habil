@@ -102,7 +102,7 @@ public class User implements Serializable {
      * @param isActive    indicates if user is still active
      * @param dateCreated the date created
      */
-    public User(String firstName, String lastName, String username, String email, String password, boolean isActive, Date dateCreated) {
+    public User(String firstName, String lastName, String username, String email, String password, boolean isActive, String zip, Date dateCreated) {
         this();
         this.firstName = firstName;
         this.lastName = lastName;
@@ -110,6 +110,7 @@ public class User implements Serializable {
         this.email = email;
         this.password = password;
         this.isActive = isActive;
+        this.zip = zip;
         this.dateCreated = dateCreated;
     }
 
