@@ -158,3 +158,25 @@
 [ERROR] 2021-03-18 13:51:52.062 [main] Database - java.lang.Exception: Database.connect()... Error: MySQL Driver not found
 [ERROR] 2021-03-18 13:52:28.784 [main] Database - java.lang.Exception: Database.connect()... Error: MySQL Driver not found
 [ERROR] 2021-03-18 13:53:29.831 [main] Database - java.sql.SQLException: The server time zone value 'CDT' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specific time zone value if you want to utilize time zone support.
+[INFO ] 2021-03-21 12:41:25.161 [main] GenericDao - UserRole{roleId=35, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-21 12:41:27.711 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-21 12:45:24.332 [main] GenericDao - UserRole{roleId=38, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-21 12:45:25.781 [main] GenericDao - User{userId=28, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-21, dateDeleted=null, zip=53705}
+[INFO ] 2021-03-21 12:45:26.995 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-21 12:55:53.018 [main] GenericDao - UserRole{roleId=42, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-21 12:55:54.744 [main] GenericDao - User{userId=31, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-21, dateDeleted=null, zip=53705}
+[INFO ] 2021-03-21 12:55:57.489 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-21 12:57:27.182 [http-nio-8080-exec-5] DisplayMatchedUsersServlet - org.apache.catalina.core.ApplicationContextFacade@56b1343c
+[INFO ] 2021-03-21 12:58:58.532 [main] GenericDao - UserRole{roleId=46, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-21 12:59:00.413 [main] GenericDao - User{userId=34, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-21, dateDeleted=null, zip=53705}
+[INFO ] 2021-03-21 12:59:02.903 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-21 13:01:26.974 [http-nio-8080-exec-8] DisplayMatchedUsersServlet - java.util.Collections$3@14c2dc0d
+[INFO ] 2021-03-21 13:01:40.220 [http-nio-8080-exec-9] DisplayMatchedUsersServlet - java.util.Collections$3@2dc3e2a5
+[INFO ] 2021-03-21 13:02:21.947 [http-nio-8080-exec-1] DisplayMatchedUsersServlet - java.util.Collections$3@d5602b8
+[INFO ] 2021-03-21 13:03:48.906 [http-nio-8080-exec-3] DisplayMatchedUsersServlet - java.util.Collections$3@262b2cca
+[INFO ] 2021-03-21 13:05:16.000 [http-nio-8080-exec-5] DisplayMatchedUsersServlet - java.util.Collections$3@6c2dd82b
+[INFO ] 2021-03-21 13:08:07.372 [http-nio-8080-exec-7] DisplayMatchedUsersServlet - java.util.Collections$3@3d30246a
+[INFO ] 2021-03-21 13:09:16.949 [main] GenericDao - UserRole{roleId=50, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-21 13:09:18.283 [main] GenericDao - User{userId=37, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-21, dateDeleted=null, zip=53705}
+[INFO ] 2021-03-21 13:09:19.861 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-21 13:10:42.589 [http-nio-8080-exec-12] DisplayMatchedUsersServlet - null

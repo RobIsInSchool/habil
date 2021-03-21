@@ -24,7 +24,7 @@ class UserDaoTest {
     }
 
     private User getTestUser() {
-        User testUser = new User("test", "user", "testuser", "email", "password", true, Date.valueOf(LocalDate.now()));
+        User testUser = new User("test", "user", "testuser", "email", "password", true, "53705", Date.valueOf(LocalDate.now()));
         return testUser;
     }
 
