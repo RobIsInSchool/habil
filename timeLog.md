@@ -31,3 +31,6 @@
 | 3/11/21 | Worked on adding main comparison algorithm | 1.5 ||
 | 3/16/21 | Met with team to discuss project | 1 ||
 | 3/18/21 | troubleshoot timezone error, working on mapping json results to class | 2.2 ||
+| 3/19/21 | Successful mapping of location objects | .5 ||
+| 3/20/21 | Lots of work on team project setup | 5 ||
+| 3/21/21 | Got skills matching working | 2.5 ||
