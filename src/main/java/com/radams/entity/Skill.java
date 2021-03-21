@@ -99,4 +99,14 @@ public class Skill {
                 ", skillName='" + skillName + '\'' +
                 '}';
     }
+
+    //Muchas gracias a https://medium.com/codelog/overriding-hashcode-method-effective-java-notes-723c1fedf51c para su ayuda
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Skill)) {
+            return false;
+        }
+        Skill skill = (Skill) obj;
+        return this.skillId == (skill.skillId) && this.skillName.equals(skill.skillName);
+    }
 }

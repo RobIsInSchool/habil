@@ -470,5 +470,20 @@ public class User implements Serializable {
                 '}';
     }
 
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    //Muchas gracias a https://medium.com/codelog/overriding-hashcode-method-effective-java-notes-723c1fedf51c para su ayuda
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof User)) {
+            return false;
+        }
+        User user = (User) obj;
+        return this.userId == (user.userId) && this.username.equals(user.username);
+    }
+
 
 }
