@@ -4,15 +4,25 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.util.List;
+
+import com.radams.entity.User;
+import com.radams.persistence.GenericDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @WebServlet(name = "LoginAction", value = "/loginAction")
 public class LoginAction extends HttpServlet {
+    private GenericDao userDao = new GenericDao(User.class);
     private final Logger logger = LogManager.getLogger(this.getClass());
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        logger.info("User " + request.getRemoteUser() + " has logged in");
+        String username = request.getRemoteUser();
+        logger.info("User " + username + " has logged in");
+        List<User> foundUser = (List<User>) userDao.findByPropertyEqual("username", username);
+        User user = foundUser.get(0);
+        request.setAttribute("username", username);
+        request.setAttribute("user", user);
         RequestDispatcher dispacher = request.getRequestDispatcher("/home.jsp");
         dispacher.forward(request, response);
     }
