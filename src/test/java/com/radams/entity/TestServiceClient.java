@@ -32,7 +32,7 @@ public class TestServiceClient {
         String targetString = "http://api.geonames.org/findNearbyPostalCodesJSON"
                 + "?maxRows=5&country=US"
                 + "&postalcode=" + zip
-                + "&radius=30&username=mirado1155";
+                + "&radius=30&username=";
         Client client = ClientBuilder.newClient();
         WebTarget target =
                 client.target(targetString);
@@ -43,5 +43,12 @@ public class TestServiceClient {
         List<PostalCodesItem> postalCodes = resultList.getPostalCodes();
         PostalCodesItem testPostalCode = postalCodes.get(1);
 //        assertEquals("53782", testPostalCode.getPostalCode());
+    }
+
+    @Test
+    public void testNearbyPostCodesByUserFromClass() throws Exception {
+        User testUser = (User) userDao.getById(1);
+        UserMatcher matcher = new UserMatcher(testUser);
+        assertNotNull(matcher.getUserNearbyPostalCodes());
     }
 }
