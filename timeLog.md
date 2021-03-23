@@ -34,3 +34,5 @@
 | 3/19/21 | Successful mapping of location objects | .5 ||
 | 3/20/21 | Lots of work on team project setup | 5 ||
 | 3/21/21 | Got skills matching working | 2.5 ||
+| 3/22/21 | I honestly cannot remember what I did this day | .8 ||
+| 3/23/21 | User logout, get user info displayed, user matching via classes | 3.5 ||
