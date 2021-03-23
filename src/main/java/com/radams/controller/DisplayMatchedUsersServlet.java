@@ -14,8 +14,7 @@ public class DisplayMatchedUsersServlet extends HttpServlet {
     private final Logger logger = LogManager.getLogger(this.getClass());
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ServletContext context = getServletContext();
-        logger.info(context.getAttribute("user_name"));
+
     }
 
     @Override
