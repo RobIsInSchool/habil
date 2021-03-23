@@ -40,6 +40,28 @@
 
   <security-constraint>
     <web-resource-collection>
+      <web-resource-name>loginActionServlet</web-resource-name>
+      <url-pattern>/loginAction</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+      <role-name>regUser</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>home</web-resource-name>
+      <url-pattern>/home.jsp</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>regUser</role-name>
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <security-constraint>
+    <web-resource-collection>
       <web-resource-name>displayServ</web-resource-name>
       <url-pattern>/displayUsers</url-pattern>
     </web-resource-collection>
@@ -55,5 +77,9 @@
   <security-role>
     <role-name>regUser</role-name>
   </security-role>
+
+  <welcome-file-list>
+    <welcome-file>loginAction</welcome-file>
+  </welcome-file-list>
 
 </web-app>
