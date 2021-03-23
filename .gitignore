@@ -17,6 +17,7 @@
 .idea/uiDesigner.xml
 /sql/
 /src/main/resources/hibernate.cfg.xml
+/src/main/resources/appProperties.properties
 /logs/
 /designDocs/ERD.png
 /src/main/webapp/WEB-INF/web.xml
