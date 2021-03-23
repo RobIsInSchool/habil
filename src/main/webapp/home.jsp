@@ -19,7 +19,8 @@
         <c:out value="${nav}" escapeXml="false"/>
     </header>
     <main>
-        <h2>Welcome, user</h2>
+        <h2>Welcome, ${username}</h2>
+        <p>Currently at zip code ${user.zip}</p>
     </main>
 </div>
 </body>
