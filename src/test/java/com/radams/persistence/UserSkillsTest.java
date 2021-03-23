@@ -3,6 +3,7 @@ package com.radams.persistence;
 import com.radams.entity.Lesson;
 import com.radams.entity.Skill;
 import com.radams.entity.User;
+import com.radams.entity.UserMatcher;
 import com.radams.test.util.Database;
 import net.bytebuddy.description.type.TypeList;
 import org.junit.jupiter.api.BeforeEach;
@@ -90,8 +91,9 @@ public class UserSkillsTest {
 
     }
 
+
     @Test
-    void matchUsersBasedOnHasSkillsSuccess() {
+    void matchUserSkillsFromClass() {
         User joeCoyne = (User) userDao.getById(1);
         User karenMack = (User) userDao.getById(4);
         User barneyCurry = (User) userDao.getById(3);
@@ -110,49 +112,10 @@ public class UserSkillsTest {
         userDao.saveOrUpdate(karenMack);
         userDao.saveOrUpdate(barneyCurry);
 
-        assertEquals(joeCoyne.getSkillsWants(), barneyCurry.getSkillsHas());
-        assertEquals(joeCoyne.getSkillsHas(), karenMack.getSkillsWants());
-
-        Set<Skill> userSkillsHas = joeCoyne.getSkillsHas();
-        Set<Skill> userSkillsWants = joeCoyne.getSkillsWants();
-
-        List<User> otherUsers = userDao.getAll();
-        otherUsers.remove(joeCoyne);
-
-        Set<User> matchedUsers = new HashSet<>();
-
-        //Loop through all users. If their wants/has are complementary, add them to the matched users list
-
-
-        for (User otherUser : otherUsers) {
-            Boolean hasMatch = false; //if the main user has a skill another user wants
-            Boolean wantsMatch = false; //if the main user wants a skill another user has
-            Set<Skill> otherUserSkillsHas = otherUser.getSkillsHas();
-            Set<Skill> otherUserSkillsWants = otherUser.getSkillsWants();
-
-            for (Skill mainUserSkillHas : userSkillsHas) {
-                for (Skill otherWant : otherUserSkillsWants) {
-                    if(otherWant.equals(mainUserSkillHas)) {
-                        hasMatch = true;
-                    }
-                }
-            }
-            for (Skill mainUserSkillWants : userSkillsWants) {
-                for (Skill otherHas : otherUserSkillsHas) {
-                    if (otherHas.equals(mainUserSkillWants)) {
-                        wantsMatch = true;
-                    }
-                }
-            }
-
-            if (wantsMatch && hasMatch) {
-                matchedUsers.add(otherUser);
-            }
-
-        }
-        assertEquals(1, matchedUsers.size());
+        UserMatcher matcher = new UserMatcher(joeCoyne);
+        Set<User> matches = matcher.matchUserSkills();
+        assertNotNull(matches);
     }
-
 }
 
 
