@@ -17,14 +17,16 @@ public class LoginAction extends HttpServlet {
     private final Logger logger = LogManager.getLogger(this.getClass());
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession();
         String username = request.getRemoteUser();
         logger.info("User " + username + " has logged in");
         List<User> foundUser = (List<User>) userDao.findByPropertyEqual("username", username);
         User user = foundUser.get(0);
         request.setAttribute("username", username);
         request.setAttribute("user", user);
-        RequestDispatcher dispacher = request.getRequestDispatcher("/home.jsp");
-        dispacher.forward(request, response);
+        session.setAttribute("user", user);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/home.jsp");
+        dispatcher.forward(request, response);
     }
 
     @Override
