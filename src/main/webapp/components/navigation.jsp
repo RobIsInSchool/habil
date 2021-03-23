@@ -13,5 +13,6 @@
         <li><a href="#">Matches</a></li>
         <li><a href="#">Portfolio</a></li>
         <li><a href="#">Skills Wish-List</a></li>
+        <li><a href="logout">Log Out</a></li>
     </ul>
 </nav>
