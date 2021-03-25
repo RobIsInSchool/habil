@@ -5,7 +5,7 @@
     <body>
     <div class="container">
         <header>
-            <h1>Welcome to the First Deploy of Habil!</h1>
+            <h1>Welcome to Habil!</h1>
         </header>
 
         <p>Log-in <a href="loginAction">here.</a></p>

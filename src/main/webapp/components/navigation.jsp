@@ -10,9 +10,10 @@
 <nav>
     <ul>
         <li><a href="#">Profile</a></li>
-        <li><a href="#">Matches</a></li>
+        <li><a href="viewMatches">Matches</a></li>
         <li><a href="#">Portfolio</a></li>
         <li><a href="#">Skills Wish-List</a></li>
+        <li><a href="displayUsers">Display All Users (Temporary)</a></li>
         <li><a href="logout">Log Out</a></li>
     </ul>
 </nav>

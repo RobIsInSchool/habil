@@ -15,7 +15,7 @@
 <body>
 <div class="container">
     <header>
-        <h1>Welcome to the First Deploy of Habil!</h1>
+        <h1>Welcome to Habil!</h1>
         <c:out value="${nav}" escapeXml="false"/>
     </header>
     <main>
