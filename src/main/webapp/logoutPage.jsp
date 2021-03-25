@@ -17,7 +17,7 @@
         <h1>Come Back Soon!</h1>
     </header>
     <main>
-        <p>You have successfully logged out. <a href="/habil">Log back in?</a></p>
+        <p>You have successfully logged out. <a href="/habil">Back to homepage</a></p>
     </main>
 </div>
 </body>

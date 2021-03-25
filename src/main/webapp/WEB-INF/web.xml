@@ -51,12 +51,34 @@
 
   <security-constraint>
     <web-resource-collection>
+      <web-resource-name>logoutActionServlet</web-resource-name>
+      <url-pattern>/logoutAction</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+      <role-name>regUser</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <security-constraint>
+    <web-resource-collection>
       <web-resource-name>home</web-resource-name>
       <url-pattern>/home.jsp</url-pattern>
     </web-resource-collection>
     <auth-constraint>
       <role-name>regUser</role-name>
       <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>viewMatchesServlet</web-resource-name>
+      <url-pattern>/viewMatches</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+      <role-name>regUser</role-name>
     </auth-constraint>
   </security-constraint>
 
@@ -71,15 +93,35 @@
     </auth-constraint>
   </security-constraint>
 
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>displayUsersPage</web-resource-name>
+      <url-pattern>/displayUsers.jsp</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+      <role-name>regUser</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>matchedUsersPage</web-resource-name>
+      <url-pattern>/matchedUsers.jsp</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+      <role-name>regUser</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+
   <security-role>
     <role-name>admin</role-name>
   </security-role>
   <security-role>
     <role-name>regUser</role-name>
   </security-role>
-
-  <welcome-file-list>
-    <welcome-file>loginAction</welcome-file>
-  </welcome-file-list>
 
 </web-app>
