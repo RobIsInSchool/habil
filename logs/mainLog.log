@@ -406,3 +406,7 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 [INFO ] 2021-03-26 14:07:24.011 [http-nio-8080-exec-26] LoginAction - User bcurry has logged in
 [INFO ] 2021-03-26 14:08:19.977 [http-nio-8080-exec-24] LogoutAction - User bcurry is logging out
 [INFO ] 2021-03-26 14:09:52.660 [http-nio-8080-exec-28] LoginAction - User bcurry has logged in
+[INFO ] 2021-03-26 14:26:21.744 [main] GenericDao - UserRole{roleId=262, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-26 14:26:22.772 [main] GenericDao - User{userId=196, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-26, dateDeleted=null, zip=53705}
+[INFO ] 2021-03-26 14:26:24.242 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-26 14:27:09.992 [http-nio-8080-exec-3] LoginAction - User jcoyne has logged in

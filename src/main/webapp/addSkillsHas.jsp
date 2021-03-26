@@ -13,16 +13,16 @@
 <c:import var="nav" url="components/navigation.jsp" />
 <c:out value="${head}" escapeXml="false"/>
 <body>
-    <div class="container">
+<div class="container">
     <header>
         <c:out value="${nav}" escapeXml="false"/>
     </header>
-    <p><a href="addSkillsHasView">Add New Skill</a></p>
+    <p><a href="#">Don't see your skill? Add it!</a></p>
     <ul>
-    <c:forEach var="skill" items="${skillsHas}">
-        <li>${skill.skillName}<form><input type="hidden" name="${skill.skillId}"><input type="submit" value="Remove Skill?"></form></li>
-    </c:forEach>
+        <c:forEach var="skill" items="${allSkills}">
+            <li>${skill.skillName}<form><input type="hidden" name="${skill.skillId}"><input type="submit" value="Add skill to Skills-Has?"></form></li>
+        </c:forEach>
     </ul>
-    </div>
+</div>
 </body>
 </html>
