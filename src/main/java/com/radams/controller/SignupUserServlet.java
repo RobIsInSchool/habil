@@ -49,6 +49,7 @@ public class SignupUserServlet extends HttpServlet {
         session.setAttribute("userName", user.getUsername());
 
         //TODO add username uniqueness check
+        //TODO add postal code validation
         RequestDispatcher dispatcher = request.getRequestDispatcher("/signupConfirm.jsp");
         dispatcher.forward(request, response);
     }
