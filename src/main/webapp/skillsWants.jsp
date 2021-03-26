@@ -18,7 +18,7 @@
         <c:out value="${nav}" escapeXml="false"/>
     </header>
     <h2>Skill Wants</h2>
-    <p><a href="#">Add New Skill</a></p>
+    <p><a href="addSkillsWantsView">Add New Skill</a></p>
     <ul>
         <c:forEach var="skill" items="${skillsWants}">
             <li>${skill.skillName}<form><input type="hidden" name="${skill.skillId}"><input type="submit" value="Remove Skill?"></form></li>
