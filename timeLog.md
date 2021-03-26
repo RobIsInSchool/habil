@@ -36,3 +36,5 @@
 | 3/21/21 | Got skills matching working | 2.5 ||
 | 3/22/21 | I honestly cannot remember what I did this day | .8 ||
 | 3/23/21 | User logout, get user info displayed, user matching via classes | 3.5 ||
+| 3/25/21 | AWS stuff and Auth stuff | 2.25 ||
+| 3/26/21 | User signup, display skill has and wants | 4.5 | Really important day! |
