@@ -384,3 +384,17 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 [INFO ] 2021-03-26 13:21:33.185 [http-nio-8080-exec-40] SignupUserServlet - User obj: User{userId=0, firstName='Rob', lastName='Adobdob', username='robinthetob', email='rob@rob.com', password='hellothere', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-26, dateDeleted=null, zip=95519}
 [INFO ] 2021-03-26 13:21:35.988 [http-nio-8080-exec-40] SignupUserServlet - regUser with id 8 has signed up: User{userId=8, firstName='Rob', lastName='Adobdob', username='robinthetob', email='rob@rob.com', password='hellothere', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-26, dateDeleted=null, zip=95519}
 [INFO ] 2021-03-26 13:21:47.667 [http-nio-8080-exec-43] LoginAction - User robinthetob has logged in
+[INFO ] 2021-03-26 13:47:15.951 [main] GenericDao - UserRole{roleId=250, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-26 13:47:17.015 [main] GenericDao - User{userId=187, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-26, dateDeleted=null, zip=53705}
+[INFO ] 2021-03-26 13:47:18.579 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-26 13:48:15.193 [http-nio-8080-exec-3] LoginAction - User robinthetob has logged in
+[INFO ] 2021-03-26 13:48:36.911 [http-nio-8080-exec-5] LogoutAction - User robinthetob is logging out
+[INFO ] 2021-03-26 13:48:46.024 [http-nio-8080-exec-10] LoginAction - User jcoyne has logged in
+[INFO ] 2021-03-26 13:49:05.996 [http-nio-8080-exec-2] LogoutAction - User jcoyne is logging out
+[INFO ] 2021-03-26 13:50:53.065 [main] GenericDao - UserRole{roleId=254, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-26 13:50:54.068 [main] GenericDao - User{userId=190, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-26, dateDeleted=null, zip=53705}
+[INFO ] 2021-03-26 13:50:55.317 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-26 13:53:18.327 [http-nio-8080-exec-15] LoginAction - User jcoyne has logged in
+[INFO ] 2021-03-26 13:54:09.606 [http-nio-8080-exec-11] LogoutAction - User jcoyne is logging out
+[INFO ] 2021-03-26 13:54:17.330 [http-nio-8080-exec-12] LoginAction - User bcurry has logged in
+[INFO ] 2021-03-26 13:54:23.914 [http-nio-8080-exec-18] LogoutAction - User bcurry is logging out
