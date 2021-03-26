@@ -36,7 +36,6 @@ public class SignupUserServlet extends HttpServlet {
                 + "last name" + lastName
                 + "user name" + userName
                 + "email" + email
-                + "pass" + password
                 + "zip" + zip
         );
 
@@ -49,6 +48,7 @@ public class SignupUserServlet extends HttpServlet {
 
         session.setAttribute("userName", user.getUsername());
 
+        //TODO add username uniqueness check
         RequestDispatcher dispatcher = request.getRequestDispatcher("/signupConfirm.jsp");
         dispatcher.forward(request, response);
     }
