@@ -18,7 +18,7 @@
 /sql/
 /src/main/resources/hibernate.cfg.xml
 /src/main/resources/appProperties.properties
-/logs/
+/logs/mainLog.log
 /designDocs/ERD.png
 /src/main/webapp/WEB-INF/web.xml
 
