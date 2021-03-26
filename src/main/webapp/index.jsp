@@ -9,6 +9,7 @@
         </header>
 
         <p>Log-in <a href="loginAction">here.</a></p>
+        <p><a href="signup.jsp">Sign up here</a></p>
 
         <aside>
             <p>Psst! Hey! Are you an admin? <a href="admin.jsp">Go here</a> </p>

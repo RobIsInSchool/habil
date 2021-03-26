@@ -25,25 +25,25 @@ public class TestServiceClient {
         db.runSQL("cleandb.sql");
     }
 
-    @Test
-    public void testNearbyPostCodesJSON() throws Exception {
-        User testUser = (User) userDao.getById(1);
-        String zip = testUser.getZip();
-        String targetString = "http://api.geonames.org/findNearbyPostalCodesJSON"
-                + "?maxRows=5&country=US"
-                + "&postalcode=" + zip
-                + "&radius=30&username=";
-        Client client = ClientBuilder.newClient();
-        WebTarget target =
-                client.target(targetString);
-        String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
-        ObjectMapper mapper = new ObjectMapper();
-        LocationJSONResponse resultList = mapper.readValue(response, LocationJSONResponse.class);
-        assertNotNull(resultList);
-        List<PostalCodesItem> postalCodes = resultList.getPostalCodes();
-        PostalCodesItem testPostalCode = postalCodes.get(1);
+//    @Test
+//    public void testNearbyPostCodesJSON() throws Exception {
+//        User testUser = (User) userDao.getById(1);
+//        String zip = testUser.getZip();
+//        String targetString = "http://api.geonames.org/findNearbyPostalCodesJSON"
+//                + "?maxRows=5&country=US"
+//                + "&postalcode=" + zip
+//                + "&radius=30&username=";
+//        Client client = ClientBuilder.newClient();
+//        WebTarget target =
+//                client.target(targetString);
+//        String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
+//        ObjectMapper mapper = new ObjectMapper();
+//        LocationJSONResponse resultList = mapper.readValue(response, LocationJSONResponse.class);
+//        assertNotNull(resultList);
+//        List<PostalCodesItem> postalCodes = resultList.getPostalCodes();
+//        PostalCodesItem testPostalCode = postalCodes.get(1);
 //        assertEquals("53782", testPostalCode.getPostalCode());
-    }
+    //}
 
     @Test
     public void testNearbyPostCodesByUserFromClass() throws Exception {
