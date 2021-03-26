@@ -9,10 +9,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <nav>
     <ul>
-        <li><a href="#">Profile</a></li>
+        <li><a href="home.jsp">Home</a></li>
         <li><a href="viewMatches">Matches</a></li>
         <li><a href="skillsHas">Skills-Has</a></li>
-        <li><a href="#">Skills-Wants</a></li>
+        <li><a href="skillsWants">Skills-Wants</a></li>
         <li><a href="displayUsers">Display All Users (Temporary)</a></li>
         <li><a href="logout">Log Out</a></li>
     </ul>
