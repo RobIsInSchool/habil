@@ -6,28 +6,28 @@
 
 
 ### Week 5
-- [ ] Create entities
+- [x] Create entities
 - [x] Implement log4j
-- [ ] Write unit tests
+- [x] Write unit tests
 
 ### Week 6
 - [x] Create DAO(s) with Hibernate
 
 ### Week 7
-- [ ] Deploy to AWS
-- [ ] User authentication
-- [ ] Admin authentication
+- [x] Deploy to AWS
+- [x] User authentication
+- [x] Admin authentication
 
 
 ### Week 8
-- [ ] Create jsp templates
-- [ ] Display db data to jsp
+- [x] Create jsp templates
+- [x] Display db data to jsp
 
 ### Week 9
 
 - [ ] Set up controller(s)
-- [ ] User Signup
-- [ ] User view skills
+- [x] User Signup
+- [x] User view skills
 
 ### Week 10
 
