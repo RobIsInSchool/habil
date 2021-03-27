@@ -61,3 +61,4 @@ public class DisplayMatchedUsersServlet extends HttpServlet {
 
     }
 }
+//TODO remove user self from matched users
