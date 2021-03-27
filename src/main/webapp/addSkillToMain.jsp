@@ -17,18 +17,18 @@
     <header>
         <c:out value="${nav}" escapeXml="false"/>
     </header>
-    <p><a href="addMainSkill">Don't see your skill? Add it!</a></p>
-    <ul>
+    <main>
+        <form action="addMainSkill" method="POST">
+            <label for="skillToAdd">Add Skill:</label>
+            <input type="text" name="skillToAdd" id="skillToAdd">
+            <input type="submit" name="submit" value="Add Skill">
+        </form>
+        <ul>
         <c:forEach var="skill" items="${allSkills}">
-            <li>${skill.skillName}
-                <form action="addSkillAction" method="POST">
-                    <input type="hidden" name="skillId" value="${skill.skillId}">
-                    <input type="hidden" name="skillType" value="has">
-                    <input type="submit" value="Add skill to Skills-Has">
-                </form>
-            </li>
+            <li>${skill.skillName}</li>
         </c:forEach>
-    </ul>
+        </ul>
+    </main>
 </div>
 </body>
 </html>
