@@ -486,5 +486,5 @@ public class User implements Serializable {
         return this.userId == (user.userId) && this.username.equals(user.username);
     }
 
-
+//TODO JDOCS FOR ALL
 }
