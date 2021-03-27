@@ -11,15 +11,22 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-@WebServlet(name = "AddSkillsWantsViewServlet", value = "/addSkillsWantsView")
-public class AddSkillsWantsViewServlet extends HttpServlet {
+@WebServlet(name = "AddSkillsViewServlet", value = "/addSkillsHasWantsView")
+public class AddSkillsHasWantsViewServlet extends HttpServlet {
     private GenericDao skillDao = new GenericDao(Skill.class);
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         List<Skill> allSkills = skillDao.getAll();
         session.setAttribute("allSkills", allSkills);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/addSkillsWants.jsp");
+        String forwardUrl;
+        if (request.getParameter("viewType").equals("has")) {
+            forwardUrl = "/addSkillsHas.jsp";
+        }
+        else {
+            forwardUrl = "/addSkillsWants.jsp";
+        }
+        RequestDispatcher dispatcher = request.getRequestDispatcher(forwardUrl);
         dispatcher.forward(request, response);
     }
 

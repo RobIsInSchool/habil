@@ -509,3 +509,18 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 [INFO ] 2021-03-27 10:47:51.484 [http-nio-8080-exec-34] AddSkillActionServlet - said skill is: spanish
 [INFO ] 2021-03-27 10:47:58.040 [http-nio-8080-exec-35] AddSkillActionServlet - Skill type: has being added for user robinthetob
 [INFO ] 2021-03-27 10:47:58.040 [http-nio-8080-exec-35] AddSkillActionServlet - said skill is: electric guitar
+[INFO ] 2021-03-27 11:02:58.464 [main] GenericDao - UserRole{roleId=330, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-27 11:02:59.316 [main] GenericDao - User{userId=247, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-27, dateDeleted=null, zip=53705}
+[INFO ] 2021-03-27 11:03:00.456 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-27 11:06:36.225 [http-nio-8080-exec-4] LoginAction - User robinthetob has logged in
+[INFO ] 2021-03-27 11:08:22.895 [main] GenericDao - UserRole{roleId=334, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-27 11:08:23.820 [main] GenericDao - User{userId=250, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-27, dateDeleted=null, zip=53705}
+[INFO ] 2021-03-27 11:08:25.168 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-27 11:09:18.304 [http-nio-8080-exec-4] LoginAction - User robinthetob has logged in
+[INFO ] 2021-03-27 11:10:48.183 [main] GenericDao - UserRole{roleId=338, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-27 11:10:49.113 [main] GenericDao - User{userId=253, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-27, dateDeleted=null, zip=53705}
+[INFO ] 2021-03-27 11:10:50.264 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-27 11:11:36.781 [http-nio-8080-exec-4] LoginAction - User robinthetob has logged in
+[INFO ] 2021-03-27 11:12:17.571 [http-nio-8080-exec-10] AddSkillActionServlet - Skill type: has being added for user robinthetob
+[INFO ] 2021-03-27 11:12:17.574 [http-nio-8080-exec-10] AddSkillActionServlet - said skill is: electric guitar
+[INFO ] 2021-03-27 11:12:41.882 [http-nio-8080-exec-4] LogoutAction - User robinthetob is logging out
