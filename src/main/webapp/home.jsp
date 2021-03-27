@@ -21,6 +21,8 @@
     <main>
         <h2>Welcome, ${username}</h2>
         <p>Currently at zip code ${user.zip}</p>
+        <button id="zipChange">Change zip?</button>
+        <div id="zipChangeInputArea"></div>
     </main>
 </div>
 </body>
