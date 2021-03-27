@@ -21,7 +21,8 @@ public class DisplaySkillsHasServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        User user = (User) session.getAttribute("user");
+        User webUser = (User) session.getAttribute("user");
+        User user = (User) userDao.getById(webUser.getUserId());
         Set<Skill> skillsHas = user.getSkillsHas();
         session.setAttribute("skillsHas", skillsHas);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/skillsHas.jsp");
@@ -30,6 +31,6 @@ public class DisplaySkillsHasServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        doGet(request, response);
     }
 }
