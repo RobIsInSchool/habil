@@ -88,7 +88,7 @@ public class UserMatcher {
         return false;
     }
 
-    private Set<User> getMatchedUsers() throws Exception {
+    public Set<User> getMatchedUsers() throws Exception {
         Set<User> matchedUsersBySkill = matchUserSkills();
         Set<User> matchedUsersBySkillAndZip = matchUserZipsFromResultingSkillMatches(matchedUsersBySkill);
         return matchedUsersBySkillAndZip;

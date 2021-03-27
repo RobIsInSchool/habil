@@ -93,7 +93,7 @@ public class UserSkillsTest {
 
 
     @Test
-    void matchUserSkillsFromClass() {
+    void matchUserSkillsFromClass() throws Exception{
         User joeCoyne = (User) userDao.getById(1);
         User karenMack = (User) userDao.getById(4);
         User barneyCurry = (User) userDao.getById(3);
@@ -115,6 +115,7 @@ public class UserSkillsTest {
         UserMatcher matcher = new UserMatcher(joeCoyne);
         Set<User> matches = matcher.matchUserSkills();
         assertNotNull(matches);
+//        assertEquals("???", matcher.getMatchedUsers());
     }
 }
 

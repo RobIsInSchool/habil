@@ -8,12 +8,11 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.radams.entity.User;
+import com.radams.entity.UserMatcher;
 import com.radams.geoNames.LocationJSONResponse;
 import com.radams.geoNames.PostalCodesItem;
 import com.radams.persistence.GenericDao;
@@ -28,28 +27,14 @@ public class DisplayMatchedUsersServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
-        String zip = user.getZip();
-        String targetString = "http://api.geonames.org/findNearbyPostalCodesJSON"
-                + "?maxRows=30&country=US"
-                + "&postalcode=" + zip
-                + "&radius=30&username=mirado1155";
-        Client client = ClientBuilder.newClient();
-        WebTarget target =
-                client.target(targetString);
-        String jsonResp = target.request(MediaType.APPLICATION_JSON).get(String.class);
-        ObjectMapper mapper = new ObjectMapper();
-        LocationJSONResponse resultList = mapper.readValue(jsonResp, LocationJSONResponse.class);
-        List<PostalCodesItem> postalCodes = resultList.getPostalCodes();
-
-        //TODO make a thing for matched users by zip AND by skill/wants
-        List<User> users = userDao.getAll();
-        List<User> matchedUsers = new ArrayList<>();
-        for (User otherUser : users) {
-            for (PostalCodesItem postalCode : postalCodes) {
-                if (otherUser.getZip().equals(postalCode.getPostalCode()) ){
-                    matchedUsers.add(otherUser);
-                }
+        UserMatcher matcher = new UserMatcher(user);
+        Set<User> matchedUsers = new HashSet<>();
+        try {
+            for(User matchedUser : matcher.getMatchedUsers()) {
+                matchedUsers.add(matchedUser);
             }
+        } catch (Exception e) {
+            logger.info(e);
         }
         session.setAttribute("matchedUsers", matchedUsers);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/matchedUsers.jsp");
@@ -60,5 +45,6 @@ public class DisplayMatchedUsersServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
+
 }
 //TODO remove user self from matched users
