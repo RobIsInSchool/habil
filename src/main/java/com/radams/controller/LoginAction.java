@@ -34,3 +34,5 @@ public class LoginAction extends HttpServlet {
 
     }
 }
+//TODO let users change zip
+//TODO skill matching
