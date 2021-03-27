@@ -38,3 +38,4 @@
 | 3/23/21 | User logout, get user info displayed, user matching via classes | 3.5 ||
 | 3/25/21 | AWS stuff and Auth stuff | 2.25 ||
 | 3/26/21 | User signup, display skill has and wants | 4.5 | Really important day! |
+| 3/27/21 | Skill wants/has add/delete, Main skills add, user matching, zip changing | 4.75 | Another huge milestone! |
