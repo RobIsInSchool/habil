@@ -17,6 +17,7 @@
     <header>
         <c:out value="${nav}" escapeXml="false"/>
     </header>
+        <h2>Skills Has</h2>
     <form action="addSkillsHasWantsView" method="GET">
         <input type="hidden" name="viewType" value="has">
         <input type="submit" value="Add New Skill Has">
@@ -24,8 +25,9 @@
     <ul>
     <c:forEach var="skill" items="${skillsHas}">
         <li>${skill.skillName}
-            <form action="removeSkillAction" method="POST">
-                <input type="hidden" name="skillToRemove" value="${skill.skillId}">
+            <form action="removeSkillAction" method="GET">
+                <input type="hidden" name="skillId" value="${skill.skillId}">
+                <input type="hidden" name="skillType" value="has">
                 <input type="submit" value="Remove Skill?">
             </form>
         </li>

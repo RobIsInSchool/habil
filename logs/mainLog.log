@@ -574,3 +574,46 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 [INFO ] 2021-03-27 11:40:03.077 [http-nio-8080-exec-9] AddSkillActionServlet - said skill is: fishing
 [INFO ] 2021-03-27 11:40:20.227 [http-nio-8080-exec-2] AddSkillActionServlet - Skill type: has being added for user robinthetob
 [INFO ] 2021-03-27 11:40:20.227 [http-nio-8080-exec-2] AddSkillActionServlet - said skill is: spanish
+[INFO ] 2021-03-27 11:51:15.083 [main] GenericDao - UserRole{roleId=366, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-27 11:51:16.052 [main] GenericDao - User{userId=274, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-27, dateDeleted=null, zip=53705}
+[INFO ] 2021-03-27 11:51:17.136 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-27 11:52:59.757 [http-nio-8080-exec-4] LoginAction - User robinthetob has logged in
+[INFO ] 2021-03-27 11:53:20.497 [http-nio-8080-exec-6] RemoveSkillActionServlet - Skill type: has being removed from user robinthetob
+[INFO ] 2021-03-27 11:53:20.498 [http-nio-8080-exec-6] RemoveSkillActionServlet - said skill is: spanish
+[INFO ] 2021-03-27 11:53:26.457 [http-nio-8080-exec-8] AddSkillActionServlet - Skill type: has being added for user robinthetob
+[INFO ] 2021-03-27 11:53:26.458 [http-nio-8080-exec-8] AddSkillActionServlet - said skill is: spanish
+[INFO ] 2021-03-27 11:53:29.405 [http-nio-8080-exec-9] RemoveSkillActionServlet - Skill type: has being removed from user robinthetob
+[INFO ] 2021-03-27 11:53:29.405 [http-nio-8080-exec-9] RemoveSkillActionServlet - said skill is: spanish
+[INFO ] 2021-03-27 11:53:31.197 [http-nio-8080-exec-10] RemoveSkillActionServlet - Skill type: has being removed from user robinthetob
+[INFO ] 2021-03-27 11:53:31.198 [http-nio-8080-exec-10] RemoveSkillActionServlet - said skill is: electric guitar
+[INFO ] 2021-03-27 11:53:38.450 [http-nio-8080-exec-3] AddSkillActionServlet - Skill type: has being added for user robinthetob
+[INFO ] 2021-03-27 11:53:38.451 [http-nio-8080-exec-3] AddSkillActionServlet - said skill is: electric guitar
+[INFO ] 2021-03-27 11:53:40.599 [http-nio-8080-exec-5] AddSkillActionServlet - Skill type: has being added for user robinthetob
+[INFO ] 2021-03-27 11:53:40.600 [http-nio-8080-exec-5] AddSkillActionServlet - said skill is: spanish
+[INFO ] 2021-03-27 11:59:47.819 [main] GenericDao - UserRole{roleId=370, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-27 11:59:48.605 [main] GenericDao - User{userId=277, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-27, dateDeleted=null, zip=53705}
+[INFO ] 2021-03-27 11:59:49.745 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-27 12:00:55.219 [http-nio-8080-exec-5] LoginAction - User robinthetob has logged in
+[INFO ] 2021-03-27 12:03:34.743 [http-nio-8080-exec-3] RemoveSkillActionServlet - Skill type: has being removed from user robinthetob
+[INFO ] 2021-03-27 12:03:34.752 [http-nio-8080-exec-3] RemoveSkillActionServlet - said skill is: spanish
+[INFO ] 2021-03-27 12:06:20.326 [main] GenericDao - UserRole{roleId=374, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-27 12:06:21.428 [main] GenericDao - User{userId=280, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-27, dateDeleted=null, zip=53705}
+[INFO ] 2021-03-27 12:06:22.785 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-27 12:07:19.826 [http-nio-8080-exec-4] LoginAction - User robinthetob has logged in
+[INFO ] 2021-03-27 12:07:55.232 [http-nio-8080-exec-7] RemoveSkillActionServlet - Skill type: wants being removed from user robinthetob
+[INFO ] 2021-03-27 12:07:55.239 [http-nio-8080-exec-7] RemoveSkillActionServlet - said skill is: fishing
+[INFO ] 2021-03-27 12:08:00.614 [http-nio-8080-exec-9] AddSkillActionServlet - Skill type: wants being added for user robinthetob
+[INFO ] 2021-03-27 12:08:00.615 [http-nio-8080-exec-9] AddSkillActionServlet - said skill is: fishing
+[INFO ] 2021-03-27 12:08:04.223 [http-nio-8080-exec-1] AddSkillActionServlet - Skill type: wants being added for user robinthetob
+[INFO ] 2021-03-27 12:08:04.230 [http-nio-8080-exec-1] AddSkillActionServlet - said skill is: fishing
+[INFO ] 2021-03-27 12:08:08.618 [http-nio-8080-exec-2] RemoveSkillActionServlet - Skill type: wants being removed from user robinthetob
+[INFO ] 2021-03-27 12:08:08.619 [http-nio-8080-exec-2] RemoveSkillActionServlet - said skill is: auto maintenance
+[INFO ] 2021-03-27 12:08:11.457 [http-nio-8080-exec-4] AddSkillActionServlet - Skill type: wants being added for user robinthetob
+[INFO ] 2021-03-27 12:08:11.458 [http-nio-8080-exec-4] AddSkillActionServlet - said skill is: auto maintenance
+[INFO ] 2021-03-27 12:08:17.140 [http-nio-8080-exec-7] AddSkillActionServlet - Skill type: has being added for user robinthetob
+[INFO ] 2021-03-27 12:08:17.143 [http-nio-8080-exec-7] AddSkillActionServlet - said skill is: spanish
+[INFO ] 2021-03-27 12:08:18.398 [http-nio-8080-exec-8] RemoveSkillActionServlet - Skill type: has being removed from user robinthetob
+[INFO ] 2021-03-27 12:08:18.399 [http-nio-8080-exec-8] RemoveSkillActionServlet - said skill is: electric guitar
+[INFO ] 2021-03-27 12:08:20.801 [http-nio-8080-exec-10] AddSkillActionServlet - Skill type: has being added for user robinthetob
+[INFO ] 2021-03-27 12:08:20.802 [http-nio-8080-exec-10] AddSkillActionServlet - said skill is: electric guitar
+[INFO ] 2021-03-27 12:09:28.741 [http-nio-8080-exec-3] LogoutAction - User robinthetob is logging out

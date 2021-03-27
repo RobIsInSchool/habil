@@ -17,7 +17,7 @@ public class AddSkillActionServlet extends HttpServlet {
     private GenericDao userDao = new GenericDao(User.class);
     private GenericDao skillDao = new GenericDao(Skill.class);
     private final Logger logger = LogManager.getLogger(this.getClass());
-
+    //TODO condense this and remove skill servlet into ONE servlet
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession webSession = request.getSession();
