@@ -28,14 +28,17 @@ public class AddSkillActionServlet extends HttpServlet {
         Skill skill = (Skill) skillDao.getById(skillId);
         logger.info("Skill type: " + skillType + " being added for user " + user.getUsername());
         logger.info("said skill is: " + skill.getSkillName());
+        String forwardUrl = "";
         if (skillType.equals("has")) {
+            forwardUrl = "/skillsHas";
             user.addSkillHas(skill);
         }
         if (skillType.equals("wants")) {
+            forwardUrl = "/skillsWants";
             user.addSkillsWants(skill);
         }
         userDao.saveOrUpdate(user);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/skillsHas");
+        RequestDispatcher dispatcher = request.getRequestDispatcher(forwardUrl);
         dispatcher.forward(request, response);
     }
 }

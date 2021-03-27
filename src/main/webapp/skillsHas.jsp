@@ -23,7 +23,12 @@
     </form>
     <ul>
     <c:forEach var="skill" items="${skillsHas}">
-        <li>${skill.skillName}<form><input type="hidden" name="${skill.skillId}"><input type="submit" value="Remove Skill?"></form></li>
+        <li>${skill.skillName}
+            <form action="removeSkillAction" method="POST">
+                <input type="hidden" name="skillToRemove" value="${skill.skillId}">
+                <input type="submit" value="Remove Skill?">
+            </form>
+        </li>
     </c:forEach>
     </ul>
     </div>

@@ -524,3 +524,53 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 [INFO ] 2021-03-27 11:12:17.571 [http-nio-8080-exec-10] AddSkillActionServlet - Skill type: has being added for user robinthetob
 [INFO ] 2021-03-27 11:12:17.574 [http-nio-8080-exec-10] AddSkillActionServlet - said skill is: electric guitar
 [INFO ] 2021-03-27 11:12:41.882 [http-nio-8080-exec-4] LogoutAction - User robinthetob is logging out
+[INFO ] 2021-03-27 11:18:22.657 [main] GenericDao - UserRole{roleId=342, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-27 11:18:23.672 [main] GenericDao - User{userId=256, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-27, dateDeleted=null, zip=53705}
+[INFO ] 2021-03-27 11:18:24.834 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-27 11:19:22.139 [http-nio-8080-exec-4] LoginAction - User robinthetob has logged in
+[INFO ] 2021-03-27 11:19:37.714 [http-nio-8080-exec-7] AddSkillActionServlet - Skill type: has being added for user robinthetob
+[INFO ] 2021-03-27 11:19:37.718 [http-nio-8080-exec-7] AddSkillActionServlet - said skill is: electric guitar
+[INFO ] 2021-03-27 11:19:44.483 [http-nio-8080-exec-9] AddSkillActionServlet - Skill type: has being added for user robinthetob
+[INFO ] 2021-03-27 11:19:44.484 [http-nio-8080-exec-9] AddSkillActionServlet - said skill is: spanish
+[INFO ] 2021-03-27 11:22:08.385 [http-nio-8080-exec-4] LogoutAction - User robinthetob is logging out
+[INFO ] 2021-03-27 11:22:37.632 [main] GenericDao - UserRole{roleId=346, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-27 11:22:38.503 [main] GenericDao - User{userId=259, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-27, dateDeleted=null, zip=53705}
+[INFO ] 2021-03-27 11:22:39.679 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-27 11:24:01.435 [main] GenericDao - UserRole{roleId=350, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-27 11:24:02.310 [main] GenericDao - User{userId=262, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-27, dateDeleted=null, zip=53705}
+[INFO ] 2021-03-27 11:24:03.499 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-27 11:25:04.852 [http-nio-8080-exec-3] LoginAction - User robinthetob has logged in
+[INFO ] 2021-03-27 11:26:01.411 [http-nio-8080-exec-7] AddSkillActionServlet - Skill type: has being added for user robinthetob
+[INFO ] 2021-03-27 11:26:01.417 [http-nio-8080-exec-7] AddSkillActionServlet - said skill is: electric guitar
+[INFO ] 2021-03-27 11:26:04.759 [http-nio-8080-exec-9] AddSkillActionServlet - Skill type: has being added for user robinthetob
+[INFO ] 2021-03-27 11:26:04.761 [http-nio-8080-exec-9] AddSkillActionServlet - said skill is: spanish
+[INFO ] 2021-03-27 11:26:13.585 [http-nio-8080-exec-2] AddSkillActionServlet - Skill type: wants being added for user robinthetob
+[INFO ] 2021-03-27 11:26:13.586 [http-nio-8080-exec-2] AddSkillActionServlet - said skill is: auto maintenance
+[INFO ] 2021-03-27 11:27:47.141 [http-nio-8080-exec-4] AddSkillActionServlet - Skill type: wants being added for user robinthetob
+[INFO ] 2021-03-27 11:27:47.142 [http-nio-8080-exec-4] AddSkillActionServlet - said skill is: auto maintenance
+[INFO ] 2021-03-27 11:30:40.547 [main] GenericDao - UserRole{roleId=354, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-27 11:30:41.390 [main] GenericDao - User{userId=265, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-27, dateDeleted=null, zip=53705}
+[INFO ] 2021-03-27 11:30:42.511 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-27 11:31:27.604 [http-nio-8080-exec-3] LoginAction - User robinthetob has logged in
+[INFO ] 2021-03-27 11:32:41.283 [http-nio-8080-exec-7] AddSkillActionServlet - Skill type: has being added for user robinthetob
+[INFO ] 2021-03-27 11:32:41.288 [http-nio-8080-exec-7] AddSkillActionServlet - said skill is: electric guitar
+[INFO ] 2021-03-27 11:32:48.319 [http-nio-8080-exec-10] AddSkillActionServlet - Skill type: wants being added for user robinthetob
+[INFO ] 2021-03-27 11:32:48.320 [http-nio-8080-exec-10] AddSkillActionServlet - said skill is: auto maintenance
+[INFO ] 2021-03-27 11:35:09.241 [main] GenericDao - UserRole{roleId=358, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-27 11:35:10.069 [main] GenericDao - User{userId=268, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-27, dateDeleted=null, zip=53705}
+[INFO ] 2021-03-27 11:35:11.221 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-27 11:36:31.183 [http-nio-8080-exec-3] LoginAction - User robinthetob has logged in
+[INFO ] 2021-03-27 11:36:47.065 [http-nio-8080-exec-7] AddSkillActionServlet - Skill type: wants being added for user robinthetob
+[INFO ] 2021-03-27 11:36:47.066 [http-nio-8080-exec-7] AddSkillActionServlet - said skill is: auto maintenance
+[INFO ] 2021-03-27 11:36:56.113 [http-nio-8080-exec-1] AddSkillActionServlet - Skill type: has being added for user robinthetob
+[INFO ] 2021-03-27 11:36:56.119 [http-nio-8080-exec-1] AddSkillActionServlet - said skill is: electric guitar
+[INFO ] 2021-03-27 11:37:03.006 [http-nio-8080-exec-3] LogoutAction - User robinthetob is logging out
+[INFO ] 2021-03-27 11:37:09.873 [http-nio-8080-exec-8] LoginAction - User robinthetob has logged in
+[INFO ] 2021-03-27 11:38:42.663 [main] GenericDao - UserRole{roleId=362, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-27 11:38:43.588 [main] GenericDao - User{userId=271, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-27, dateDeleted=null, zip=53705}
+[INFO ] 2021-03-27 11:38:44.664 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-27 11:39:42.291 [http-nio-8080-exec-4] LoginAction - User robinthetob has logged in
+[INFO ] 2021-03-27 11:40:03.076 [http-nio-8080-exec-9] AddSkillActionServlet - Skill type: wants being added for user robinthetob
+[INFO ] 2021-03-27 11:40:03.077 [http-nio-8080-exec-9] AddSkillActionServlet - said skill is: fishing
+[INFO ] 2021-03-27 11:40:20.227 [http-nio-8080-exec-2] AddSkillActionServlet - Skill type: has being added for user robinthetob
+[INFO ] 2021-03-27 11:40:20.227 [http-nio-8080-exec-2] AddSkillActionServlet - said skill is: spanish
