@@ -679,3 +679,15 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 [INFO ] 2021-03-27 16:26:13.372 [http-nio-8080-exec-4] LogoutAction - User jcoyne is logging out
 [INFO ] 2021-03-27 16:26:20.727 [http-nio-8080-exec-7] LoginAction - User robinthetob has logged in
 [INFO ] 2021-03-27 16:26:55.206 [http-nio-8080-exec-5] LogoutAction - User robinthetob is logging out
+[INFO ] 2021-03-28 15:02:59.100 [main] GenericDao - UserRole{roleId=410, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-28 15:03:00.270 [main] GenericDao - User{userId=307, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-28, dateDeleted=null, zip=53705}
+[INFO ] 2021-03-28 15:03:01.965 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-28 15:15:33.480 [main] GenericDao - UserRole{roleId=414, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-28 15:15:35.690 [main] GenericDao - User{userId=310, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-28, dateDeleted=null, zip=53705}
+[INFO ] 2021-03-28 15:15:38.267 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-28 15:34:12.032 [main] GenericDao - UserRole{roleId=418, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-28 15:34:13.008 [main] GenericDao - User{userId=313, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-28, dateDeleted=null, zip=53705}
+[INFO ] 2021-03-28 15:34:14.176 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-03-28 15:37:57.904 [main] GenericDao - UserRole{roleId=422, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-03-28 15:37:58.737 [main] GenericDao - User{userId=316, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-03-28, dateDeleted=null, zip=53705}
+[INFO ] 2021-03-28 15:37:59.891 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
