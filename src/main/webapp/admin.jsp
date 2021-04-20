@@ -15,11 +15,9 @@
 <body>
 <div class="container">
     <header>
-        <h1>Welcome to the First Deploy of Habil!</h1>
-        <c:out value="${nav}" escapeXml="false"/>
+        <h1>Welcome, administrator</h1>
     </header>
     <main>
-        <h2>Welcome, administrator</h2>
         <section id="users">
             <h3>Users</h3>
             <table>

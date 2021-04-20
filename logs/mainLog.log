@@ -792,3 +792,4 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 [INFO ] 2021-04-20 12:58:17.282 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
 [INFO ] 2021-04-20 12:59:26.834 [http-nio-8080-exec-5] AdminLoginAction - Admin bcurry has logged in
 [INFO ] 2021-04-20 13:00:11.098 [http-nio-8080-exec-7] LogoutAction - User bcurry is logging out
+[INFO ] 2021-04-20 13:01:00.520 [http-nio-8080-exec-3] AdminLoginAction - Admin bcurry has logged in
