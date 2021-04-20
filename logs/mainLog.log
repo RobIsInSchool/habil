@@ -783,3 +783,12 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 [INFO ] 2021-04-20 12:48:21.377 [main] GenericDao - User{userId=379, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-04-20, dateDeleted=null, zip=53705}
 [INFO ] 2021-04-20 12:48:22.476 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
 [INFO ] 2021-04-20 12:49:08.396 [http-nio-8080-exec-4] AdminLoginAction - Admin bcurry has logged in
+[INFO ] 2021-04-20 12:55:25.778 [main] GenericDao - UserRole{roleId=510, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-04-20 12:55:26.704 [main] GenericDao - User{userId=382, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-04-20, dateDeleted=null, zip=53705}
+[INFO ] 2021-04-20 12:55:27.870 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-04-20 12:56:18.133 [http-nio-8080-exec-3] AdminLoginAction - Admin bcurry has logged in
+[INFO ] 2021-04-20 12:58:15.086 [main] GenericDao - UserRole{roleId=514, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-04-20 12:58:16.061 [main] GenericDao - User{userId=385, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-04-20, dateDeleted=null, zip=53705}
+[INFO ] 2021-04-20 12:58:17.282 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-04-20 12:59:26.834 [http-nio-8080-exec-5] AdminLoginAction - Admin bcurry has logged in
+[INFO ] 2021-04-20 13:00:11.098 [http-nio-8080-exec-7] LogoutAction - User bcurry is logging out

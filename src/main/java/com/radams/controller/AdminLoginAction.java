@@ -26,10 +26,12 @@ public class AdminLoginAction extends HttpServlet {
         List<User> foundUser = (List<User>) userDao.findByPropertyEqual("username", username);
         User user = foundUser.get(0);
         List<User> allUsers = (List<User>) userDao.getAll();
+        List<Skill> allSkills = (List<Skill>) skillDao.getAll();
         request.setAttribute("username", username);
         request.setAttribute("user", user);
         session.setAttribute("user", user);
         session.setAttribute("allUsers", allUsers);
+        session.setAttribute("allSkills", allSkills);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/admin.jsp");
         dispatcher.forward(request, response);
     }

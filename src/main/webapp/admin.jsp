@@ -23,7 +23,7 @@
         <section id="users">
             <h3>Users</h3>
             <table>
-                <th><td>Username</td><td>User ID</td><td>Email</td></th>
+                <tr><th>Username</th><th>User ID</th><th>Email</th><th>Delete</th></tr>
             <c:forEach var="user" items="${allUsers}">
                 <tr>
                     <td>${user.username}</td>
@@ -32,11 +32,29 @@
                     <td>
                         <form action="" method="post">
                             <input type="hidden" value="${user.userId}" name="userToDelete">
-                            <input type="submit" value="Delete ${user.username}" name="submitDelete">
+                            <input type="submit" value="Delete ${user.username}" name="submitUserDelete">
                         </form>
                     </td>
                 </tr>
             </c:forEach>
+            </table>
+        </section>
+        <section id="skills">
+            <h3>Skills</h3>
+            <table>
+                <tr><th>Skill Name</th><th>Skill ID</th><th>Delete</th></tr>
+                <c:forEach var="skill" items="${allSkills}">
+                    <tr>
+                        <td>${skill.skillName}</td>
+                        <td>${skill.skillId}</td>
+                        <td>
+                            <form action="" method="post">
+                                <input type="hidden" value="${skill.skillId}" name="skillToDelete">
+                                <input type="submit" value="Delete ${skill.skillName}" name="submitSkillDelete">
+                            </form>
+                        </td>
+                    </tr>
+                </c:forEach>
             </table>
         </section>
     </main>
