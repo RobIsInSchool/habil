@@ -4,6 +4,7 @@
 <c:out value="${head}" escapeXml="false"/>
 <body>
 
+    <h1>Sign Up for Habil</h1>
     <form action="signupUser" method="POST">
         <label for="firstName">First Name</label>
         <input type="text" name="firstName" id="firstName" pattern="[a-zA-Z]{1,50}" required>
@@ -28,6 +29,6 @@
 
         <input type="submit" value="submit">
     </form>
-
+    <a href="/habil">Go Back</a>
 </body>
 </html>

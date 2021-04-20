@@ -27,6 +27,6 @@
         </tr>
     </table>
 </form>
-<a href="index.jsp">Go back</a>
+<a href="/habil">Go back</a>
 </body>
 </html>
