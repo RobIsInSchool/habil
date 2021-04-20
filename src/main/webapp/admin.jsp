@@ -10,7 +10,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <c:import var="head" url="components/head.jsp" />
-<c:import var="nav" url="components/navigation.jsp" />
 <c:out value="${head}" escapeXml="false"/>
 <body>
 <div class="container">
