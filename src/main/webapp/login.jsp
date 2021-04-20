@@ -11,6 +11,9 @@
 <c:import var="head" url="components/head.jsp" />
 <c:out value="${head}" escapeXml="false"/>
 <body>
+<header>
+    <h1>Login to Habil</h1>
+</header>
 <form action="j_security_check" method="post">
     <table>
         <tr>
@@ -24,6 +27,6 @@
         </tr>
     </table>
 </form>
-
+<a href="index.jsp">Go back</a>
 </body>
 </html>
