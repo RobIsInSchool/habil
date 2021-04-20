@@ -15,6 +15,7 @@
 <div class="container">
     <header>
         <h1>Welcome, administrator</h1>
+        <p><a href="logout">Log Out</a></p>
     </header>
     <main>
         <section id="users">
