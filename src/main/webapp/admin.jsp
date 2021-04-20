@@ -20,6 +20,25 @@
     </header>
     <main>
         <h2>Welcome, administrator</h2>
+        <section id="users">
+            <h3>Users</h3>
+            <table>
+                <th><td>Username</td><td>User ID</td><td>Email</td></th>
+            <c:forEach var="user" items="${allUsers}">
+                <tr>
+                    <td>${user.username}</td>
+                    <td>${user.userId}</td>
+                    <td>${user.email}</td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="${user.userId}" name="userToDelete">
+                            <input type="submit" value="Delete ${user.username}" name="submitDelete">
+                        </form>
+                    </td>
+                </tr>
+            </c:forEach>
+            </table>
+        </section>
     </main>
 </div>
 </body>
