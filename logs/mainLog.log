@@ -802,3 +802,47 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 [INFO ] 2021-04-20 13:14:26.624 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
 [INFO ] 2021-04-20 13:16:40.064 [http-nio-8080-exec-4] AdminLoginAction - Admin bcurry has logged in
 [INFO ] 2021-04-20 13:16:53.570 [http-nio-8080-exec-5] LogoutAction - User bcurry is logging out
+[INFO ] 2021-04-20 13:31:11.632 [main] GenericDao - UserRole{roleId=526, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-04-20 13:31:12.591 [main] GenericDao - User{userId=394, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-04-20, dateDeleted=null, zip=53705}
+[INFO ] 2021-04-20 13:31:14.090 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-04-20 13:32:08.229 [http-nio-8080-exec-5] LoginAction - User robinthetob has logged in
+[INFO ] 2021-04-20 13:32:48.573 [http-nio-8080-exec-1] AddMainSkillServlet - deleteThisSkill being added as skill...
+[INFO ] 2021-04-20 13:32:48.701 [http-nio-8080-exec-1] AddMainSkillServlet - Skill with id: 10 successfully added
+[INFO ] 2021-04-20 13:32:55.589 [http-nio-8080-exec-2] AddMainSkillServlet - deleteThisAlso being added as skill...
+[INFO ] 2021-04-20 13:32:55.599 [http-nio-8080-exec-2] AddMainSkillServlet - Skill with id: 11 successfully added
+[INFO ] 2021-04-20 13:33:00.010 [http-nio-8080-exec-3] AddMainSkillServlet - DoNotDelete being added as skill...
+[INFO ] 2021-04-20 13:33:00.016 [http-nio-8080-exec-3] AddMainSkillServlet - Skill with id: 12 successfully added
+[INFO ] 2021-04-20 13:33:06.012 [http-nio-8080-exec-5] LogoutAction - User robinthetob is logging out
+[INFO ] 2021-04-20 13:33:15.148 [http-nio-8080-exec-10] AdminLoginAction - Admin bcurry has logged in
+[INFO ] 2021-04-20 13:35:17.451 [main] GenericDao - UserRole{roleId=530, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-04-20 13:35:18.331 [main] GenericDao - User{userId=397, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-04-20, dateDeleted=null, zip=53705}
+[INFO ] 2021-04-20 13:35:19.469 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-04-20 13:36:55.105 [http-nio-8080-exec-4] AdminLoginAction - Admin bcurry has logged in
+[INFO ] 2021-04-20 13:37:05.132 [http-nio-8080-exec-5] GenericDao - Skill{skillId=10, skillName='deleteThisSkill'}
+[INFO ] 2021-04-20 13:37:05.313 [http-nio-8080-exec-5] DeleteSkillsServlet - Deleted skill with ID: 10 and Name: deleteThisSkill
+[INFO ] 2021-04-20 13:37:10.162 [http-nio-8080-exec-6] AdminLoginAction - Admin bcurry has logged in
+[INFO ] 2021-04-20 13:38:31.046 [http-nio-8080-exec-9] GenericDao - Skill{skillId=11, skillName='deleteThisAlso'}
+[INFO ] 2021-04-20 13:38:31.055 [http-nio-8080-exec-9] DeleteSkillsServlet - Deleted skill with ID: 11 and Name: deleteThisAlso
+[INFO ] 2021-04-20 13:38:41.725 [http-nio-8080-exec-10] AdminLoginAction - Admin bcurry has logged in
+[INFO ] 2021-04-20 13:45:15.081 [main] GenericDao - UserRole{roleId=534, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-04-20 13:45:16.026 [main] GenericDao - User{userId=400, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-04-20, dateDeleted=null, zip=53705}
+[INFO ] 2021-04-20 13:45:17.181 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-04-20 13:46:12.056 [http-nio-8080-exec-6] LoginAction - User robinthetob has logged in
+[INFO ] 2021-04-20 13:46:31.918 [http-nio-8080-exec-10] AddMainSkillServlet - deleteThisSkill being added as skill...
+[INFO ] 2021-04-20 13:46:32.012 [http-nio-8080-exec-10] AddMainSkillServlet - Skill with id: 13 successfully added
+[INFO ] 2021-04-20 13:46:34.930 [http-nio-8080-exec-1] AddMainSkillServlet - deleteThisAlso being added as skill...
+[INFO ] 2021-04-20 13:46:34.938 [http-nio-8080-exec-1] AddMainSkillServlet - Skill with id: 14 successfully added
+[INFO ] 2021-04-20 13:46:43.146 [http-nio-8080-exec-2] AddMainSkillServlet - deleteForGoodMeasure being added as skill...
+[INFO ] 2021-04-20 13:46:43.150 [http-nio-8080-exec-2] AddMainSkillServlet - Skill with id: 15 successfully added
+[INFO ] 2021-04-20 13:46:48.326 [http-nio-8080-exec-3] AddMainSkillServlet - DeleteAgain being added as skill...
+[INFO ] 2021-04-20 13:46:48.348 [http-nio-8080-exec-3] AddMainSkillServlet - Skill with id: 16 successfully added
+[INFO ] 2021-04-20 13:46:50.986 [http-nio-8080-exec-4] LogoutAction - User robinthetob is logging out
+[INFO ] 2021-04-20 13:46:59.596 [http-nio-8080-exec-9] AdminLoginAction - Admin bcurry has logged in
+[INFO ] 2021-04-20 13:47:03.453 [http-nio-8080-exec-10] GenericDao - Skill{skillId=13, skillName='deleteThisSkill'}
+[INFO ] 2021-04-20 13:47:03.527 [http-nio-8080-exec-10] DeleteSkillsServlet - Deleted skill with ID: 13 and Name: deleteThisSkill
+[INFO ] 2021-04-20 13:47:14.948 [http-nio-8080-exec-1] GenericDao - Skill{skillId=14, skillName='deleteThisAlso'}
+[INFO ] 2021-04-20 13:47:14.957 [http-nio-8080-exec-1] DeleteSkillsServlet - Deleted skill with ID: 14 and Name: deleteThisAlso
+[INFO ] 2021-04-20 13:47:23.708 [http-nio-8080-exec-2] GenericDao - Skill{skillId=15, skillName='deleteForGoodMeasure'}
+[INFO ] 2021-04-20 13:47:23.716 [http-nio-8080-exec-2] DeleteSkillsServlet - Deleted skill with ID: 15 and Name: deleteForGoodMeasure
+[INFO ] 2021-04-20 13:47:25.159 [http-nio-8080-exec-3] GenericDao - Skill{skillId=16, skillName='DeleteAgain'}
+[INFO ] 2021-04-20 13:47:25.169 [http-nio-8080-exec-3] DeleteSkillsServlet - Deleted skill with ID: 16 and Name: DeleteAgain

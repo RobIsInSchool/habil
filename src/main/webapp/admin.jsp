@@ -46,8 +46,9 @@
                         <td>${skill.skillName}</td>
                         <td>${skill.skillId}</td>
                         <td>
-                            <form action="" method="post">
-                                <input type="hidden" value="${skill.skillId}" name="skillToDelete">
+                            <form action="deleteSkill" method="post">
+                                <input type="hidden" value="${skill.skillId}" name="skillId">
+                                <input type="hidden" value="${skill.skillName}" name="skillName">
                                 <input type="submit" value="Delete ${skill.skillName}" name="submitSkillDelete">
                             </form>
                         </td>

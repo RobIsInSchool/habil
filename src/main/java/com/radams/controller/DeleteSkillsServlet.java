@@ -12,7 +12,7 @@ import com.radams.persistence.GenericDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@WebServlet(name = "DeleteSkillsServlet", value = "/DeleteSkillsServlet")
+@WebServlet(name = "DeleteSkillsServlet", value = "/deleteSkill")
 public class DeleteSkillsServlet extends HttpServlet {
     private GenericDao skillDao = new GenericDao(Skill.class);
     private final Logger logger = LogManager.getLogger(this.getClass());
@@ -23,6 +23,16 @@ public class DeleteSkillsServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        HttpSession session = request.getSession();
+        int skillId = Integer.parseInt(request.getParameter("skillId"));
+        String skillName = request.getParameter("skillName");
+        Skill skillToDelete = (Skill) skillDao.getById(skillId);
+        skillDao.delete(skillToDelete);
+        logger.info("Deleted skill with ID: " + skillId + " and Name: " + skillName);
+        List<Skill> allSkills = (List<Skill>) skillDao.getAll();
+        session.setAttribute("allSkills", allSkills);
+        String forwardURL = "/admin.jsp";
+        RequestDispatcher dispatcher = request.getRequestDispatcher(forwardURL);
+        dispatcher.forward(request, response);
     }
 }
