@@ -13,7 +13,7 @@
         <li><a href="viewMatches">Matches</a></li>
         <li><a href="skillsHas">Skills-Has</a></li>
         <li><a href="skillsWants">Skills-Wants</a></li>
-        <li><a href="displayUsers">Display All Users (Temporary)</a></li>
+<%--        <li><a href="displayUsers">Display All Users (Temporary)</a></li>--%>
         <li><a href="logout">Log Out</a></li>
     </ul>
 </nav>
