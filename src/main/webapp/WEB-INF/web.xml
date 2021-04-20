@@ -89,7 +89,6 @@
     </web-resource-collection>
     <auth-constraint>
       <role-name>admin</role-name>
-      <role-name>regUser</role-name>
     </auth-constraint>
   </security-constraint>
 
@@ -100,7 +99,6 @@
     </web-resource-collection>
     <auth-constraint>
       <role-name>admin</role-name>
-      <role-name>regUser</role-name>
     </auth-constraint>
   </security-constraint>
 
