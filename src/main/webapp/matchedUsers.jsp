@@ -23,7 +23,8 @@
             <tr>
                 <th>Username</th>
                 <th>Zip</th>
-                <th>Matched Skills</th>
+                <th>Has</th>
+                <th>Wants</th>
             </tr>
             <c:forEach var="user" items="${matchedUsers}">
                 <tr>
@@ -34,18 +35,27 @@
                             ${user.zip}
                     </td>
                     <td>
-                            <c:forEach var="skill" items="${matchedSkills}">
-
+                            <ul>
+                            <c:forEach var="skill" items="${user.skillsHas}">
+                                <li>${skill.skillName}</li>
                             </c:forEach>
+                            </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <c:forEach var="skill" items="${user.skillsWants}">
+                                <li>${skill.skillName}</li>
+                            </c:forEach>
+                        </ul>
                     </td>
                 </tr>
             </c:forEach>
         </table>
-        <ul>
-            <c:forEach var="user" items="${matchedUsers}">
-                <li>${user.firstName} -> ${user.zip}</li>
-            </c:forEach>
-        </ul>
+<%--        <ul>--%>
+<%--            <c:forEach var="user" items="${matchedUsers}">--%>
+<%--                <li>${user.firstName} -> ${user.zip}</li>--%>
+<%--            </c:forEach>--%>
+<%--        </ul>--%>
     </main>
 </div>
 </body>
