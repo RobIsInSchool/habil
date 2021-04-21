@@ -19,6 +19,28 @@
         <c:out value="${nav}" escapeXml="false"/>
     </header>
     <main>
+        <table>
+            <tr>
+                <th>Username</th>
+                <th>Zip</th>
+                <th>Matched Skills</th>
+            </tr>
+            <c:forEach var="user" items="${matchedUsers}">
+                <tr>
+                    <td>
+                            ${user.username}
+                    </td>
+                    <td>
+                            ${user.zip}
+                    </td>
+                    <td>
+                            <c:forEach var="skill" items="${matchedSkills}">
+
+                            </c:forEach>
+                    </td>
+                </tr>
+            </c:forEach>
+        </table>
         <ul>
             <c:forEach var="user" items="${matchedUsers}">
                 <li>${user.firstName} -> ${user.zip}</li>

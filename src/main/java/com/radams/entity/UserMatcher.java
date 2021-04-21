@@ -7,13 +7,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.radams.geoNames.LocationJSONResponse;
 import com.radams.geoNames.PostalCodesItem;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.radams.geoNames.LocationJSONResponse;
-import com.radams.geoNames.PostalCodesItem;
 import com.radams.persistence.GenericDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import org.json.simple.JSONObject;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
@@ -23,6 +21,7 @@ public class UserMatcher {
     private User user;
     private Properties properties;
     private GenericDao userDao;
+    private Map<User, JSONObject> matchedUserSkillsMap =  new TreeMap<>();
     private final Logger logger = LogManager.getLogger(this.getClass());
 
     public UserMatcher(User user) {
@@ -33,6 +32,9 @@ public class UserMatcher {
     public UserMatcher() {
 
     }
+
+
+    //----------------------------------SKILLS MATCHING----------------------------
 
     public Set<User> matchUserSkills() {
         userDao = new GenericDao(User.class);
@@ -67,9 +69,11 @@ public class UserMatcher {
             }
 
     private Boolean matchUserHas(Set<Skill> userSkillsHas, Set<Skill> otherUserSkillsWants) {
+        JSONObject matchedSkillsJSON = new JSONObject();
         for (Skill mainUserSkillHas : userSkillsHas) {
             for (Skill otherWant : otherUserSkillsWants) {
                 if(otherWant.equals(mainUserSkillHas)) {
+                    matchedSkillsJSON.put("", "");
                     return true;
                 }
             }
@@ -78,9 +82,9 @@ public class UserMatcher {
     }
 
     private Boolean matchUserWants(Set<Skill> userSkillsWants, Set<Skill> otherUserSkillsHas) {
-        for (Skill mainUserSkillHas : userSkillsWants) {
-            for (Skill otherWant : otherUserSkillsHas) {
-                if(otherWant.equals(mainUserSkillHas)) {
+        for (Skill mainUserSkillWants : userSkillsWants) {
+            for (Skill otherHas : otherUserSkillsHas) {
+                if(otherHas.equals(mainUserSkillWants)) {
                     return true;
                 }
             }
@@ -88,12 +92,7 @@ public class UserMatcher {
         return false;
     }
 
-    public Set<User> getMatchedUsers() throws Exception {
-        Set<User> matchedUsersBySkill = matchUserSkills();
-        Set<User> matchedUsersBySkillAndZip = matchUserZipsFromResultingSkillMatches(matchedUsersBySkill);
-        return matchedUsersBySkillAndZip;
-    }
-
+    //------------------------------ZIP CODE MATCHING-----------------------------------
     private Set<User> matchUserZipsFromResultingSkillMatches(Set<User> matchedUsersBySkill) throws Exception {
         Set<User> matchedUsers = new HashSet<>();
         for (User otherUser : matchedUsersBySkill) {
@@ -131,6 +130,16 @@ public class UserMatcher {
         return resultList.getPostalCodes();
     }
 
+    //------------------------------------------MATCHED USERS----------------------------------
+
+
+    public Set<User> getMatchedUsers() throws Exception {
+        Set<User> matchedUsersBySkill = matchUserSkills();
+        Set<User> matchedUsersBySkillAndZip = matchUserZipsFromResultingSkillMatches(matchedUsersBySkill);
+        return matchedUsersBySkillAndZip;
+    }
+
+    //--------------------------------PROPERTIES-----------------------------------------
     private void loadProperties() {
         properties = new Properties();
         try {
