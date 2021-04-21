@@ -39,4 +39,6 @@
 | 3/25/21 | AWS stuff and Auth stuff | 2.25 ||
 | 3/26/21 | User signup, display skill has and wants | 4.5 | Really important day! |
 | 3/27/21 | Skill wants/has add/delete, Main skills add, user matching, zip changing | 4.75 | Another huge milestone! |
+| 3/28/21 | Can't remember since I only just found the time I wrote down | 1 ||
 | 4/20/21 | logo and back link on login/signup, restricted display-all, added user and skill display to admin and working on deleting | 3.5 | I'm back! |
+| 4/21/21 | put band-aid on skill-delete bug, fixed username display bug, added admin user-delete, improved matched user display, some refactoring | 2.5 ||

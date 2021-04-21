@@ -1031,3 +1031,5 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 [INFO ] 2021-04-21 11:36:57.929 [http-nio-8080-exec-9] LogoutAction - User robinthetob is logging out
 [INFO ] 2021-04-21 11:37:05.771 [http-nio-8080-exec-4] LoginAction - User kmack has logged in
 [INFO ] 2021-04-21 11:38:08.762 [http-nio-8080-exec-7] LogoutAction - User kmack is logging out
+[INFO ] 2021-04-21 11:40:19.668 [http-nio-8080-exec-8] AdminLoginAction - Admin bcurry has logged in
+[INFO ] 2021-04-21 11:40:53.913 [http-nio-8080-exec-10] LogoutAction - User bcurry is logging out
