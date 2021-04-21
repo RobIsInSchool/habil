@@ -961,3 +961,12 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 [INFO ] 2021-04-21 10:05:43.702 [http-nio-8080-exec-10] GenericDao - Skill{skillId=8, skillName='stick-shift'}
 [INFO ] 2021-04-21 10:05:43.739 [http-nio-8080-exec-10] DeleteSkillsServlet - Deleted skill with ID: 8 and Name: stick-shift
 [INFO ] 2021-04-21 10:10:36.176 [http-nio-8080-exec-2] LogoutAction - User bcurry is logging out
+[INFO ] 2021-04-21 10:17:57.160 [main] GenericDao - UserRole{roleId=570, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-04-21 10:17:58.232 [main] GenericDao - User{userId=427, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-04-21, dateDeleted=null, zip=53705}
+[INFO ] 2021-04-21 10:17:59.746 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-04-21 10:19:27.808 [http-nio-8080-exec-4] LoginAction - User bcurry has logged in
+[INFO ] 2021-04-21 10:20:18.861 [http-nio-8080-exec-3] AddMainSkillServlet - spanish being added as skill...
+[INFO ] 2021-04-21 10:20:18.971 [http-nio-8080-exec-3] AddMainSkillServlet - Skill with id: 9 successfully added
+[INFO ] 2021-04-21 10:20:24.019 [http-nio-8080-exec-6] AddSkillActionServlet - Skill type: has being added for user bcurry
+[INFO ] 2021-04-21 10:20:24.020 [http-nio-8080-exec-6] AddSkillActionServlet - said skill is: spanish
+[INFO ] 2021-04-21 10:21:35.054 [http-nio-8080-exec-10] LogoutAction - User bcurry is logging out
