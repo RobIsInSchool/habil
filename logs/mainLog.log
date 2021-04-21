@@ -970,3 +970,22 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 [INFO ] 2021-04-21 10:20:24.019 [http-nio-8080-exec-6] AddSkillActionServlet - Skill type: has being added for user bcurry
 [INFO ] 2021-04-21 10:20:24.020 [http-nio-8080-exec-6] AddSkillActionServlet - said skill is: spanish
 [INFO ] 2021-04-21 10:21:35.054 [http-nio-8080-exec-10] LogoutAction - User bcurry is logging out
+[INFO ] 2021-04-21 10:34:40.374 [main] GenericDao - UserRole{roleId=574, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-04-21 10:34:41.380 [main] GenericDao - User{userId=430, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-04-21, dateDeleted=null, zip=53705}
+[INFO ] 2021-04-21 10:34:42.600 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-04-21 10:36:09.969 [http-nio-8080-exec-3] SignupUserServlet - first name Deletelast nameMeuser namedeletemeemaildelete@delete.comzip95519
+[INFO ] 2021-04-21 10:36:10.033 [http-nio-8080-exec-3] SignupUserServlet - User obj: User{userId=0, firstName='Delete', lastName='Me', username='deleteme', email='delete@delete.com', password='deleteme', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-04-21, dateDeleted=null, zip=95519}
+[INFO ] 2021-04-21 10:36:14.729 [http-nio-8080-exec-3] SignupUserServlet - regUser with id 8 has signed up: User{userId=8, firstName='Delete', lastName='Me', username='deleteme', email='delete@delete.com', password='deleteme', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-04-21, dateDeleted=null, zip=95519}
+[INFO ] 2021-04-21 10:36:23.944 [http-nio-8080-exec-6] LoginAction - User deleteme has logged in
+[INFO ] 2021-04-21 10:36:30.605 [http-nio-8080-exec-9] AddSkillActionServlet - Skill type: has being added for user deleteme
+[INFO ] 2021-04-21 10:36:30.606 [http-nio-8080-exec-9] AddSkillActionServlet - said skill is: Auto Maintenance
+[INFO ] 2021-04-21 10:36:32.578 [http-nio-8080-exec-1] AddSkillActionServlet - Skill type: has being added for user deleteme
+[INFO ] 2021-04-21 10:36:32.579 [http-nio-8080-exec-1] AddSkillActionServlet - said skill is: fishing
+[INFO ] 2021-04-21 10:36:36.531 [http-nio-8080-exec-4] AddSkillActionServlet - Skill type: wants being added for user deleteme
+[INFO ] 2021-04-21 10:36:36.532 [http-nio-8080-exec-4] AddSkillActionServlet - said skill is: sewing
+[INFO ] 2021-04-21 10:37:02.358 [http-nio-8080-exec-4] LogoutAction - User deleteme is logging out
+[INFO ] 2021-04-21 10:39:13.169 [http-nio-8080-exec-1] AdminLoginAction - Admin bcurry has logged in
+[INFO ] 2021-04-21 10:39:36.856 [http-nio-8080-exec-3] GenericDao - User{userId=8, firstName='Delete', lastName='Me', username='deleteme', email='delete@delete.com', password='deleteme', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-04-21, dateDeleted=null, zip=53705}
+[INFO ] 2021-04-21 10:39:36.888 [http-nio-8080-exec-3] DeleteUsersServlet - Deleted user with ID: 8 and username: deleteme
+[INFO ] 2021-04-21 10:39:42.386 [http-nio-8080-exec-4] GenericDao - null
+[INFO ] 2021-04-21 10:39:55.923 [http-nio-8080-exec-5] AdminLoginAction - Admin bcurry has logged in

@@ -28,8 +28,9 @@
                     <td>${user.userId}</td>
                     <td>${user.email}</td>
                     <td>
-                        <form action="" method="post">
+                        <form action="deleteUser" method="post">
                             <input type="hidden" value="${user.userId}" name="userToDelete">
+                            <input type="hidden" value="${user.username}" name="username">
                             <input type="submit" value="Delete ${user.username}" name="submitUserDelete">
                         </form>
                     </td>
