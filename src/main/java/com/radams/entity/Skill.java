@@ -22,10 +22,28 @@ public class Skill {
     @Column(name = "skill_name")
     private String skillName;
 
-    @ManyToMany(mappedBy = "skillsHas", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToMany(
+            mappedBy = "skillsHas",
+            cascade =
+                    {
+                            CascadeType.DETACH,
+                            CascadeType.MERGE,
+                            CascadeType.REFRESH,
+                            CascadeType.PERSIST
+                    },
+            fetch = FetchType.EAGER)
     private Set<User> usersHave = new HashSet<>();
 
-    @ManyToMany(mappedBy = "skillsWants", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToMany(
+            mappedBy = "skillsWants",
+            cascade =
+                    {
+                            CascadeType.DETACH,
+                            CascadeType.MERGE,
+                            CascadeType.REFRESH,
+                            CascadeType.PERSIST
+                    },
+            fetch = FetchType.EAGER)
     private Set<User> usersWant = new HashSet<>();
 
     /**

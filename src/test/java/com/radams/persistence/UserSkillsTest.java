@@ -1,15 +1,12 @@
 package com.radams.persistence;
 
-import com.radams.entity.Lesson;
 import com.radams.entity.Skill;
 import com.radams.entity.User;
 import com.radams.entity.UserMatcher;
 import com.radams.test.util.Database;
-import net.bytebuddy.description.type.TypeList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.sql.SQLException;
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -71,7 +68,7 @@ public class UserSkillsTest {
     void updateUserJoeCoyneWithNewSkillWants() {
         User joeCoyne = (User)userDao.getById(1);
         Skill autoMaintenance = (Skill)skillDao.getById(2);
-        joeCoyne.addSkillsWants(autoMaintenance);
+        joeCoyne.addSkillWants(autoMaintenance);
         userDao.saveOrUpdate(joeCoyne);
         User updatedJoeCoyne = (User)userDao.getById(1);
         assertEquals(1, updatedJoeCoyne.getSkillsWants().size());
@@ -81,7 +78,7 @@ public class UserSkillsTest {
     void updateUserJoeCoyneWithRemovedSkillWants() {
         User joeCoyne = (User)userDao.getById(1);
         Skill autoMaintenance = (Skill)skillDao.getById(1);
-        joeCoyne.addSkillsWants(autoMaintenance);
+        joeCoyne.addSkillWants(autoMaintenance);
         userDao.saveOrUpdate(joeCoyne);
         User updatedJoeCoyneWith = (User)userDao.getById(1);
         updatedJoeCoyneWith.removeSkillWants(autoMaintenance);
@@ -102,10 +99,10 @@ public class UserSkillsTest {
 
         //Joe Coyne wants to learn auto maintenance - Karen Mack and Barney Curry know auto maintenance
         //Joe Coyne knows how to fish, but only Karen Mack wants to learn how to fish
-        joeCoyne.addSkillsWants(autoMaintenance);
+        joeCoyne.addSkillWants(autoMaintenance);
         joeCoyne.addSkillHas(fishing);
         karenMack.addSkillHas(autoMaintenance);
-        karenMack.addSkillsWants(fishing);
+        karenMack.addSkillWants(fishing);
         barneyCurry.addSkillHas(autoMaintenance);
 
         userDao.saveOrUpdate(joeCoyne);

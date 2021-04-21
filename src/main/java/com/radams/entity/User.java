@@ -427,22 +427,12 @@ public class User implements Serializable {
         }
     }
 
-    public void addSkillsWants(Skill skill) {
+    public void addSkillWants(Skill skill) {
         skillsWants.add(skill);
         skill.addUsersWants(this);
     }
 
     public void removeSkillWants(Skill skill) {
-        Iterator<Skill> iterator = skillsWants.iterator();
-        while(iterator.hasNext()) {
-            String skillName = iterator.next().getSkillName();
-            if(skillName.equals(skill.getSkillName())) {
-                iterator.remove();
-            }
-        }
-    }
-
-    public void removeSkillsWants(Skill skill) {
         Iterator<Skill> iterator = skillsWants.iterator();
         while(iterator.hasNext()) {
             String skillName = iterator.next().getSkillName();

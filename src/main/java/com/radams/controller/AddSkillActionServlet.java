@@ -35,7 +35,7 @@ public class AddSkillActionServlet extends HttpServlet {
         }
         if (skillType.equals("wants")) {
             forwardUrl = "/skillsWants";
-            user.addSkillsWants(skill);
+            user.addSkillWants(skill);
         }
         userDao.saveOrUpdate(user);
         RequestDispatcher dispatcher = request.getRequestDispatcher(forwardUrl);
