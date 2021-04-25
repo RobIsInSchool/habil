@@ -100,6 +100,7 @@ public class User implements Serializable {
      * @param email       user email
      * @param password    user password
      * @param isActive    indicates if user is still active
+     * @param zip         the zip
      * @param dateCreated the date created
      */
     public User(String firstName, String lastName, String username, String email, String password, boolean isActive, String zip, Date dateCreated) {
@@ -312,10 +313,20 @@ public class User implements Serializable {
         this.dateDeleted = dateDeleted;
     }
 
+    /**
+     * Gets zip.
+     *
+     * @return the zip
+     */
     public String getZip() {
         return zip;
     }
 
+    /**
+     * Sets zip.
+     *
+     * @param zip the zip
+     */
     public void setZip(String zip) {
         this.zip = zip;
     }
@@ -412,11 +423,21 @@ public class User implements Serializable {
         lessonsTaught.add(lesson);
     }
 
+    /**
+     * Add skill has.
+     *
+     * @param skill the skill
+     */
     public void addSkillHas(Skill skill) {
         skillsHas.add(skill);
         skill.addUsersHas(this);
     }
 
+    /**
+     * Remove skill has.
+     *
+     * @param skill the skill
+     */
     public void removeSkillHas(Skill skill) {
         Iterator<Skill> iterator = skillsHas.iterator();
         while(iterator.hasNext()) {
@@ -427,11 +448,21 @@ public class User implements Serializable {
         }
     }
 
+    /**
+     * Add skill wants.
+     *
+     * @param skill the skill
+     */
     public void addSkillWants(Skill skill) {
         skillsWants.add(skill);
         skill.addUsersWants(this);
     }
 
+    /**
+     * Remove skill wants.
+     *
+     * @param skill the skill
+     */
     public void removeSkillWants(Skill skill) {
         Iterator<Skill> iterator = skillsWants.iterator();
         while(iterator.hasNext()) {
@@ -476,5 +507,4 @@ public class User implements Serializable {
         return this.userId == (user.userId) && this.username.equals(user.username);
     }
 
-//TODO JDOCS FOR ALL
 }
