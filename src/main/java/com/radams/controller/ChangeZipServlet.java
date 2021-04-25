@@ -11,6 +11,10 @@ import com.radams.persistence.GenericDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * Change user zip code
+ * @author Robert Adams
+ */
 @WebServlet(name = "ChangeZipServlet", value = "/changeZip")
 public class ChangeZipServlet extends HttpServlet {
     private GenericDao userDao = new GenericDao(User.class);
@@ -22,7 +26,10 @@ public class ChangeZipServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         HttpSession session = request.getSession();
+
+        //webUser and user differentiate between session user and that same user in database
         User webUser = (User) session.getAttribute("user");
         User user = (User) userDao.getById(webUser.getUserId());
 
