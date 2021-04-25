@@ -40,7 +40,5 @@ public class AddSkillActionServlet extends HttpServlet {
         userDao.saveOrUpdate(user);
         webSession.setAttribute("user", user);
         response.sendRedirect(request.getContextPath() + forwardUrl);
-//        RequestDispatcher dispatcher = request.getRequestDispatcher(forwardUrl);
-//        dispatcher.forward(request, response);
     }
 }

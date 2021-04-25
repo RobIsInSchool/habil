@@ -37,7 +37,5 @@ public class AddMainSkillServlet extends HttpServlet {
         List<Skill> skills = (List<Skill>) skillDao.getAll();
         session.setAttribute("allSkills", skills);
         response.sendRedirect(request.getContextPath() + "/addMainSkill");
-//        RequestDispatcher dispatcher = request.getRequestDispatcher("/addSkillToMain.jsp");
-//        dispatcher.forward(request, response);
     }
 }

@@ -26,8 +26,6 @@ public class LoginAction extends HttpServlet {
         request.setAttribute("user", user);
         session.setAttribute("user", user);
         response.sendRedirect(request.getContextPath() + "/home");
-//        RequestDispatcher dispatcher = request.getRequestDispatcher("/home.jsp");
-//        dispatcher.forward(request, response);
     }
 
     @Override
