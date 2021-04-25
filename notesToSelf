@@ -1,0 +1,5 @@
+remove "welcome to first deploy" from matched user page
+
+Maybe the "addSkillAction" and "changeZip" servlets can redirect to view
+
+Also add a servlet to only redirect to home
