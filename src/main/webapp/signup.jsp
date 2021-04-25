@@ -28,7 +28,7 @@
         <label for="passwordConfirm">Confirm Password</label>
         <input type="text" id="passwordConfirm" pattern="[a-zA-Z0-9!@#$%^&*.,]{8,80}" required>
 
-        <input type="submit" class="btn btn-success btn-sm"  value="submit">
+        <input type="submit" class="btn btn-info btn-sm"  value="submit">
     </form>
     <a href="/habil">Go Back</a>
     <c:out value="${footer}" escapeXml="false"/>

@@ -24,7 +24,7 @@
             <td>Password: <input type="text" name="j_password"></td>
         </tr>
         <tr>
-            <td><input class="btn btn-success btn-sm" type="submit" value="Log In"> </td>
+            <td><input class="btn btn-info btn-sm" type="submit" value="Log In"> </td>
         </tr>
     </table>
 </form>

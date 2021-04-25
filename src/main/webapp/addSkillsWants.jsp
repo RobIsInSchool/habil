@@ -25,7 +25,7 @@
                 <form action="addSkillAction" method="POST">
                     <input type="hidden" name="skillId" value="${skill.skillId}">
                     <input type="hidden" name="skillType" value="wants">
-                    <input type="submit" class="btn btn-success btn-sm" value="Add Skill-Want">
+                    <input type="submit" class="btn btn-info btn-sm" value="Add Skill-Want">
                 </form>
             </li>
         </c:forEach>

@@ -22,7 +22,7 @@
         <form action="addMainSkill" method="POST">
             <label for="skillToAdd">Add Skill:</label>
             <input type="text" name="skillToAdd" id="skillToAdd">
-            <input type="submit" class="btn btn-success btn-sm" name="submit" value="Add Skill">
+            <input type="submit" class="btn btn-info btn-sm" name="submit" value="Add Skill">
         </form>
         <ul>
         <c:forEach var="skill" items="${allSkills}">
