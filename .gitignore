@@ -21,6 +21,7 @@
 /logs/mainLog.log
 /designDocs/ERD.png
 /src/main/webapp/WEB-INF/web.xml
+notesToSelf
 
 # Gradle:
 .idea/gradle.xml
