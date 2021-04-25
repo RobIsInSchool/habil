@@ -22,7 +22,7 @@
     <main>
         <h2>Welcome, ${user.username}</h2>
         <p>Currently at zip code ${user.zip}</p>
-        <button id="zipChange">Change zip?</button>
+        <button class="btn btn-success btn-sm" id="zipChange">Change zip?</button>
         <div id="zipChangeInputArea"></div>
     </main>
     <c:out value="${footer}" escapeXml="false"/>

@@ -51,7 +51,7 @@
                             <form action="deleteSkill" method="post">
                                 <input type="hidden" value="${skill.skillId}" name="skillId">
                                 <input type="hidden" value="${skill.skillName}" name="skillName">
-                                <input type="submit" value="Delete ${skill.skillName}" name="submitSkillDelete">
+                                <input type="submit" class="btn btn-success btn-sm"  value="Delete ${skill.skillName}" name="submitSkillDelete">
                             </form>
                         </td>
                     </tr>
