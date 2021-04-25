@@ -12,6 +12,10 @@ import com.radams.persistence.GenericDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * This servlet adds a skill to the main shared list of skills for all users to choose
+ * @author Robert Adams
+ */
 @WebServlet(name = "AddMainSkillServlet", value = "/addMainSkill")
 public class AddMainSkillServlet extends HttpServlet {
     private GenericDao userDao = new GenericDao(User.class);
