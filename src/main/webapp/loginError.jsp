@@ -12,5 +12,6 @@
 </head>
 <body>
 <p>Login failed, please <a href="login.jsp"> try again</a>.</p>
+<c:out value="${footer}" escapeXml="false"/>
 </body>
 </html>

@@ -29,5 +29,6 @@
     </table>
 </form>
 <a href="/habil">Go back</a>
+<c:out value="${footer}" escapeXml="false"/>
 </body>
 </html>

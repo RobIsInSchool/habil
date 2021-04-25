@@ -34,6 +34,7 @@
         </li>
     </c:forEach>
     </ul>
+        <c:out value="${footer}" escapeXml="false"/>
     </div>
 </body>
 </html>

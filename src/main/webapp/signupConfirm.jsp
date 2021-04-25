@@ -5,5 +5,6 @@
 <c:out value="${head}" escapeXml="false"/>
 <body>
     <p>You have successfully signed up as user ${userName}. Go <a href="loginAction">here</a> to log in.</p>
+    <c:out value="${footer}" escapeXml="false"/>
 </body>
 </html>

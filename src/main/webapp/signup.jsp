@@ -31,5 +31,6 @@
         <input type="submit" value="submit">
     </form>
     <a href="/habil">Go Back</a>
+    <c:out value="${footer}" escapeXml="false"/>
 </body>
 </html>

@@ -25,6 +25,7 @@
         <button id="zipChange">Change zip?</button>
         <div id="zipChangeInputArea"></div>
     </main>
+    <c:out value="${footer}" escapeXml="false"/>
 </div>
 </body>
 </html>

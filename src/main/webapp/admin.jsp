@@ -59,6 +59,7 @@
             </table>
         </section>
     </main>
+    <c:out value="${footer}" escapeXml="false"/>
 </div>
 </body>
 </html>

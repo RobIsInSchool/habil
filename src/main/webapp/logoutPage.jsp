@@ -20,6 +20,7 @@
     <main>
         <p>You have successfully logged out. <a href="/habil">Back to homepage</a></p>
     </main>
+    <c:out value="${footer}" escapeXml="false"/>
 </div>
 </body>
 </html>
