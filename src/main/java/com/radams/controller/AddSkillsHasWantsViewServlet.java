@@ -11,6 +11,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * This servlet displays user's skills depending on the skill type
+ * @author Robert Adams
+ */
 @WebServlet(name = "AddSkillsViewServlet", value = "/addSkillsHasWantsView")
 public class AddSkillsHasWantsViewServlet extends HttpServlet {
     private GenericDao skillDao = new GenericDao(Skill.class);
@@ -20,6 +24,7 @@ public class AddSkillsHasWantsViewServlet extends HttpServlet {
         List<Skill> allSkills = skillDao.getAll();
         session.setAttribute("allSkills", allSkills);
         String forwardUrl;
+        //Determine skill type and adjust forward URL accordingly
         if (request.getParameter("viewType").equals("has")) {
             forwardUrl = "/addSkillsHas.jsp";
         }
@@ -28,10 +33,5 @@ public class AddSkillsHasWantsViewServlet extends HttpServlet {
         }
         RequestDispatcher dispatcher = request.getRequestDispatcher(forwardUrl);
         dispatcher.forward(request, response);
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
     }
 }
