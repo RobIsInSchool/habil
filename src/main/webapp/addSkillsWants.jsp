@@ -21,11 +21,11 @@
     <p><a href="#">Don't see the skill you want? Add it!</a></p>
     <ul>
         <c:forEach var="skill" items="${allSkills}">
-            <li>${skill.skillName}
+            <li><p>${skill.skillName}</p>
                 <form action="addSkillAction" method="POST">
                     <input type="hidden" name="skillId" value="${skill.skillId}">
                     <input type="hidden" name="skillType" value="wants">
-                    <input type="submit" value="Add skill to Skills-Wants">
+                    <input type="submit" class="btn btn-success btn-sm" value="Add Skill-Want">
                 </form>
             </li>
         </c:forEach>
