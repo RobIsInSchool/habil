@@ -31,7 +31,8 @@ public class ChangeZipServlet extends HttpServlet {
 
         userDao.saveOrUpdate(user);
         session.setAttribute("user", user);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/home.jsp");
-        dispatcher.forward(request, response);
+        response.sendRedirect(request.getContextPath() + "/home");
+//        RequestDispatcher dispatcher = request.getRequestDispatcher("/home.jsp");
+//        dispatcher.forward(request, response);
     }
 }
