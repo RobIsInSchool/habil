@@ -11,24 +11,36 @@ import com.radams.persistence.GenericDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import org.json.simple.JSONObject;
+//import org.json.simple.JSONObject;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 
+/**
+ * This class compares a user against other users and determines if they're a skill match
+ * @author Robert Adams
+ */
 public class UserMatcher {
     private User user;
     private Properties properties;
     private GenericDao userDao;
-    private Map<User, JSONObject> matchedUserSkillsMap =  new TreeMap<>();
+//    private Map<User, JSONObject> matchedUserSkillsMap =  new TreeMap<>();
     private final Logger logger = LogManager.getLogger(this.getClass());
 
+    /**
+     * Instantiates a new User matcher.
+     *
+     * @param user the user
+     */
     public UserMatcher(User user) {
         this.user = user;
         this.loadProperties();
     }
 
+    /**
+     * Instantiates a new User matcher.
+     */
     public UserMatcher() {
 
     }
@@ -36,6 +48,10 @@ public class UserMatcher {
 
     //----------------------------------SKILLS MATCHING----------------------------
 
+    /**
+     * Matches users based on their skills
+     * @return the matched users
+     */
     public Set<User> matchUserSkills() {
         userDao = new GenericDao(User.class);
         Set<Skill> userSkillsHas = user.getSkillsHas();
@@ -56,11 +72,20 @@ public class UserMatcher {
         return matchedUsers;
     }
 
+    /**
+     *
+     * @param userSkillsHas skills user has
+     * @param userSkillsWants skills user wants
+     * @param otherUserSkillsHas skills OTHER user has
+     * @param otherUserSkillsWants skills OTHER user wants
+     * @return boolean indicating a match
+     */
     private Boolean isMatch(Set<Skill> userSkillsHas,
                             Set<Skill> userSkillsWants,
                             Set<Skill> otherUserSkillsHas,
                             Set<Skill> otherUserSkillsWants) {
 
+                //determines if user has/wants are complementary to other user
                 if(matchUserHas(userSkillsHas, otherUserSkillsWants) &&
                         matchUserWants(userSkillsWants, otherUserSkillsHas)) {
                     return true;
@@ -68,12 +93,18 @@ public class UserMatcher {
                 return false;
             }
 
+    /**
+     * Matches user skills has against other skill wants
+     * @param userSkillsHas user skill has
+     * @param otherUserSkillsWants OTHER user skill wants
+     * @return
+     */
     private Boolean matchUserHas(Set<Skill> userSkillsHas, Set<Skill> otherUserSkillsWants) {
-        JSONObject matchedSkillsJSON = new JSONObject();
+//        JSONObject matchedSkillsJSON = new JSONObject();
         for (Skill mainUserSkillHas : userSkillsHas) {
             for (Skill otherWant : otherUserSkillsWants) {
                 if(otherWant.equals(mainUserSkillHas)) {
-                    matchedSkillsJSON.put("", "");
+//                    matchedSkillsJSON.put("", "");
                     return true;
                 }
             }
@@ -81,6 +112,12 @@ public class UserMatcher {
         return false;
     }
 
+    /**
+     * Matches user skills wants agains OTHER skill has
+     * @param userSkillsWants user skill wants
+     * @param otherUserSkillsHas OTHER user skills has
+     * @return
+     */
     private Boolean matchUserWants(Set<Skill> userSkillsWants, Set<Skill> otherUserSkillsHas) {
         for (Skill mainUserSkillWants : userSkillsWants) {
             for (Skill otherHas : otherUserSkillsHas) {
@@ -93,6 +130,13 @@ public class UserMatcher {
     }
 
     //------------------------------ZIP CODE MATCHING-----------------------------------
+
+    /**
+     * Takes all skill-matched users and determines if they exist in nearby zip code
+     * @param matchedUsersBySkill set of all skill-matched users
+     * @return users matched by both skills and zip
+     * @throws Exception
+     */
     private Set<User> matchUserZipsFromResultingSkillMatches(Set<User> matchedUsersBySkill) throws Exception {
         Set<User> matchedUsers = new HashSet<>();
         for (User otherUser : matchedUsersBySkill) {
@@ -104,6 +148,11 @@ public class UserMatcher {
         return matchedUsers;
     }
 
+    /**
+     * gets list of nearby postal codes from returned data objects
+     * @return postal codes
+     * @throws Exception
+     */
     private Set<String> getPostalCodesFromPostalCodesItem() throws Exception {
         Set<String> postalCodes = new HashSet<>();
         for(PostalCodesItem postalCode : getUserNearbyPostalCodes()) {
@@ -112,6 +161,11 @@ public class UserMatcher {
         return postalCodes;
     }
 
+    /**
+     * Reaches out to external API and gets zip code data based on user's zip code
+     * @return postal codes
+     * @throws Exception
+     */
     public List<PostalCodesItem> getUserNearbyPostalCodes() throws Exception {
         String zip = user.getZip();
         String targetString = "http://api.geonames.org/findNearbyPostalCodesJSON"
@@ -133,6 +187,11 @@ public class UserMatcher {
     //------------------------------------------MATCHED USERS----------------------------------
 
 
+    /**
+     * gets users matched by skill and zip
+     * @return set of users matched by skill and zip
+     * @throws Exception
+     */
     public Set<User> getMatchedUsers() throws Exception {
         Set<User> matchedUsersBySkill = matchUserSkills();
         Set<User> matchedUsersBySkillAndZip = matchUserZipsFromResultingSkillMatches(matchedUsersBySkill);
@@ -140,6 +199,10 @@ public class UserMatcher {
     }
 
     //--------------------------------PROPERTIES-----------------------------------------
+
+    /**
+     * loads properties from file
+     */
     private void loadProperties() {
         properties = new Properties();
         try {
