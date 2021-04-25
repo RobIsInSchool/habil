@@ -13,6 +13,10 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.Set;
 
+/**
+ * Displays user's skills that they have
+ * @author Robert Adams
+ */
 @WebServlet(name = "DisplaySkillsHasServlet", value = "/skillsHas")
 public class DisplaySkillsHasServlet extends HttpServlet {
     private GenericDao userDao = new GenericDao(User.class);
@@ -20,10 +24,15 @@ public class DisplaySkillsHasServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         HttpSession session = request.getSession();
+
+        //webUser and user are used to differentiate between the session user and the same user in the database
         User webUser = (User) session.getAttribute("user");
         User user = (User) userDao.getById(webUser.getUserId());
+
         Set<Skill> skillsHas = user.getSkillsHas();
+
         session.setAttribute("skillsHas", skillsHas);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/skillsHas.jsp");
         dispatcher.forward(request, response);

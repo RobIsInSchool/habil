@@ -10,6 +10,10 @@ import com.radams.persistence.GenericDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * Servlet to delete users
+ * @author Robert Adams
+ */
 @WebServlet(name = "DeleteUsersServlet", value = "/deleteUser")
 public class DeleteUsersServlet extends HttpServlet {
     private GenericDao userDao = new GenericDao(User.class);
@@ -17,13 +21,18 @@ public class DeleteUsersServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         HttpSession session = request.getSession();
+
         int userId = Integer.parseInt(request.getParameter("userToDelete"));
         String username = request.getParameter("username");
+
         User userToDelete = (User) userDao.getById(userId);
         userDao.delete(userToDelete);
         logger.info("Deleted user with ID: " + userId + " and username: " + username);
+
         List<User> allUsers = (List<User>) userDao.getAll();
+
         session.setAttribute("allUsers", allUsers);
         String forwardURL = "/admin.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(forwardURL);

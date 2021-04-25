@@ -14,6 +14,10 @@ import java.io.IOException;
 import java.sql.Date;
 import java.time.LocalDate;
 
+/**
+ * Creates new user
+ * @author Robert Adams
+ */
 @WebServlet(name = "SignupUserServlet", value = "/signupUser")
 public class SignupUserServlet extends HttpServlet {
 
@@ -32,15 +36,7 @@ public class SignupUserServlet extends HttpServlet {
         String password = request.getParameter("password");
         String zip = request.getParameter("zip");
 
-        logger.info("first name " + firstName
-                + "last name" + lastName
-                + "user name" + userName
-                + "email" + email
-                + "zip" + zip
-        );
-
         User user = new User(firstName, lastName, userName, email, password, true, zip, Date.valueOf(LocalDate.now()));
-        logger.info("User obj: " + user);
         UserRole role = new UserRole("regUser", user);
         user.addRole(role);
         int userId = userDao.insert(user);

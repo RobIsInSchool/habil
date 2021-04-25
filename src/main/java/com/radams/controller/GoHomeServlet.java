@@ -5,6 +5,10 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
+/**
+ * Sends the user home
+ * @author Robert Adams
+ */
 @WebServlet(name = "GoHomeServlet", value = "/home")
 public class GoHomeServlet extends HttpServlet {
     @Override
@@ -12,9 +16,4 @@ public class GoHomeServlet extends HttpServlet {
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/home.jsp");
         dispatcher.forward(request, response);
     }
-//
-//    @Override
-//    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//
-//    }
 }
