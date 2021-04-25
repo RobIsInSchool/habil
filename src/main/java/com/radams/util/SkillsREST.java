@@ -8,9 +8,18 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+/**
+ * Returns skills as part of REST service
+ * @author Robert Adams
+ */
 @Path("/skills")
 public class SkillsREST {
     private GenericDao skillDao = new GenericDao(Skill.class);
+
+    /**
+     * Gets list of all skills and outputs each one
+     * @return
+     */
     // The Java method will process HTTP GET requests
     @GET
     // The Java method will produce content identified by the MIME Media type "text/plain"
@@ -26,6 +35,11 @@ public class SkillsREST {
         return Response.status(200).entity(output).build();
     }
 
+    /**
+     * Outputs skills for web service
+     * @param id skill id
+     * @return
+     */
     @GET
     @Produces("text/plain")
     @Path("{id}")
