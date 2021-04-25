@@ -29,7 +29,7 @@
             <form action="removeSkillAction" method="GET">
                 <input type="hidden" name="skillId" value="${skill.skillId}">
                 <input type="hidden" name="skillType" value="has">
-                <input type="submit" class="btn btn-info btn-sm" value="Remove Skill?">
+                <input type="submit" class="btn btn-info btn-sm" value="X">
             </form>
         </li>
     </c:forEach>
