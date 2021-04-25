@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
 <c:import var="head" url="components/head.jsp" />
+<c:import var="footer" url="components/footer.jsp" />
 <c:out value="${head}" escapeXml="false"/>
 <body>
 
