@@ -1357,3 +1357,9 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 [INFO ] 2021-04-26 12:21:43.845 [main] GenericDao - User{userId=649, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-04-26, dateDeleted=null, zip=53705}
 [INFO ] 2021-04-26 12:21:46.110 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
 [INFO ] 2021-04-26 12:23:33.987 [http-nio-8080-exec-7] LoginAction - User robinthetob has logged in
+[INFO ] 2021-04-26 12:25:00.105 [http-nio-8080-exec-1] LogoutAction - User robinthetob is logging out
+[INFO ] 2021-04-26 12:26:13.346 [http-nio-8080-exec-1] LoginAction - User robinthetob has logged in
+[INFO ] 2021-04-26 12:32:05.478 [main] GenericDao - UserRole{roleId=870, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-04-26 12:32:06.506 [main] GenericDao - User{userId=652, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-04-26, dateDeleted=null, zip=53705}
+[INFO ] 2021-04-26 12:32:07.678 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-04-26 12:35:52.563 [http-nio-8080-exec-8] LoginAction - User robinthetob has logged in

@@ -20,7 +20,7 @@
     </header>
     <main>
         <h2>Welcome, ${user.username}</h2>
-        <p>Currently at zip code ${user.zip}</p>
+        <p id="zip" style="display:inline-block">Currently at zip code ${user.zip}</p>
         <button class="btn btn-info btn-sm" id="zipChange">Change zip?</button>
         <div id="zipChangeInputArea"></div>
     </main>
