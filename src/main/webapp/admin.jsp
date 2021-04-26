@@ -21,31 +21,38 @@
     <main>
         <section id="users">
             <h3>Users</h3>
-            <table>
-                <tr><th>Username</th><th>User ID</th><th>Email</th><th>Delete</th></tr>
+            <table class="table table-hover">
+                <thead>
+                <tr><th scope="col">Username</th><th scope="col">User ID</th><th scope="col">Email</th><th scope="col">Delete</th></tr>
+                </thead>
+                <tbody>
             <c:forEach var="user" items="${allUsers}">
                 <tr>
-                    <td>${user.username}</td>
+                    <td scope="row">${user.username}</td>
                     <td>${user.userId}</td>
                     <td>${user.email}</td>
                     <td>
                         <form action="deleteUser" method="post">
                             <input type="hidden" value="${user.userId}" name="userToDelete">
                             <input type="hidden" value="${user.username}" name="username">
-                            <input type="submit" value="Delete ${user.username}" name="submitUserDelete">
+                            <input type="submit" class="btn btn-info btn-sm" value="Delete ${user.username}" name="submitUserDelete">
                         </form>
                     </td>
                 </tr>
             </c:forEach>
+                </tbody>
             </table>
         </section>
         <section id="skills">
             <h3>Skills</h3>
-            <table>
-                <tr><th>Skill Name</th><th>Skill ID</th><th>Delete</th></tr>
+            <table class="table table-hover">
+                <thead>
+                <tr><th scope="col">Skill Name</th><th scope="col">Skill ID</th><th scope="col">Delete</th></tr>
+                </thead>
+                <tbody>
                 <c:forEach var="skill" items="${allSkills}">
                     <tr>
-                        <td>${skill.skillName}</td>
+                        <td scope="row">${skill.skillName}</td>
                         <td>${skill.skillId}</td>
                         <td>
                             <form action="deleteSkill" method="post">
@@ -56,6 +63,7 @@
                         </td>
                     </tr>
                 </c:forEach>
+                </tbody>
             </table>
         </section>
     </main>

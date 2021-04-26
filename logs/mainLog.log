@@ -1424,3 +1424,66 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 [INFO ] 2021-04-26 13:29:10.909 [http-nio-8080-exec-2] RemoveSkillActionServlet - Skill type: wants being removed from user robinthetob
 [INFO ] 2021-04-26 13:29:10.910 [http-nio-8080-exec-2] RemoveSkillActionServlet - said skill is: surfing
 [INFO ] 2021-04-26 13:30:50.069 [http-nio-8080-exec-2] LogoutAction - User robinthetob is logging out
+[INFO ] 2021-04-26 13:32:34.386 [http-nio-8080-exec-9] AdminLoginAction - Admin bcurry has logged in
+[INFO ] 2021-04-26 13:32:47.400 [http-nio-8080-exec-10] GenericDao - Skill{skillId=3, skillName='surfing'}
+[INFO ] 2021-04-26 13:32:47.481 [http-nio-8080-exec-10] DeleteSkillsServlet - Deleted skill with ID: 3 and Name: surfing
+[INFO ] 2021-04-26 13:33:03.201 [http-nio-8080-exec-1] LogoutAction - User bcurry is logging out
+[INFO ] 2021-04-26 13:33:10.710 [http-nio-8080-exec-6] LoginAction - User robinthetob has logged in
+[INFO ] 2021-04-26 13:33:13.518 [http-nio-8080-exec-8] LogoutAction - User robinthetob is logging out
+[INFO ] 2021-04-26 13:35:00.961 [main] GenericDao - UserRole{roleId=914, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-04-26 13:35:02.024 [main] GenericDao - User{userId=685, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-04-26, dateDeleted=null, zip=53705}
+[INFO ] 2021-04-26 13:35:03.518 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-04-26 13:37:45.421 [http-nio-8080-exec-5] LoginAction - User robinthetob has logged in
+[INFO ] 2021-04-26 13:38:03.373 [http-nio-8080-exec-7] LogoutAction - User robinthetob is logging out
+[INFO ] 2021-04-26 13:38:11.193 [http-nio-8080-exec-3] AdminLoginAction - Admin bcurry has logged in
+[INFO ] 2021-04-26 13:43:55.317 [main] GenericDao - UserRole{roleId=918, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-04-26 13:43:56.362 [main] GenericDao - User{userId=688, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-04-26, dateDeleted=null, zip=53705}
+[INFO ] 2021-04-26 13:43:58.005 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-04-26 13:44:55.459 [http-nio-8080-exec-6] LoginAction - User robinthetob has logged in
+[INFO ] 2021-04-26 13:45:07.301 [http-nio-8080-exec-9] LogoutAction - User robinthetob is logging out
+[INFO ] 2021-04-26 13:45:47.620 [http-nio-8080-exec-7] AdminLoginAction - Admin bcurry has logged in
+[INFO ] 2021-04-26 13:46:09.171 [http-nio-8080-exec-9] LogoutAction - User bcurry is logging out
+[INFO ] 2021-04-26 13:46:16.443 [http-nio-8080-exec-5] LoginAction - User robinthetob has logged in
+[INFO ] 2021-04-26 13:46:24.871 [http-nio-8080-exec-8] LogoutAction - User robinthetob is logging out
+[INFO ] 2021-04-26 13:47:49.657 [main] GenericDao - UserRole{roleId=922, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-04-26 13:47:50.617 [main] GenericDao - User{userId=691, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-04-26, dateDeleted=null, zip=53705}
+[INFO ] 2021-04-26 13:47:51.757 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-04-26 13:48:39.754 [http-nio-8080-exec-7] AdminLoginAction - Admin bcurry has logged in
+[INFO ] 2021-04-26 13:49:33.482 [http-nio-8080-exec-4] GenericDao - Skill{skillId=13, skillName='Gardening'}
+[INFO ] 2021-04-26 13:51:24.570 [http-nio-8080-exec-3] AdminLoginAction - Admin bcurry has logged in
+[INFO ] 2021-04-26 13:51:28.133 [http-nio-8080-exec-1] GenericDao - Skill{skillId=13, skillName='Gardening'}
+[INFO ] 2021-04-26 13:51:28.152 [http-nio-8080-exec-1] DeleteSkillsServlet - Deleted skill with ID: 13 and Name: Gardening
+[INFO ] 2021-04-26 13:51:33.880 [http-nio-8080-exec-9] LogoutAction - User bcurry is logging out
+[INFO ] 2021-04-26 13:51:42.152 [http-nio-8080-exec-4] LoginAction - User robinthetob has logged in
+[INFO ] 2021-04-26 13:52:38.742 [http-nio-8080-exec-3] LogoutAction - User robinthetob is logging out
+[INFO ] 2021-04-26 13:55:20.071 [main] GenericDao - UserRole{roleId=926, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-04-26 13:55:20.950 [main] GenericDao - User{userId=694, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-04-26, dateDeleted=null, zip=53705}
+[INFO ] 2021-04-26 13:55:22.082 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-04-26 13:56:46.867 [http-nio-8080-exec-5] LoginAction - User robinthetob has logged in
+[INFO ] 2021-04-26 13:58:55.552 [main] GenericDao - UserRole{roleId=930, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-04-26 13:58:56.468 [main] GenericDao - User{userId=697, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-04-26, dateDeleted=null, zip=53705}
+[INFO ] 2021-04-26 13:58:57.542 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-04-26 14:00:46.643 [http-nio-8080-exec-8] LoginAction - User robinthetob has logged in
+[INFO ] 2021-04-26 14:04:02.597 [http-nio-8080-exec-5] LogoutAction - User robinthetob is logging out
+[INFO ] 2021-04-26 14:04:15.657 [http-nio-8080-exec-5] LoginAction - User dtillman has logged in
+[INFO ] 2021-04-26 14:04:25.540 [http-nio-8080-exec-1] AddSkillActionServlet - Skill type: has being added for user dtillman
+[INFO ] 2021-04-26 14:04:25.542 [http-nio-8080-exec-1] AddSkillActionServlet - said skill is: Beer Brewing
+[INFO ] 2021-04-26 14:06:23.819 [main] GenericDao - UserRole{roleId=934, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-04-26 14:06:24.624 [main] GenericDao - User{userId=700, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-04-26, dateDeleted=null, zip=53705}
+[INFO ] 2021-04-26 14:06:25.709 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-04-26 14:10:19.506 [http-nio-8080-exec-7] LoginAction - User robinthetob has logged in
+[INFO ] 2021-04-26 14:10:55.068 [http-nio-8080-exec-3] LogoutAction - User robinthetob is logging out
+[INFO ] 2021-04-26 14:13:54.485 [http-nio-8080-exec-10] AdminLoginAction - Admin bcurry has logged in
+[INFO ] 2021-04-26 14:15:14.376 [http-nio-8080-exec-2] LogoutAction - User bcurry is logging out
+[INFO ] 2021-04-26 14:15:23.932 [http-nio-8080-exec-8] AdminLoginAction - Admin robinthetob has logged in
+[INFO ] 2021-04-26 14:16:04.700 [http-nio-8080-exec-10] LogoutAction - User robinthetob is logging out
+[INFO ] 2021-04-26 14:16:10.365 [http-nio-8080-exec-6] LoginAction - User robinthetob has logged in
+[INFO ] 2021-04-26 14:16:14.425 [http-nio-8080-exec-9] LogoutAction - User robinthetob is logging out
+[INFO ] 2021-04-26 14:16:42.491 [http-nio-8080-exec-5] LoginAction - User kmack has logged in
+[INFO ] 2021-04-26 14:16:58.408 [http-nio-8080-exec-9] AddSkillActionServlet - Skill type: wants being added for user kmack
+[INFO ] 2021-04-26 14:16:58.410 [http-nio-8080-exec-9] AddSkillActionServlet - said skill is: guitar
+[INFO ] 2021-04-26 14:17:06.809 [http-nio-8080-exec-3] AddSkillActionServlet - Skill type: has being added for user kmack
+[INFO ] 2021-04-26 14:17:06.812 [http-nio-8080-exec-3] AddSkillActionServlet - said skill is: sewing
+[INFO ] 2021-04-26 14:17:13.622 [http-nio-8080-exec-6] LogoutAction - User kmack is logging out
+[INFO ] 2021-04-26 14:17:19.392 [http-nio-8080-exec-1] LoginAction - User robinthetob has logged in
+[INFO ] 2021-04-26 14:17:58.341 [http-nio-8080-exec-4] LogoutAction - User robinthetob is logging out

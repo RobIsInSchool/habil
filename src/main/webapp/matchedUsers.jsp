@@ -19,13 +19,16 @@
         <c:out value="${nav}" escapeXml="false"/>
     </header>
     <main>
-        <table>
+        <table class="table table-hover">
+            <thead>
             <tr>
-                <th>Username</th>
-                <th>Zip</th>
-                <th>Has</th>
-                <th>Wants</th>
+                <th scope="col">Username</th>
+                <th scope="col">Zip</th>
+                <th scope="col">Has</th>
+                <th scope="col">Wants</th>
             </tr>
+            </thead>
+            <tbody>
             <c:forEach var="user" items="${matchedUsers}">
                 <tr>
                     <td>
@@ -35,14 +38,14 @@
                             ${user.zip}
                     </td>
                     <td>
-                            <ul>
+                            <ul class="matchedSkillsList">
                             <c:forEach var="skill" items="${user.skillsHas}">
                                 <li>${skill.skillName}</li>
                             </c:forEach>
                             </ul>
                     </td>
                     <td>
-                        <ul>
+                        <ul class="matchedSkillsList">
                             <c:forEach var="skill" items="${user.skillsWants}">
                                 <li>${skill.skillName}</li>
                             </c:forEach>
@@ -50,6 +53,7 @@
                     </td>
                 </tr>
             </c:forEach>
+            </tbody>
         </table>
 <%--        <ul>--%>
 <%--            <c:forEach var="user" items="${matchedUsers}">--%>
