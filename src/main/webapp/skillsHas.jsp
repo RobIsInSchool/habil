@@ -18,18 +18,18 @@
     <header>
         <c:out value="${nav}" escapeXml="false"/>
     </header>
-        <h2>Skills Has</h2>
-    <form action="addSkillsHasWantsView" method="GET">
+        <h2>Skills-Has</h2>
+    <form class="addSkillsForm" action="addSkillsHasWantsView" method="GET">
         <input type="hidden" name="viewType" value="has">
-        <input type="submit" value="Add New Skill Has">
+        <input type="submit" class="btn btn-info btn-lg" value="Add New">
     </form>
-    <ul>
+    <ul class="list-group">
     <c:forEach var="skill" items="${skillsHas}">
-        <li>${skill.skillName}
+        <li class="list-group-item">${skill.skillName}
             <form action="removeSkillAction" method="GET">
                 <input type="hidden" name="skillId" value="${skill.skillId}">
                 <input type="hidden" name="skillType" value="has">
-                <input type="submit" class="btn btn-info btn-sm" value="X">
+                <input type="submit" class="btn btn-danger btn-sm" value="X">
             </form>
         </li>
     </c:forEach>

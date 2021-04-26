@@ -52,3 +52,17 @@ nav a {
 nav a:hover {
     color: lightgray;
 }
+
+.addSkillsForm {
+    margin-top: 2em;
+}
+
+.list-group {
+    margin: 1em auto 1em auto;
+    width: 60%;
+}
+
+.list-group-item {
+    font-weight: bold;
+    font-size: large;
+}
