@@ -2,3 +2,10 @@ li p, form {
     display: inline-block;
 }
 
+nav {
+    background-color: #e3f2fd;
+}
+
+h1 {
+    text-align: center;
+}
