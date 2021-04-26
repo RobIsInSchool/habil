@@ -20,13 +20,12 @@
     </header>
     <main>
         <form action="addMainSkill" method="POST">
-            <label for="skillToAdd">Add Skill:</label>
             <input type="text" name="skillToAdd" id="skillToAdd">
             <input type="submit" class="btn btn-info btn-sm" name="submit" value="Add Skill">
         </form>
-        <ul>
+        <ul class="list-group">
         <c:forEach var="skill" items="${allSkills}">
-            <li>${skill.skillName}</li>
+            <li class="list-group-item">${skill.skillName}</li>
         </c:forEach>
         </ul>
     </main>
