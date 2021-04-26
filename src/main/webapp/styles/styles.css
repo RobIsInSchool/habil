@@ -1,11 +1,54 @@
+body {
+    background-color: #f4f4f4;
+}
+
 li p, form {
     display: inline-block;
 }
 
 nav {
-    background-color: #e3f2fd;
+    background-color: darkslategray;
+    border-radius: 5px;
+}
+
+header {
+    margin: .5em auto 4em auto;
 }
 
 h1 {
     text-align: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.buttonContainer {
+    margin: 0 6em 0 6em;
+}
+
+.buttonContainer p {
+    margin-bottom: .25rem;
+}
+
+#indexContainer {
+    margin-top: 3em;
+}
+
+#welcomeButtons {
+    display: flex;
+    justify-content: center;
+    margin: 10em 0 10em 0;
+}
+
+footer {
+    margin-top: 10em;
+}
+
+nav a {
+    color: white;
+}
+
+nav a:hover {
+    color: lightgray;
 }

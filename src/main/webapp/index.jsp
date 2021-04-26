@@ -4,18 +4,28 @@
 <c:import var="footer" url="components/footer.jsp" />
 <c:out value="${head}" escapeXml="false"/>
     <body>
-    <div class="container">
+    <div class="container" id="indexContainer">
         <header>
             <h1>Welcome to Habil!</h1>
         </header>
 
-        <p>Log-in <a href="loginAction">here.</a></p>
-        <p><a href="signup.jsp">Sign up here</a></p>
+        <main>
+            <div id="welcomeButtons">
+                <div class="buttonContainer">
+                    <p>New to Habil?</p>
+                    <a href="signup.jsp"><button class="btn btn-info btn-lg">Sign Up Here</button></a>
+                </div>
+                <div class="buttonContainer">
+                    <p>Already a User?</p>
+                    <a href="loginAction"><button class="btn btn-info btn-lg">Log In Here</button></a>
+                </div>
+            </div>
+        </main>
 
+        <c:out value="${footer}" escapeXml="false"/>
         <aside>
             <p>Psst! Hey! Are you an admin? <a href="adminLoginAction">Go here</a> </p>
         </aside>
-        <c:out value="${footer}" escapeXml="false"/>
     </div>
     </body>
 </html>

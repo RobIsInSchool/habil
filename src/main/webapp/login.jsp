@@ -12,8 +12,9 @@
 <c:import var="footer" url="components/footer.jsp" />
 <c:out value="${head}" escapeXml="false"/>
 <body>
+<div class="container">
 <header>
-    <h1>Login to Habil</h1>
+    <h1>Log In to Habil</h1>
 </header>
 <form action="j_security_check" method="post">
     <table>
@@ -28,7 +29,8 @@
         </tr>
     </table>
 </form>
-<a href="/habil">Go back</a>
+<p><a href="/habil">Go back</a></p>
 <c:out value="${footer}" escapeXml="false"/>
+</div>
 </body>
 </html>
