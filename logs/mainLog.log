@@ -1537,3 +1537,9 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 [INFO ] 2021-04-27 11:59:01.578 [main] GenericDao - User{userId=715, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-04-27, dateDeleted=null, zip=53705}
 [INFO ] 2021-04-27 11:59:03.020 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
 [INFO ] 2021-04-27 12:00:43.576 [http-nio-8080-exec-7] LoginAction - User robinthetob has logged in
+[INFO ] 2021-04-27 14:40:43.524 [main] GenericDao - UserRole{roleId=958, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-04-27 14:40:44.781 [main] GenericDao - User{userId=718, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-04-27, dateDeleted=null, zip=53705}
+[INFO ] 2021-04-27 14:40:46.133 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
+[INFO ] 2021-04-27 15:03:05.525 [main] GenericDao - UserRole{roleId=962, roleName='unitTester', user=User{userId=1, firstName='Joe', lastName='Coyne', username='jcoyne', email='email@email.com', password='supersecret1', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=1964-04-01, dateDeleted=null, zip=53705}}
+[INFO ] 2021-04-27 15:03:06.470 [main] GenericDao - User{userId=721, firstName='test', lastName='user', username='testuser', email='email', password='password', lessonsTaken=null, lessonsTaught=null, isActive=true, dateCreated=2021-04-27, dateDeleted=null, zip=53705}
+[INFO ] 2021-04-27 15:03:07.505 [main] GenericDao - Lesson{lessonId=3, student=4, teacher=6}
