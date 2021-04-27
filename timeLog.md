@@ -43,3 +43,4 @@
 | 4/20/21 | logo and back link on login/signup, restricted display-all, added user and skill display to admin and working on deleting | 3.5 | I'm back! |
 | 4/21/21 | put band-aid on skill-delete bug, fixed username display bug, added admin user-delete, improved matched user display, some refactoring | 2.5 ||
 | 4/25/21 | fixed refresh bug, added jdocs and comments, fixed user matching bug, added footer | 3.5 ||
+| 4/26/21 | Spent essentially the whole time on styling and layout | 5.5 ||
