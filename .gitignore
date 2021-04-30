@@ -19,10 +19,11 @@
 /sql/
 /src/main/resources/hibernate.cfg.xml
 /src/main/resources/appProperties.properties
-/logs/mainLog.log
+/logs/*.log
 /designDocs/ERD.png
 /src/main/webapp/WEB-INF/web.xml
 notesToSelf.txt
+/src/main/webapp/scripts/config.js
 
 # Gradle:
 .idea/gradle.xml

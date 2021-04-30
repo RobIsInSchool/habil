@@ -9,6 +9,7 @@ const makeForm = () => {
     zipTextInput.setAttribute("type", "text");
     zipTextInput.setAttribute("name", "newZip");
     zipTextInput.setAttribute("pattern", "[0-9]{5}");
+    zipTextInput.setAttribute("class", "zipTextInput");
     submitButton.setAttribute("type", "submit");
     submitButton.setAttribute("value", "Change");
 
