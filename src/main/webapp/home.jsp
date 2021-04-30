@@ -14,6 +14,9 @@
 <c:import var="footer" url="components/footer.jsp" />
 <c:out value="${head}" escapeXml="false"/>
 <body>
+<script src="scripts/changeZip.js"></script>
+<script src="scripts/validateZip.js"></script>
+<script src="scripts/config.js"></script>
 <div class="container">
     <header>
         <c:out value="${nav}" escapeXml="false"/>
@@ -27,4 +30,5 @@
     <c:out value="${footer}" escapeXml="false"/>
 </div>
 </body>
+<script>initChange();</script>
 </html>
