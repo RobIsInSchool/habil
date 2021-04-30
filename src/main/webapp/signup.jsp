@@ -4,33 +4,39 @@
 <c:import var="footer" url="components/footer.jsp" />
 <c:out value="${head}" escapeXml="false"/>
 <body>
-
+<div class="container">
     <h1>Sign Up for Habil</h1>
-    <form action="signupUser" method="POST">
+    <form action="signupUser" method="POST" id="signupForm">
+        <div class="form-group">
         <label for="firstName">First Name</label>
-        <input type="text" name="firstName" id="firstName" pattern="[a-zA-Z]{1,50}" required>
+        <input type="text" class="form-control" name="firstName" id="firstName" pattern="[a-zA-Z]{1,50}" required>
 
         <label for="lastName">Last Name</label>
-        <input type="text" name="lastName" id="lastName" pattern="[a-zA-Z]{1,50}" required>
+        <input type="text" class="form-control" name="lastName" id="lastName" pattern="[a-zA-Z]{1,50}" required>
+        </div>
 
+        <div class="form-group">
         <label for="username">Username - must be unique</label>
-        <input type="text" name="username" id="username" pattern="[a-zA-Z]{1,50}" required>
+        <input type="text" class="form-control" name="username" id="username" pattern="[a-zA-Z]{1,50}" required>
 
         <label for="email">email</label>
-        <input type="email" name="email" id="email" required>
+        <input type="email" class="form-control" name="email" id="email" required>
 
         <label for="zip">Zip Code - for skill matching</label>
-        <input type="text" name="zip" id="zip" pattern="[0-9]{5}" required>
+        <input type="text" class="form-control" name="zip" id="zip" pattern="[0-9]{5}" required>
 
         <label for="password">Password - at least 8 characters, but no more than 80</label>
-        <input type="text" name="password" id="password" pattern="[a-zA-Z0-9!@#$%^&*.,]{8,80}" required>
+        <input type="text" class="form-control" name="password" id="password" pattern="[a-zA-Z0-9!@#$%^&*.,]{8,80}" required>
 
         <label for="passwordConfirm">Confirm Password</label>
-        <input type="text" id="passwordConfirm" pattern="[a-zA-Z0-9!@#$%^&*.,]{8,80}" required>
+        <input type="text" class="form-control" id="passwordConfirm" pattern="[a-zA-Z0-9!@#$%^&*.,]{8,80}" required>
 
         <input type="submit" class="btn btn-info btn-sm"  value="submit">
+        </div>
     </form>
+    <br>
     <a href="/habil">Go Back</a>
     <c:out value="${footer}" escapeXml="false"/>
+</div>
 </body>
 </html>

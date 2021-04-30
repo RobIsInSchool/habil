@@ -15,9 +15,9 @@ header {
     margin: .5em auto 4em auto;
 }
 
-h1 {
-    text-align: center;
-}
+/*h1 {*/
+/*    text-align: center;*/
+/*}*/
 
 .container {
     text-align: center;
@@ -77,4 +77,12 @@ table {
 
 .matchedSkillsList {
     text-align: center;
+}
+
+form#signupForm label {
+    margin: 2em auto 0 auto;
+}
+
+form#signupForm input[type="submit"] {
+    margin-top: 1em;
 }
