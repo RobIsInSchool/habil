@@ -4,6 +4,8 @@
 <c:import var="footer" url="components/footer.jsp" />
 <c:out value="${head}" escapeXml="false"/>
 <body>
+<script src="scripts/config.js"></script>
+<script src="scripts/validateZip.js"></script>
 <div class="container">
     <h1>Sign Up for Habil</h1>
     <form action="signupUser" method="POST" id="signupForm">
@@ -23,7 +25,7 @@
         <input type="email" class="form-control" name="email" id="email" required>
 
         <label for="zip">Zip Code - for skill matching</label>
-        <input type="text" class="form-control" name="zip" id="zip" pattern="[0-9]{5}" required>
+        <input type="text" class="form-control zipTextInput" name="zip" id="zip" pattern="[0-9]{5}" required>
 
         <label for="password">Password - at least 8 characters, but no more than 80</label>
         <input type="text" class="form-control" name="password" id="password" pattern="[a-zA-Z0-9!@#$%^&*.,]{8,80}" required>
@@ -39,4 +41,5 @@
     <c:out value="${footer}" escapeXml="false"/>
 </div>
 </body>
+<script>initValidate();</script>
 </html>
