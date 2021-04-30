@@ -3,6 +3,8 @@ const validateInput = results => {
     let inputField = document.querySelector(".zipTextInput");
     console.log("Reults: " + results);
     if (results > 0) {
+        let submit = document.querySelector(".submitButton");
+        submit.disabled = false;
         inputField.setCustomValidity("");
     } else {
         inputField.setCustomValidity("Sorry, that zip code cannot be validated. Please make sure it's a US zip and completely numeric.");

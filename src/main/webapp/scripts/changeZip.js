@@ -12,6 +12,8 @@ const makeForm = () => {
     zipTextInput.setAttribute("class", "zipTextInput");
     submitButton.setAttribute("type", "submit");
     submitButton.setAttribute("value", "Change");
+    submitButton.setAttribute("class", "submitButton");
+    submitButton.disabled = true;
 
     form.appendChild(zipTextInput);
     form.appendChild(submitButton);
