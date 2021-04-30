@@ -24,11 +24,12 @@ const handleClick = event => {
     let outputArea = document.querySelector("#zipChangeInputArea");
     outputArea.innerHTML = "";
     outputArea.appendChild(makeForm());
+    initValidate();
 }
 
-const init = () => {
+const initChange = () => {
     let changeButton = document.querySelector("#zipChange");
     changeButton.addEventListener("click", handleClick);
 }
 
-window.onload = init;
+// window.onload = initChange;
