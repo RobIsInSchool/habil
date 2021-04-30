@@ -45,3 +45,4 @@
 | 4/25/21 | fixed refresh bug, added jdocs and comments, fixed user matching bug, added footer | 3.5 ||
 | 4/26/21 | Spent essentially the whole time on styling and layout | 5.5 ||
 | 4/27/21 | Dealing with AWS and deployment troubles | 1 ||
+| 4/30/21 | Adding zip code validation w/ js | 3 | To be continued tomorrow... |
