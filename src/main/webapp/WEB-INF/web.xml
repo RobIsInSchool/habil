@@ -59,6 +59,7 @@
     <auth-constraint>
       <role-name>admin</role-name>
       <role-name>regUser</role-name>
+      <role-name>owner</role-name>
     </auth-constraint>
   </security-constraint>
 
@@ -70,6 +71,7 @@
     <auth-constraint>
       <role-name>admin</role-name>
       <role-name>regUser</role-name>
+      <role-name>owner</role-name>
     </auth-constraint>
   </security-constraint>
 
@@ -81,6 +83,7 @@
     <auth-constraint>
       <role-name>regUser</role-name>
       <role-name>admin</role-name>
+      <role-name>owner</role-name>
     </auth-constraint>
   </security-constraint>
 
@@ -92,6 +95,7 @@
     <auth-constraint>
       <role-name>admin</role-name>
       <role-name>regUser</role-name>
+      <role-name>owner</role-name>
     </auth-constraint>
   </security-constraint>
 
@@ -103,6 +107,7 @@
     <auth-constraint>
       <role-name>admin</role-name>
       <role-name>regUser</role-name>
+      <role-name>owner</role-name>
     </auth-constraint>
   </security-constraint>
 
@@ -137,6 +142,7 @@
     <auth-constraint>
       <role-name>admin</role-name>
       <role-name>regUser</role-name>
+      <role-name>owner</role-name>
     </auth-constraint>
   </security-constraint>
 
@@ -148,6 +154,7 @@
     <auth-constraint>
       <role-name>admin</role-name>
       <role-name>regUser</role-name>
+      <role-name>owner</role-name>
     </auth-constraint>
   </security-constraint>
 
@@ -159,6 +166,7 @@
     <auth-constraint>
       <role-name>admin</role-name>
       <role-name>regUser</role-name>
+      <role-name>owner</role-name>
     </auth-constraint>
   </security-constraint>
 
@@ -170,6 +178,7 @@
     <auth-constraint>
       <role-name>admin</role-name>
       <role-name>regUser</role-name>
+      <role-name>owner</role-name>
     </auth-constraint>
   </security-constraint>
 
@@ -181,6 +190,7 @@
     <auth-constraint>
       <role-name>admin</role-name>
       <role-name>regUser</role-name>
+      <role-name>owner</role-name>
     </auth-constraint>
   </security-constraint>
 
@@ -192,6 +202,7 @@
     <auth-constraint>
       <role-name>admin</role-name>
       <role-name>regUser</role-name>
+      <role-name>owner</role-name>
     </auth-constraint>
   </security-constraint>
 
@@ -203,6 +214,7 @@
     <auth-constraint>
       <role-name>admin</role-name>
       <role-name>regUser</role-name>
+      <role-name>owner</role-name>
     </auth-constraint>
   </security-constraint>
 
@@ -236,6 +248,7 @@
     <auth-constraint>
       <role-name>admin</role-name>
       <role-name>regUser</role-name>
+      <role-name>owner</role-name>
     </auth-constraint>
   </security-constraint>
 
@@ -247,6 +260,7 @@
     <auth-constraint>
       <role-name>admin</role-name>
       <role-name>regUser</role-name>
+      <role-name>owner</role-name>
     </auth-constraint>
   </security-constraint>
 
@@ -258,6 +272,7 @@
     <auth-constraint>
       <role-name>admin</role-name>
       <role-name>regUser</role-name>
+      <role-name>owner</role-name>
     </auth-constraint>
   </security-constraint>
 
@@ -269,6 +284,7 @@
     <auth-constraint>
       <role-name>admin</role-name>
       <role-name>regUser</role-name>
+      <role-name>owner</role-name>
     </auth-constraint>
   </security-constraint>
 
@@ -281,6 +297,7 @@
     <auth-constraint>
       <role-name>admin</role-name>
       <role-name>regUser</role-name>
+      <role-name>owner</role-name>
     </auth-constraint>
   </security-constraint>
 
@@ -292,6 +309,7 @@
     <auth-constraint>
       <role-name>admin</role-name>
       <role-name>regUser</role-name>
+      <role-name>owner</role-name>
     </auth-constraint>
   </security-constraint>
 
@@ -303,6 +321,7 @@
     <auth-constraint>
       <role-name>admin</role-name>
       <role-name>regUser</role-name>
+      <role-name>owner</role-name>
     </auth-constraint>
   </security-constraint>
 
@@ -314,6 +333,7 @@
     <auth-constraint>
       <role-name>admin</role-name>
       <role-name>regUser</role-name>
+      <role-name>owner</role-name>
     </auth-constraint>
   </security-constraint>
 
