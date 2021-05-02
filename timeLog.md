@@ -46,3 +46,4 @@
 | 4/26/21 | Spent essentially the whole time on styling and layout | 5.5 ||
 | 4/27/21 | Dealing with AWS and deployment troubles | 1 ||
 | 4/30/21 | Adding zip code validation w/ js | 3 | To be continued tomorrow... |
+| 5/2/21 | Zip code validation, admin add/remove w/ new owner role, lesson tracking with ratio and messages, some navigation improvements | 9 | Big, productive day! Good mood and good music |
