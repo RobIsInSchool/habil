@@ -18,7 +18,9 @@
     <header>
         <c:out value="${nav}" escapeXml="false"/>
     </header>
+    <h2>Add skill to our Main List</h2>
     <main>
+        <a href="addSkillsHasWantsView?viewType=${linkBackType}">Back to Skills-${linkBackType}</a>
         <form action="addMainSkill" method="POST">
             <input type="text" name="skillToAdd" id="skillToAdd">
             <input type="submit" class="btn btn-info btn-sm" name="submit" value="Add Skill">

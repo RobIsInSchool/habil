@@ -21,9 +21,11 @@ public class AddSkillsHasWantsViewServlet extends HttpServlet {
         HttpSession session = request.getSession();
         List<Skill> allSkills = skillDao.getAll();
         session.setAttribute("allSkills", allSkills);
+        String viewType = request.getParameter("viewType");
+        session.setAttribute("linkBackType", viewType);
         String forwardUrl;
         //Determine skill type and adjust forward URL accordingly
-        if (request.getParameter("viewType").equals("has")) {
+        if (viewType.equals("has")) {
             forwardUrl = "/addSkillsHas.jsp";
         }
         else {

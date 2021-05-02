@@ -18,7 +18,8 @@
     <header>
         <c:out value="${nav}" escapeXml="false"/>
     </header>
-    <a href="addMainSkill"><button class="btn btn-info">Don't see the skill you want? Add it to our main list!</button></a>
+    <h2>Adding Skill-Want...</h2>
+    <a href="addMainSkill?linkBackType=wants"><button class="btn btn-info">Don't see the skill you want? Add it to our main list!</button></a>
     <ul class="list-group">
         <c:forEach var="skill" items="${allSkills}">
             <li class="list-group-item"><p>${skill.skillName}</p>
