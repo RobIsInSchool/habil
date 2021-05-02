@@ -228,36 +228,7 @@ public class User implements Serializable {
      *
      * @return the lessons taken
      */
-    public Integer getNumLessonsTaken() {
-        return numLessonsTaken;
-    }
 
-    /**
-     * Sets lessons taken.
-     *
-     * @param numLessonsTaken the lessons taken
-     */
-    public void setNumLessonsTaken(Integer numLessonsTaken) {
-        this.numLessonsTaken = numLessonsTaken;
-    }
-
-    /**
-     * Gets lessons taught.
-     *
-     * @return the lessons taught
-     */
-    public Integer getNumLessonsTaught() {
-        return numLessonsTaught;
-    }
-
-    /**
-     * Sets lessons taught.
-     *
-     * @param numLessonsTaught the lessons taught
-     */
-    public void setNumLessonsTaught(Integer numLessonsTaught) {
-        this.numLessonsTaught = numLessonsTaught;
-    }
 
     /**
      * Is active boolean.
@@ -471,6 +442,25 @@ public class User implements Serializable {
                 iterator.remove();
             }
         }
+    }
+
+    /**
+     * Gets number of lessons taken
+     *
+     * @return the number of lessons taken
+     */
+    public Integer getNumLessonsTaken() {
+        return lessonsTaken.size();
+    }
+
+
+    /**
+     * Gets number of lessons taught.
+     *
+     * @return the number of lessons taught
+     */
+    public Integer getNumLessonsTaught() {
+        return lessonsTaught.size();
     }
 
 
