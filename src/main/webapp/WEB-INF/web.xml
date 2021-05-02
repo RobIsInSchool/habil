@@ -42,8 +42,8 @@
 
   <security-constraint>
     <web-resource-collection>
-      <web-resource-name>adminLogin</web-resource-name>
-      <url-pattern>/adminLoginAction</url-pattern>
+      <web-resource-name>adminHome</web-resource-name>
+      <url-pattern>/adminHome</url-pattern>
     </web-resource-collection>
     <auth-constraint>
       <role-name>admin</role-name>

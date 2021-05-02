@@ -14,10 +14,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class RoleDaoTest {
 
     GenericDao userRoleDao;
+    GenericDao userDao;
 
     @BeforeEach
     void setUp() {
         userRoleDao = new GenericDao(UserRole.class);
+        userDao = new GenericDao(User.class);
         Database db = Database.getInstance();
         db.runSQL("cleandb.sql");
     }

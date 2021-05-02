@@ -24,7 +24,7 @@
 
         <c:out value="${footer}" escapeXml="false"/>
         <aside>
-            <p>Psst! Hey! Are you an admin? <a href="adminLoginAction">Go here</a> </p>
+            <p>Psst! Hey! Are you an admin? <a href="adminHome">Go here</a> </p>
         </aside>
     </div>
     </body>

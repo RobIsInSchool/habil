@@ -15,7 +15,14 @@
 <body>
 <div class="container">
     <header>
-        <h1>Welcome, administrator</h1>
+        <c:choose>
+            <c:when test="${isOwner}">
+                <h1>Welcome, Omnipotent Overlord</h1>
+            </c:when>
+            <c:otherwise>
+                <h1>Welcome, Administrator</h1>
+            </c:otherwise>
+        </c:choose>
         <p><a href="logout">Log Out</a></p>
     </header>
     <main>
@@ -28,7 +35,28 @@
                 <tbody>
             <c:forEach var="user" items="${allUsers}">
                 <tr>
-                    <td scope="row">${user.username}</td>
+                    <td scope="row">
+                            ${user.username}
+                        <c:set var="isAdmin" scope="page" value="${false}"/>
+                        <c:forEach var="role" items="${user.userRoles}">
+                            <c:if test="${role.roleName.equals('admin')}">
+                                <c:set var="isAdmin" scope="page" value="${true}"/>
+                                <c:set var="roleId" scope="page" value="${role.roleId}"/>
+                            </c:if>
+                        </c:forEach>
+                        <c:choose>
+                            <c:when test="${isAdmin}">
+                                <p> (Admin)</p>
+                                <br>
+                                <c:if test="${isOwner}">
+                                    <a href="adminAddRemove?action=remove&userId=${user.userId}&role=${roleId}">Remove admin privileges</a>
+                                </c:if>
+                            </c:when>
+                            <c:otherwise>
+                                <a href="adminAddRemove?action=add&userId=${user.userId}&role=null">Add admin privileges</a>
+                            </c:otherwise>
+                        </c:choose>
+                    </td>
                     <td>${user.userId}</td>
                     <td>${user.email}</td>
                     <td>
