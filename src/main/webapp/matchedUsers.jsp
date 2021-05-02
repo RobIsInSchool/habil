@@ -23,6 +23,7 @@
             <thead>
             <tr>
                 <th scope="col">Username</th>
+                <th scope="col">Email</th>
                 <th scope="col">Zip</th>
                 <th scope="col">Has</th>
                 <th scope="col">Wants</th>
@@ -54,6 +55,9 @@
                                 <input type="hidden" name="student" value="${user.userId}">
                                 <input type="submit" class="btn btn-info btn-sm" value="I took a new lesson from this person">
                             </form>
+                    </td>
+                    <td>
+                        ${otherUser.username}${otherUser.userId}@habil.com
                     </td>
                     <td>
                             ${otherUser.zip}
