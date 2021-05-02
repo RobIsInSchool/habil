@@ -17,5 +17,6 @@
           crossorigin="anonymous"
     >
     <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/styles.css">
+    <script src="scripts/validateZip.js"></script>
 </head>
 

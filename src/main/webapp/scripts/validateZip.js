@@ -2,11 +2,12 @@
 const validateInput = results => {
     let inputField = document.querySelector(".zipTextInput");
     console.log("Reults: " + results);
+    let submit = document.querySelector(".submitButton");
     if (results > 0) {
-        let submit = document.querySelector(".submitButton");
         submit.disabled = false;
         inputField.setCustomValidity("");
     } else {
+        submit.disabled = true;
         inputField.setCustomValidity("Sorry, that zip code cannot be validated. Please make sure it's a US zip and completely numeric.");
     }
 }
@@ -50,9 +51,9 @@ const checkDigitCount = numDigits => {
 }
 
 const initValidate = () => {
-    let zipInput = document.querySelector(".zipTextInput");
-    console.log("input class: " + zipInput.getAttribute("class"));
-    zipInput.addEventListener('change', validateZip);
+    const zipInput = document.querySelector(".zipTextInput");
+    zipInput.addEventListener('keyup', validateZip);
+    zipInput.addEventListener('paste', validateZip)
     console.log("initializing validate...");
 }
 
