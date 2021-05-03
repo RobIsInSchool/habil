@@ -25,7 +25,6 @@ public class UserMatcher {
     private User user;
     private Properties properties;
     private GenericDao userDao;
-//    private Map<User, JSONObject> matchedUserSkillsMap =  new TreeMap<>();
     private final Logger logger = LogManager.getLogger(this.getClass());
 
     /**

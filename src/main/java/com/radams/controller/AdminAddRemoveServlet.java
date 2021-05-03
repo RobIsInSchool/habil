@@ -54,16 +54,6 @@ public class AdminAddRemoveServlet extends HttpServlet {
         user.removeRole(role);
         userDao.saveOrUpdate(user);
         roleDao.delete(role);
-//        Set<UserRole> userRoles = user.getUserRoles();
-//        for (UserRole role : userRoles) {
-//            if (role.getRoleName().equals("admin") && role.getUser().getUsername().equals(user.getUsername())) {
-//                logger.info("Found User Role: " + role.toString());
-//                user.removeRole(role);
-//                userDao.saveOrUpdate(user);
-//            } else {
-//                logger.info("Could not find role");
-//            }
-//        }
 
     }
 
