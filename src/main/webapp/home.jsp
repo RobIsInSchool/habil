@@ -35,7 +35,7 @@
                 <p>You haven't taught any lessons yet. Time to start giving back!</p>
             </c:when>
             <c:when test="${(numTaught == 0) && (numTaken == 0)}">
-                <p>Welcome to Habil!</p>
+                <p>Welcome to Habil! Time to take or teach some lessons!</p>
             </c:when>
             <c:when test="${(numTaught > 0) && (numTaken == 0)}">
                 <p>You haven't taken any lessons yet! Don't be afraid, it's why you're here!</p>
