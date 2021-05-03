@@ -4,5 +4,9 @@
            connectionURL="jdbc:mysql://localhost:3306/habil?user=tomcat&amp;password=tomcat"
            userTable="users" userNameCol="user_name" userCredCol="password"
            userRoleTable="roles" roleNameCol="role_name" >
+        <CredentialHandler
+                className="org.apache.catalina.realm.MessageDigestCredentialHandler"
+                algorithm="sha-256"
+                encoding="UTF-8" />
     </Realm>
 </Context>
