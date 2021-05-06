@@ -2,6 +2,8 @@
 
 Individual project for Robert Adams.
 
+Video presentation here: https://www.youtube.com/watch?v=fE6_zFv387s
+
 ## The Beginning:
 Say you want to learn a skill. How about Auto Maintenance? Youtube might be a good resource,
 but maybe the video format doesn't quite do it for you. You need specialized attention, right?
@@ -25,7 +27,7 @@ For reference, 8 billion seconds is equal to about 250 years. So, we'd say it's 
 connects you with that person or persons who compliment your skills and skill-wishes.
 
 ## How it works:
-With Habil, you create a list of skills you already have and upload a portfolio. You then create a list
+With Habil, you first create a list of skills you already have. You then create a list
 of skills that you want to learn - this is your Skills Wish List. Habil will automatically compare your skills
 and Skills Wish List to others in your specified area (or not, if you're okay with virtual!). You may then reach
 out and contact that person to negotiate your Skill-Swap!
