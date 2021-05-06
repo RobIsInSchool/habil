@@ -24,6 +24,9 @@
 /src/main/webapp/WEB-INF/web.xml
 notesToSelf.txt
 /src/main/webapp/scripts/config.js
+dataClear.sql
+dump.sql
+conn.txt
 
 # Gradle:
 .idea/gradle.xml
