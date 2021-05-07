@@ -13,6 +13,11 @@
 <c:import var="nav" url="components/navigation.jsp" />
 <c:import var="footer" url="components/footer.jsp" />
 <c:out value="${head}" escapeXml="false"/>
+<script>
+    $(document).ready( function () {
+        $('#skillsTable').DataTable();
+    } );
+</script>
 <body>
 <div class="container">
     <header>
@@ -20,17 +25,40 @@
     </header>
     <h2>Adding Skill-Has...</h2>
     <a href="addMainSkill?linkBackType=has"><button class="btn btn-info">Don't see your skill? Add it to our main list!</button></a>
-    <ul class="list-group">
+
+    <table class="table table-hover" id="skillsTable">
+        <thead>
+            <tr>
+                <th scope="col">Available Skills:</th>
+            </tr>
+        </thead>
+        <tbody>
         <c:forEach var="skill" items="${allSkills}">
-            <li class="list-group-item">${skill.skillName}
+            <tr>
+            <td scope="row">${skill.skillName}
                 <form action="addSkillAction" method="POST">
                     <input type="hidden" name="skillId" value="${skill.skillId}">
                     <input type="hidden" name="skillType" value="has">
                     <input type="submit" class="btn btn-info btn-sm"  value="Add Skill-Has">
                 </form>
-            </li>
+            </td>
+            </tr>
         </c:forEach>
-    </ul>
+        </tbody>
+    </table>
+
+
+<%--    <ul class="list-group">--%>
+<%--        <c:forEach var="skill" items="${allSkills}">--%>
+<%--            <li class="list-group-item">${skill.skillName}--%>
+<%--                <form action="addSkillAction" method="POST">--%>
+<%--                    <input type="hidden" name="skillId" value="${skill.skillId}">--%>
+<%--                    <input type="hidden" name="skillType" value="has">--%>
+<%--                    <input type="submit" class="btn btn-info btn-sm"  value="Add Skill-Has">--%>
+<%--                </form>--%>
+<%--            </li>--%>
+<%--        </c:forEach>--%>
+<%--    </ul>--%>
     <c:out value="${footer}" escapeXml="false"/>
 </div>
 </body>
