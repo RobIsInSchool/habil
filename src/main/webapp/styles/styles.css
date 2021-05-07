@@ -1,5 +1,5 @@
 body {
-    background-color: #f4f4f4;
+    background-color: white;
 }
 
 li p, form {
@@ -13,6 +13,10 @@ nav {
 
 header {
     margin: .5em auto 4em auto;
+}
+
+section {
+    margin: 4em auto;
 }
 
 /*h1 {*/
@@ -86,3 +90,16 @@ form#signupForm label {
 form#signupForm input[type="submit"] {
     margin-top: 1em;
 }
+
+p {
+    margin: 0;
+    padding: 3px;
+}
+
+/*input[type="search"] {*/
+/*    background-color: white;*/
+/*}*/
+
+/*select {*/
+/*    padding: 5px;*/
+/*}*/

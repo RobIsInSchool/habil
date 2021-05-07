@@ -12,6 +12,12 @@
 <c:import var="head" url="components/head.jsp" />
 <c:import var="footer" url="components/footer.jsp" />
 <c:out value="${head}" escapeXml="false"/>
+<script>
+    $(document).ready( function () {
+        $('#usersTable').DataTable();
+        $('#skillsTable').DataTable();
+    } );
+</script>
 <body>
 <div class="container">
     <header>
@@ -28,7 +34,7 @@
     <main>
         <section id="users">
             <h3>Users</h3>
-            <table class="table table-hover">
+            <table class="table table-hover" id="usersTable">
                 <thead>
                 <tr><th scope="col">Username</th><th scope="col">User ID</th><th scope="col">Email</th><th scope="col">Delete</th></tr>
                 </thead>
@@ -36,7 +42,9 @@
             <c:forEach var="user" items="${allUsers}">
                 <tr>
                     <td scope="row">
+                        <p>
                             ${user.username}
+                        </p>
                         <c:set var="isAdmin" scope="page" value="${false}"/>
                         <c:forEach var="role" items="${user.userRoles}">
                             <c:if test="${role.roleName.equals('admin')}">
@@ -47,7 +55,6 @@
                         <c:choose>
                             <c:when test="${isAdmin}">
                                 <p> (Admin)</p>
-                                <br>
                                 <c:if test="${isOwner}">
                                     <a href="adminAddRemove?action=remove&userId=${user.userId}&role=${roleId}">Remove admin privileges</a>
                                 </c:if>
@@ -73,7 +80,7 @@
         </section>
         <section id="skills">
             <h3>Skills</h3>
-            <table class="table table-hover">
+            <table class="table table-hover" id="skillsTable">
                 <thead>
                 <tr><th scope="col">Skill Name</th><th scope="col">Skill ID</th><th scope="col">Delete</th></tr>
                 </thead>
