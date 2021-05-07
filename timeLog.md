@@ -49,3 +49,4 @@
 | 5/2/21 | Zip code validation, admin add/remove w/ new owner role, lesson tracking with ratio and messages, some navigation improvements | 9 | Big, productive day! Good mood and good music |
 | 5/3/21 | Password encryption, AWS deployment and some presentation prep | 5 ||
 | 5/4/21 | Prepared and recorded project presentation | 4.25 ||
+| 5/7/21 | added jquery tables and did some minor layout and styling adjustments | 2 ||
