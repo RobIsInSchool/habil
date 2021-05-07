@@ -19,7 +19,7 @@
 
         <div class="form-group">
         <label for="username">Username - must be unique</label>
-        <input type="text" class="form-control" name="username" id="username" pattern="[a-zA-Z0-9]{1,50}" required>
+        <input type="text" class="form-control usernameInput" name="username" id="username" pattern="[a-zA-Z0-9]{1,50}" required>
 
         <label for="email">email</label>
         <input type="email" class="form-control" name="email" id="email" required>

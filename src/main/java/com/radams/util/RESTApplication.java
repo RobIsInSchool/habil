@@ -18,6 +18,7 @@ public class RESTApplication extends Application {
     public Set<Class<?>> getClasses() {
         HashSet h = new HashSet<Class<?>>();
         h.add(SkillsREST.class );
+        h.add(UsersREST.class);
         return h;
     }
 }
