@@ -13,6 +13,11 @@
 <c:import var="nav" url="components/navigation.jsp" />
 <c:import var="footer" url="components/footer.jsp" />
 <c:out value="${head}" escapeXml="false"/>
+<script>
+    $(document).ready( function () {
+        $('#skillsTable').DataTable();
+    } );
+</script>
 <body>
 <div class="container">
     <header>
@@ -25,11 +30,29 @@
             <input type="text" name="skillToAdd" id="skillToAdd">
             <input type="submit" class="btn btn-info btn-sm" name="submit" value="Add Skill">
         </form>
-        <ul class="list-group">
-        <c:forEach var="skill" items="${allSkills}">
-            <li class="list-group-item">${skill.skillName}</li>
-        </c:forEach>
-        </ul>
+
+        <table class="table table-hover" id="skillsTable">
+
+            <thead>
+                <tr>
+                    <th scope="col">Habil Skills List:</th>
+                </tr>
+            </thead>
+            <tbody>
+            <c:forEach var="skill" items="${allSkills}">
+                <tr>
+                    <td scope="row">${skill.skillName}</td>
+                </tr>
+            </c:forEach>
+            </tbody>
+
+        </table>
+
+<%--        <ul class="list-group">--%>
+<%--        <c:forEach var="skill" items="${allSkills}">--%>
+<%--            <li class="list-group-item">${skill.skillName}</li>--%>
+<%--        </c:forEach>--%>
+<%--        </ul>--%>
     </main>
     <c:out value="${footer}" escapeXml="false"/>
 </div>

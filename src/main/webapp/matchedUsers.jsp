@@ -13,13 +13,18 @@
 <c:import var="nav" url="components/navigation.jsp" />
 <c:import var="footer" url="components/footer.jsp" />
 <c:out value="${head}" escapeXml="false"/>
+<script>
+    $(document).ready( function () {
+        $('#usersTable').DataTable();
+    } );
+</script>
 <body>
 <div class="container">
     <header>
         <c:out value="${nav}" escapeXml="false"/>
     </header>
     <main>
-        <table class="table table-hover">
+        <table class="table table-hover" id="usersTable">
             <thead>
             <tr>
                 <th scope="col">Username</th>
@@ -33,8 +38,8 @@
             <c:forEach var="otherUser" items="${matchedUsers}">
                 <tr>
                     <td>
-                            ${otherUser.username}
-                        <br>
+                        <p><strong>${otherUser.username}</strong></p>
+                        <p>(Habil user since ${otherUser.dateCreated})</p>
                         <c:forEach var="lesson" items="${userLessons}">
                             <c:if test = "${otherUser.userId == lesson.key}">
                                 <p>You've taken ${lesson.value}
@@ -46,14 +51,14 @@
                                             lessons
                                         </c:otherwise>
                                     </c:choose>
-                                from this person</p>
+                                from ${otherUser.username}</p>
                             </c:if>
                         </c:forEach>
                             <br>
                             <form action="addLesson" method="post">
                                 <input type="hidden" name="teacher" value="${otherUser.userId}">
                                 <input type="hidden" name="student" value="${user.userId}">
-                                <input type="submit" class="btn btn-info btn-sm" value="I took a new lesson from this person">
+                                <input type="submit" class="btn btn-info btn-sm" value="I took a new lesson from ${otherUser.username}">
                             </form>
                     </td>
                     <td>
