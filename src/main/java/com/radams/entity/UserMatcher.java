@@ -208,10 +208,10 @@ public class UserMatcher {
             properties.load (this.getClass().getResourceAsStream("/appProperties.properties"));
         } catch (IOException ioe) {
             logger.error("UserMatcher.loadProperties()...Cannot load the properties file");
-            ioe.printStackTrace();
+            logger.error(ioe);
         } catch (Exception e) {
             logger.error("UserMatcher.loadProperties()..." + e);
-            e.printStackTrace();
+            logger.error(e);
         }
 
     }
