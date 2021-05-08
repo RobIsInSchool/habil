@@ -18,48 +18,57 @@ import org.apache.logging.log4j.Logger;
 public class EmailsREST {
     private Properties properties;
     private String emailKey;
-    private JSONArray allUsers;
+    private Set<String> emails;
     private GenericDao userDao = new GenericDao(User.class);
     private final Logger logger = LogManager.getLogger(this.getClass());
 
     public EmailsREST() {
         this.loadProperties();
-        this.allUsers = getAllUsers();
+        this.emails = getAllUsers();
     }
 
-    private JSONArray getAllUsers() {
+    private Set<String> getAllUsers() {
         // Return all emails
-        List<User> users = (List<User>) userDao.getAll();
-        Set<String> jsonSet = new TreeSet();
-        JSONArray json = new JSONArray();
-        JSONParser parser = new JSONParser();
-        for(User user : users) {
-            String result = "{\"email\": \"" + user.getEmail() + "\"}";
-            jsonSet.add(result);
+        Set<String> emails = new TreeSet();
+        for (User user : (List<User>) userDao.getAll()) {
+            emails.add(user.getEmail());
         }
-        logger.info(jsonSet);
-        try {
-            json = (JSONArray) parser.parse(jsonSet.toString());
-        } catch (org.json.simple.parser.ParseException e) {
-            logger.error("could not add json to array... " + e);
-        }
+        return emails;
+    }
 
+    private boolean findMatch(String emailToMatch) {
+        if (this.emails.contains(emailToMatch)) {
+            return true;
+        }
+        return false;
+    }
+
+    private JSONArray buildJSON(String status) {
+        JSONParser parser = new JSONParser();
+        JSONArray json = new JSONArray();
+        String jsonString = "{\"found\": \"" + status + "\"}";
+
+        try {
+            json = (JSONArray) parser.parse(jsonString);
+            return json;
+        } catch (org.json.simple.parser.ParseException e) {
+            logger.error("Could not put email confirmation into json... " + e);
+        }
         return json;
     }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public JSONArray serveJSON(@QueryParam("key") String key) {
+    public JSONArray serveJSON(@QueryParam("userEmail") String userEmail) {
         String keyProp = properties.getProperty("email.rest.key");
-        logger.info("Passed key param: " + key);
+        logger.info("Passed email param: " + userEmail);
         logger.info("Key property: " + keyProp);
-        if (key.equals(keyProp)) {
-            logger.info("key match...");
-            logger.info("All: " + this.allUsers);
-            return this.allUsers;
+        if (findMatch(userEmail)) {
+            logger.info("email match");
+            return buildJSON("true");
         }
-        logger.info("key did not match");
-        return new JSONArray();
+        logger.info("no email match");
+        return buildJSON("false");
     }
 
 
