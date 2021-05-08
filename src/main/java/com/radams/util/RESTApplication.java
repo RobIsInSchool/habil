@@ -19,6 +19,7 @@ public class RESTApplication extends Application {
         HashSet h = new HashSet<Class<?>>();
         h.add(SkillsREST.class );
         h.add(UsersREST.class);
+        h.add(EmailsREST.class);
         return h;
     }
 }
