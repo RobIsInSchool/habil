@@ -33,7 +33,7 @@
         <label for="passwordConfirm">Confirm Password</label>
         <input type="text" class="form-control" id="passwordConfirm" pattern="[a-zA-Z0-9!@#$%^&*.,]{8,80}" required>
 
-        <input type="submit" class="btn btn-info btn-sm submitButton" value="submit" disabled>
+        <input type="submit" id="submit" class="btn btn-info btn-sm submitButton" value="submit" disabled>
         </div>
     </form>
     <br>

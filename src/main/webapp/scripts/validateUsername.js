@@ -35,6 +35,7 @@ class Validator {
             submit.disabled = false;
         } else {
             inputField.setCustomValidity("Sorry, that user name already exists. Please choose something else");
+            inputField.reportValidity();
             submit.disabled = true;
         }
     }
