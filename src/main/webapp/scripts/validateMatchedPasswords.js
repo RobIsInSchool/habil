@@ -1,11 +1,11 @@
 
 
-const checkInputs = event => {
+const checkPassInputs = event => {
     let inputVal= event.target.value;
     let passValue = document.querySelector("#password").value;
     let submit = document.querySelector("#submit");
     let passConfirm = document.querySelector("#passwordConfirm");
-    if(inputVal != passValue) {
+    if((inputVal != passValue) && (inputVal.length == passValue.length)) {
         passConfirm.setCustomValidity("Passwords do not match");
         passConfirm.reportValidity();
         submit.disabled = true;
@@ -17,7 +17,7 @@ const checkInputs = event => {
 
 const initValidatePwdMatch = () => {
     let passConfirm = document.querySelector("#passwordConfirm");
-    passConfirm.addEventListener('input', checkInputs);
+    passConfirm.addEventListener('input', checkPassInputs);
 }
 
-window.onload = initValidatePwdMatch;
+// window.onload = initValidatePwdMatch;

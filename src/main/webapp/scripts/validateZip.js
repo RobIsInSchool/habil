@@ -38,7 +38,6 @@ const validateZip = event => {
     }
 }
 
-
 const checkDigitCount = numDigits => {
     if (numDigits == 5) {
         return true;
@@ -46,10 +45,7 @@ const checkDigitCount = numDigits => {
     return false;
 }
 
-const initValidate = () => {
+const initValidateZip = () => {
     const zipInput = document.querySelector("#zip");
     zipInput.addEventListener('input', validateZip);
-    console.log("initializing validate...");
 }
-
-// window.onload = initValidate;

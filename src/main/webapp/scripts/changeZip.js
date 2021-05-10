@@ -26,7 +26,7 @@ const handleClick = event => {
     let outputArea = document.querySelector("#zipChangeInputArea");
     outputArea.innerHTML = "";
     outputArea.appendChild(makeForm());
-    initValidate();
+    initValidateZip();
 }
 
 const initChange = () => {

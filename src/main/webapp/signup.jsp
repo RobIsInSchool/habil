@@ -29,10 +29,10 @@
         <input type="text" class="form-control zipTextInput" name="zip" id="zip" pattern="[0-9]{5}" required>
 
         <label for="password">Password - at least 8 characters, but no more than 80</label>
-        <input type="text" class="form-control" name="password" id="password" pattern="[a-zA-Z0-9!@#$%^&*.,]{8,80}" required>
+        <input type="password" class="form-control" name="password" id="password" pattern="[a-zA-Z0-9!@#$%^&*.,]{8,80}" required>
 
         <label for="passwordConfirm">Confirm Password</label>
-        <input type="text" class="form-control" id="passwordConfirm" pattern="[a-zA-Z0-9!@#$%^&*.,]{8,80}" required>
+        <input type="password" class="form-control" id="passwordConfirm" pattern="[a-zA-Z0-9!@#$%^&*.,]{8,80}" required>
 
         <input type="submit" id="submit" class="btn btn-info btn-sm submitButton" value="submit" disabled>
         </div>
@@ -42,5 +42,7 @@
     <c:out value="${footer}" escapeXml="false"/>
 </div>
 </body>
-<script>initValidate();</script>
+<script>initValidateZip();</script>
+<script>initValidatePwdMatch();</script>
+<script>initValidateUsername();</script>
 </html>

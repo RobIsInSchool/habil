@@ -13,7 +13,7 @@ class Validator {
         xhr.send();
         xhr.onload = () => {
             if (xhr.status != 200) {
-                console.log("There was an error with the request");
+
             } else {
                 this.usernames = JSON.parse(xhr.responseText);
             }
@@ -24,8 +24,6 @@ class Validator {
         let targetUsername = event.target.value;
         const submit = document.querySelector(".submitButton");
         let inputField = document.querySelector("#username");
-
-        console.log("Validating username...");
 
         if (this.isUnique(targetUsername)) {
             inputField.setCustomValidity("");
@@ -38,17 +36,13 @@ class Validator {
     }
 
     isUnique = targetUsername => {
-        console.log("checking list of usernames against target: " + targetUsername);
         let username;
-
         for (let i = 0; i < this.usernames.length; i++) {
             username = this.usernames[i].username;
             if (targetUsername == username) {
-                console.log("An identical username was found");
                 return false;
             }
         }
-        console.log("the username " + targetUsername + " is unique");
         return true;
     }
 }
@@ -56,8 +50,5 @@ class Validator {
 const initValidateUsername = () => {
     let validator = new Validator();
     const inputField = document.querySelector("#username");
-
     inputField.addEventListener('input', validator.validateUsername);
 }
-
-window.onload = initValidateUsername;
