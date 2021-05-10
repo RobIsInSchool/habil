@@ -7,6 +7,7 @@
 <script src="scripts/config.js"></script>
 <script src="scripts/validateUsername.js"></script>
 <script src="scripts/validateMatchedPasswords.js"></script>
+<script src="scripts/validateZip.js"></script>
 <div class="container">
     <h1>Sign Up for Habil</h1>
     <form action="signupUser" method="POST" id="signupForm">
