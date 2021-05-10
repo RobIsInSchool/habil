@@ -1,5 +1,4 @@
-
-const validateInput = results => {
+const validateZipInput = results => {
     let inputField = document.querySelector("#zip");
     let submit = document.querySelector("#submit");
     if (results > 0) {
@@ -23,13 +22,14 @@ const checkGeoAPI = zip => {
             console.log("There was an error with the request");
         } else {
             numResults = JSON.parse(xhr.responseText).postalCodes.length;
-            validateInput(numResults);
+            validateZipInput(numResults);
         }
     }
 }
 
 
 const validateZip = event => {
+    console.log("checking zip... ");
     let zip = event.target.value;
     let numDigits = zip.length;
 

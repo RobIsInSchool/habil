@@ -11,6 +11,7 @@ const makeForm = () => {
     zipTextInput.setAttribute("pattern", "[0-9]{5}");
     zipTextInput.setAttribute("id", "zip");
     submitButton.setAttribute("type", "submit");
+    submitButton.setAttribute("id", "submit");
     submitButton.setAttribute("value", "Change");
     submitButton.setAttribute("class", "submitButton");
     submitButton.disabled = true;

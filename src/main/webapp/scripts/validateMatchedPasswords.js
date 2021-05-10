@@ -5,9 +5,12 @@ const checkPassInputs = event => {
     let passValue = document.querySelector("#password").value;
     let submit = document.querySelector("#submit");
     let passConfirm = document.querySelector("#passwordConfirm");
-    if((inputVal != passValue) && (inputVal.length == passValue.length)) {
+    if(inputVal != passValue) {
         passConfirm.setCustomValidity("Passwords do not match");
-        passConfirm.reportValidity();
+        if (inputVal.length == passValue.length) {
+            passConfirm.reportValidity();
+        }
+
         submit.disabled = true;
     } else {
         passConfirm.setCustomValidity("");
