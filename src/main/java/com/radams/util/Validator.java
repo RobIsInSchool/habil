@@ -5,6 +5,9 @@ import org.apache.logging.log4j.Logger;
 
 import com.radams.entity.User;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Validator {
 
     private GenericDao userDao = new GenericDao(User.class);
@@ -12,10 +15,18 @@ public class Validator {
 
     private boolean usernameExists;
     private boolean emailExists;
+    private List<User> users;
+    private List<String> usernames;
+    private List<String> emails;
 
     public Validator() {
         this.usernameExists = false;
         this.emailExists = false;
+        this.users = new ArrayList<>();
+        this.usernames = new ArrayList<>();
+        this.emails = new ArrayList<>();
+        this.getUsers();
+        this.getUsernamesAndEmails();
     }
 
     public boolean isUsernameExists() {
@@ -34,7 +45,24 @@ public class Validator {
         this.emailExists = emailExists;
     }
 
-    private void validateUsername() {
+    private void getUsers() {
+        users = (List<User>) userDao.getAll();
+    }
 
+    private void getUsernamesAndEmails() {
+        for (User user : users) {
+            usernames.add(user.getUsername());
+            emails.add(user.getEmail());
+        }
+    }
+
+
+    public void validate(String username, String email) {
+        if (usernames.contains(username)) {
+            usernameExists = true;
+        }
+        if (emails.contains(email)) {
+            emailExists = true;
+        }
     }
 }

@@ -3,6 +3,7 @@ package com.radams.controller;
 import com.radams.entity.User;
 import com.radams.entity.UserRole;
 import com.radams.persistence.GenericDao;
+import com.radams.util.Validator;
 import org.apache.catalina.CredentialHandler;
 import org.apache.catalina.Globals;
 import org.apache.catalina.realm.MessageDigestCredentialHandler;
@@ -39,24 +40,36 @@ public class SignupUserServlet extends HttpServlet {
         }
         credentialHandler.setEncoding("UTF-8");
 
+        Validator validator = new Validator();
+
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
         String userName = request.getParameter("username");
         String email = request.getParameter("email");
         String password = credentialHandler.mutate(request.getParameter("password"));
         String zip = request.getParameter("zip");
-        logger.info("Hashed password length: " + password.length());
-        User user = new User(firstName, lastName, userName, email, password, true, zip, Date.valueOf(LocalDate.now()));
-        UserRole role = new UserRole("regUser", user);
-        user.addRole(role);
-        int userId = userDao.insert(user);
-        logger.info("regUser with id " + userId + " has signed up: " + user);
 
-        session.setAttribute("userName", user.getUsername());
+        validator.validate(userName, email);
+        boolean usernameExists = validator.isUsernameExists();
+        boolean emailExists = validator.isEmailExists();
+        if (emailExists || usernameExists) {
+            logger.info("a username or email matches");
+            String errorURL = "/signupError.jsp";
+            session.invalidate();
+            response.sendRedirect(request.getContextPath() + errorURL);
+        } else {
+            User user = new User(firstName, lastName, userName, email, password, true, zip, Date.valueOf(LocalDate.now()));
+            UserRole role = new UserRole("regUser", user);
+            user.addRole(role);
+            int userId = userDao.insert(user);
+            logger.info("regUser with id " + userId + " has signed up: " + user);
 
-        //TODO add username uniqueness check
-        //TODO add postal code validation
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/signupConfirm.jsp");
-        dispatcher.forward(request, response);
+            session.setAttribute("userName", user.getUsername());
+
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/signupConfirm.jsp");
+            dispatcher.forward(request, response);
+        }
+
+
     }
 }
