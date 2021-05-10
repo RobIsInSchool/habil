@@ -12,29 +12,29 @@
     <form action="signupUser" method="POST" id="signupForm">
         <div class="form-group">
         <label for="firstName">First Name</label>
-        <input type="text" class="form-control" name="firstName" id="firstName" pattern="[a-zA-Z]{1,50}" required>
+        <input type="text" class="form-control" name="firstName" id="firstName" pattern="[a-zA-Z-]{1,50}" title="Letters or Dashes only" required>
 
         <label for="lastName">Last Name</label>
-        <input type="text" class="form-control" name="lastName" id="lastName" pattern="[a-zA-Z]{1,50}" required>
+        <input type="text" class="form-control" name="lastName" id="lastName" pattern="[a-zA-Z-]{1,50}" title="Letters or Dashes only" required>
         </div>
 
         <div class="form-group">
         <label for="username">Username - must be unique</label>
-        <input type="text" class="form-control usernameInput" name="username" id="username" pattern="[a-zA-Z0-9]{1,50}" required>
+        <input type="text" class="form-control usernameInput" name="username" id="username" pattern="[a-zA-Z0-9]{1,50}" title="Letters or Numbers only" required>
 
         <label for="email">email</label>
-        <input type="email" class="form-control" name="email" id="email" required>
+        <input type="email" class="form-control" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address" required>
 
         <label for="zip">Zip Code - for skill matching</label>
-        <input type="text" class="form-control zipTextInput" name="zip" id="zip" pattern="[0-9]{5}" required>
+        <input type="text" class="form-control zipTextInput" name="zip" id="zip" pattern="[0-9]{5}" title="5-digit US zip" required>
 
-        <label for="password">Password - at least 8 characters, but no more than 80</label>
-        <input type="password" class="form-control" name="password" id="password" pattern="[a-zA-Z0-9!@#$%^&*.,]{8,80}" required>
+        <label for="password">Password - letters, numbers, or ! @ # $ % ^ & * . ,</label>
+        <input type="password" class="form-control" name="password" id="password" pattern="[a-zA-Z0-9!@#$%^&*.,]{8,80}" title="Passwords should be comprised of letters, numbers, or the following: !@#$%^&*.," required>
 
         <label for="passwordConfirm">Confirm Password</label>
         <input type="password" class="form-control" id="passwordConfirm" pattern="[a-zA-Z0-9!@#$%^&*.,]{8,80}" required>
 
-        <input type="submit" id="submit" class="btn btn-info btn-sm submitButton" value="submit" disabled>
+        <input type="submit" id="submit" class="btn btn-info btn-sm submitButton" value="submit" title="Passwords should be comprised of letters, numbers, or the following: !@#$%^&*.,"  disabled>
         </div>
     </form>
     <br>

@@ -22,7 +22,7 @@
             <td>User Name: <input type="text" name="j_username"></td>
         </tr>
         <tr>
-            <td>Password: <input type="text" name="j_password"></td>
+            <td>Password: <input type="password" name="j_password"></td>
         </tr>
         <tr>
             <td><input class="btn btn-info btn-sm" type="submit" value="Log In"> </td>
