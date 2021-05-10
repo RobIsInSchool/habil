@@ -53,7 +53,6 @@ public class SignupUserServlet extends HttpServlet {
         boolean usernameExists = validator.isUsernameExists();
         boolean emailExists = validator.isEmailExists();
         if (emailExists || usernameExists) {
-            logger.info("a username or email matches");
             String errorURL = "/signupError.jsp";
             session.invalidate();
             response.sendRedirect(request.getContextPath() + errorURL);
