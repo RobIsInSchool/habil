@@ -4,12 +4,10 @@ class Validator {
 
     constructor() {
         this.getUserNames();
-
     }
 
     getUserNames = () => {
         let url = location.pathname.substr(0, location.pathname.lastIndexOf('/')) + "/api/usernames";
-        console.log("Connecting to URL: " + url);
         let xhr = new XMLHttpRequest();
         xhr.open("get", url);
         xhr.send();
@@ -17,7 +15,6 @@ class Validator {
             if (xhr.status != 200) {
                 console.log("There was an error with the request");
             } else {
-                console.log("Request successful: " + xhr.responseText);
                 this.usernames = JSON.parse(xhr.responseText);
             }
         }
@@ -46,7 +43,6 @@ class Validator {
 
         for (let i = 0; i < this.usernames.length; i++) {
             username = this.usernames[i].username;
-            console.log("checking -> " + username);
             if (targetUsername == username) {
                 console.log("An identical username was found");
                 return false;
@@ -57,12 +53,11 @@ class Validator {
     }
 }
 
-const init = () => {
-    console.log("script initialized successfully");
+const initValidateUsername = () => {
     let validator = new Validator();
     const inputField = document.querySelector("#username");
 
     inputField.addEventListener('input', validator.validateUsername);
 }
 
-window.onload = init;
+window.onload = initValidateUsername;
