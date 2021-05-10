@@ -51,4 +51,4 @@
 | 5/4/21 | Prepared and recorded project presentation | 4.25 ||
 | 5/7/21 | added jquery tables and did some minor layout and styling adjustments, implemented username verification system | 6.25 ||
 | 5/8/21 | pwd matching, aws deploy stuff, attempt email validation, immediate feedback on non-unique usernames | 4.33 ||
-| 5/10/21 | improved form validation, added backend validation for username and email | 2 ||
+| 5/10/21 | improved form validation, added backend validation for username and email, troubleshooted js problems, aws deployment issues, added usermatcher tests | 6 | Possibly the final update |
