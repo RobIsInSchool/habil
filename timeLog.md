@@ -2,8 +2,8 @@
 
 | Date | Task | Hours | Notes|
 |------|------|-------|------|
-| 1/26/21| Indie Project setup, git repo, problem statement, weekly activities | 4 | weeks 1 and 2 - Hours may not be accurate since I can't remember the exact number|
-|1/27/21| Work on week 2 exercise | 1 | slow day |
+| 1/26/21 | Indie Project setup, git repo, problem statement, weekly activities | 4 | weeks 1 and 2 - Hours may not be accurate since I can't remember the exact number|
+| 1/27/21 | Work on week 2 exercise | 1 | slow day |
 | 1/29/21 | Work on week 2 exercise | 1 | slow day |
 | 1/30/21 | Powered through and finished week 2 exercise | 4 | productive day |
 | 1/31/21 | worked through some of the week 3 demos and activities and did the readings | 2 | |
@@ -50,3 +50,5 @@
 | 5/3/21 | Password encryption, AWS deployment and some presentation prep | 5 ||
 | 5/4/21 | Prepared and recorded project presentation | 4.25 ||
 | 5/7/21 | added jquery tables and did some minor layout and styling adjustments, implemented username verification system | 6.25 ||
+| 5/8/21 | pwd matching, aws deploy stuff, attempt email validation, immediate feedback on non-unique usernames | 4.33 ||
+| 5/10/21 | improved form validation, added backend validation for username and email | 2 ||
