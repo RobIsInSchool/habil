@@ -14,16 +14,17 @@
 <c:import var="footer" url="components/footer.jsp" />
 <c:out value="${head}" escapeXml="false"/>
 <body>
-<script src="scripts/changeZip.js"></script>
-<script src="scripts/validateZip.js"></script>
 <script src="scripts/config.js"></script>
+<script src="scripts/validateZip.js"></script>
+<script src="scripts/changeZip.js"></script>
+
 <div class="container">
     <header>
         <c:out value="${nav}" escapeXml="false"/>
     </header>
     <main>
         <h2>Welcome, ${user.username}</h2>
-        <p id="zip" style="display:inline-block">Currently at zip code ${user.zip}</p>
+        <p id="zipDisplay" style="display:inline-block">Currently at zip code ${user.zip}</p>
         <button class="btn btn-info btn-sm" id="zipChange">Change zip?</button>
         <div id="zipChangeInputArea"></div>
 
